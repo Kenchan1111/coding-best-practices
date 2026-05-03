@@ -1,0 +1,47 @@
+# Reference repos cloned for analysis (have their own .git, not part of this project)
+gstack/
+dictionary-of-ai-coding/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Node (future Phase 1 stack)
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+
+# Bun
+.bun/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs / runtime
+*.log
+*.pid
+tmp/
+
+# Claude Code local settings (per-machine)
+.claude/settings.local.json
