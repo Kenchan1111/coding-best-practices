@@ -27,7 +27,7 @@ Construire une **skill de coding portable multi-LLM** ancrée dans un catalogue 
 | **Reviewer stratégique + orchestrateur** | Claude Opus 4.7 (cette instance) | Revue stratégique, synthèse cross-LLM, vérification reproduction. Profil observé : orchestrateur qui s'auto-amende. |
 | **Co-reviewer stratégique** | Claude Sonnet | Lecture statique ligne-par-ligne, défauts d'implémentation concrets. Profil observé : surgical precision sur 5 modules forensic. |
 | **Implementer + reviewer stratégique** | GPT-5.5 (double casquette) | Écrit le code de la skill. **Aussi** : apporte sa perspective stratégique full-app dual-skill (engineering + domaine). Profil observé : ultrareview avec findings à impact métier. |
-| **Reviewer indépendant (optionnel)** | Kimi délégué | 2e revue épistémologique sur les décisions architecturales majeures (indépendance famille de modèle) |
+| **Reviewer systémique + perspective utilisateur** | Kimi | Revue systémique (invariants, contrats, garanties manquantes), tableaux comparatifs, **perspective end-user de la skill** (Kimi est un consommateur potentiel du skill). Indépendance épistémologique (famille de modèle différente des Claude et OpenAI). |
 
 Chaque rôle écrit ses outputs dans `reviews/<agent>/{proposition,corrections,handoff}/`.
 
@@ -49,8 +49,9 @@ Toute session démarre par cette séquence :
 6. **`TODOS.md`** — backlog ordonné
 7. **`ONBOARDING_<TON_LLM>.md`** — uniquement le tien :
    - `ONBOARDING_OPUS47.md` (cette session, supervisor + orchestrateur)
-   - `ONBOARDING_SONNET.md` (co-reviewer stratégique)
+   - `ONBOARDING_SONNET.md` (co-reviewer stratégique ligne-par-ligne)
    - `ONBOARDING_GPT55.md` (implementer + reviewer stratégique double casquette)
+   - `ONBOARDING_KIMI.md` (reviewer systémique + perspective end-user)
 
 Documents supplémentaires (lazy load) :
 - `reviews/<agent>/...` — reviews croisées
@@ -203,9 +204,9 @@ reviews/claude-sonnet/corrections/NN-titre-YYYYMMDD.md
 Tout merge ou décision architecturale majeure doit avoir **les deux sign-offs Claude** (Opus 4.7 + Sonnet) OU un sign-off + arbitrage Zack. Sinon, status reste `proposed`, jamais `accepted`.
 
 **Convergence inter-LLM** = signal P0 (cf `findings/03_methodology.md` §3) :
-- Opus 4.7 + Sonnet d'accord → fort
-- Opus 4.7 + Sonnet + GPT-5.5 (en mode review d'autres) d'accord → très fort
-- Opus 4.7 + Sonnet + Kimi (délégation) d'accord → maximal (4 familles de modèle représentées)
+- Opus 4.7 + Sonnet d'accord → fort (même famille Anthropic)
+- Opus 4.7 + Sonnet + GPT-5.5 (en mode review d'autres) d'accord → très fort (2 familles)
+- Opus 4.7 + Sonnet + GPT-5.5 + Kimi d'accord → **maximal** (3 familles de modèle représentées : Anthropic, OpenAI, Moonshot)
 
 ### 8.4 Décisions ouvertes → Zack
 
