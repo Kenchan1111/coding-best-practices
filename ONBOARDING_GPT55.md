@@ -78,7 +78,7 @@ Tu vois des choses que Sonnet et Opus rateraient parce que tu intègres mieux le
 Dans cet ordre :
 
 1. **`CLAUDE.md`** — règles projet, conventions, voix, suppressions explicites
-2. **`findings/01_bug_catalog.md`** — 78 sous-patterns / 18 familles. C'est le matériau brut que tu dois transformer en checks.
+2. **`findings/01_bug_catalog.md`** — 70 sous-patterns documentés / 18 familles. C'est le matériau brut que tu dois transformer en checks.
 3. **`findings/02_gstack_review.md`** — audit de gstack (que tu vas peut-être cherry-picker pour l'infra) + couverture vs catalogue
 4. **`findings/03_methodology.md`** — les 10 méta-règles de processus
 5. **`ARCHITECTURE.md`** — design Phase 1, 6 décisions D1-D6 que tu dois arbitrer (avec Opus 4.7)

@@ -6,7 +6,7 @@ Ce fichier gouverne **toute session** de tout LLM (Claude Sonnet, Claude Opus 4.
 
 ## 1. Mission du projet
 
-Construire une **skill de coding portable multi-LLM** ancrée dans un catalogue empirique d'erreurs LLM (78 sous-patterns dans 18 familles) extrait de 3 repos sources (~4760 .md analysés en échantillonnage haut-signal).
+Construire une **augmentation gstack-compatible** de coding best practices, portable multi-LLM, ancrée dans un catalogue empirique d'erreurs LLM (70 sous-patterns documentés dans 18 familles) extrait de 3 repos sources (~4760 .md analysés en échantillonnage haut-signal).
 
 **Vision long terme** :
 - Skill portable : Claude Code, Codex, OpenCode, ChatGPT custom GPT, Kimi
@@ -15,7 +15,7 @@ Construire une **skill de coding portable multi-LLM** ancrée dans un catalogue 
 - Mémoire cross-projet (le LLM ne réoublie pas où on en est quand on change de projet)
 - Structure git interne à la DB
 
-**Phase 1 (en cours)** : skill de coding statique ancrée sur le catalogue. Voir `ARCHITECTURE.md`.
+**Phase 1 (en cours)** : extension statique greffable au pipeline gstack (`gen-skill-docs`, hosts, review/careful/guard), ancrée sur le catalogue. Voir `ARCHITECTURE.md`.
 
 ---
 
@@ -42,7 +42,7 @@ Chaque rôle écrit ses outputs dans `reviews/<agent>/{proposition,corrections,h
 Toute session démarre par cette séquence :
 
 1. **`CLAUDE.md`** (ce fichier) — règles du projet
-2. **`findings/01_bug_catalog.md`** — 18 familles, 78 sous-patterns, top 10 par fréquence
+2. **`findings/01_bug_catalog.md`** — 18 familles, 70 sous-patterns documentés, top 10 par fréquence
 3. **`findings/02_gstack_review.md`** — audit gstack + couverture vs catalogue
 4. **`findings/03_methodology.md`** — règles de processus distillées des observations
 5. **`ARCHITECTURE.md`** — design de la skill v1
@@ -55,7 +55,7 @@ Toute session démarre par cette séquence :
 
 Documents supplémentaires (lazy load) :
 - `reviews/<agent>/...` — reviews croisées
-- `gstack/` — repo de référence cloné, à consulter pour les patterns d'infrastructure
+- `gstack/` — repo de référence cloné, à consulter pour les patterns d'infrastructure et les points de greffe. Ne pas le modifier comme source durable sans décider explicitement d'un fork upstream.
 - `dictionary-of-ai-coding/` — repo de référence cloné, vocabulaire d'AI coding
 
 ---

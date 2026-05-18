@@ -1,0 +1,30 @@
+{
+  "task_session_id": "20260507T235259+0200_gstack",
+  "objective": "Fix gbrain integration correctness and security defects found during review",
+  "reviewed_revision": "bf65487162ce5e4330efc43632ca945b640ebc16",
+  "note_path": "/home/zack/Documents/Divers/Dict_AI_Coding/reviews/gpt-5.5/handoff/03-gbrain-fixes-security-roadmap-20260510.md",
+  "note_sha256": "c1217d85fedaf18e5b677054abb5c4f7c009eb5241c916d0c686115fbe1a30d6",
+  "validated_at_local": "2026-05-10T13:46:11.830098+02:00",
+  "changed_files": [
+    "CHANGELOG.md",
+    "README.md",
+    "USING_GBRAIN_WITH_GSTACK.md",
+    "bin/gstack-brain-context-load.ts",
+    "bin/gstack-gbrain-source-wireup",
+    "bin/gstack-gbrain-sync.ts",
+    "bin/gstack-memory-ingest.ts",
+    "bun.lock",
+    "lib/gstack-memory-helpers.ts",
+    "package.json",
+    "scripts/resolvers/gbrain.ts",
+    "setup-gbrain/SKILL.md",
+    "setup-gbrain/SKILL.md.tmpl",
+    "setup-gbrain/memory.md",
+    "test/gstack-brain-context-load.test.ts",
+    "test/gstack-gbrain-source-wireup.test.ts",
+    "test/gstack-gbrain-sync.test.ts",
+    "test/gstack-memory-ingest.test.ts",
+    "test/skill-validation.test.ts"
+  ],
+  "post_change_check_count": 4
+}

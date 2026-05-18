@@ -1,0 +1,68 @@
+---
+name: coding-best-practices
+version: 0.1.0
+description: |
+  Extension gstack-compatible qui surface les patterns d'erreurs LLM documentes
+  dans ce repo quand le contexte les rend pertinents : ecriture de fichiers
+  d'etat, tests, boucles de scan, operations destructrices, et claims de review
+  avec file:line.
+allowed-tools:
+  - Read
+  - Grep
+  - Bash
+triggers:
+  - writing code
+  - writing tests
+  - reviewing code
+---
+
+# coding-best-practices
+
+Cette skill augmente gstack en aidant un agent de coding a charger les checks pertinents au bon moment.
+Elle ne remplace pas les tests, la review humaine, ni la convergence inter-LLM.
+
+## English quick contract
+
+Use this skill as a contextual guardrail, not as an autonomous enforcement hook.
+Before editing code, tests, scan loops, persistent state, destructive operations, or publishing a review claim, identify the matching trigger, load only the referenced checks, and state the requested preflight decision.
+The time budgets in triggers are cognitive budgets, not enforceable timers.
+
+## Perimetre Phase 1
+
+- Catalogue statique issu de `findings/01_bug_catalog.md`
+- 18 familles de checks
+- Triggers contextuels
+- Validation statique
+- Smoke test dynamique avant acceptation
+- Compatibilite avec la plomberie gstack existante
+
+## Hors perimetre Phase 1
+
+- Base de donnees persistante
+- Moteur ML ou RL
+- Knowledge graph
+- Memoire cross-projet
+- Plugin IDE
+
+## Runtime workflow
+
+1. Avant un edit ou une review, identifier si un trigger ci-dessous s'applique.
+2. Si oui, lire le fichier `triggers/<trigger>.md`.
+3. Lire ensuite les fichiers `checks/<check>.md` listes dans `calls_checks`.
+4. Produire la phrase de preflight demandee par le trigger avant de coder ou publier le finding.
+5. Appliquer Fix-First : AUTO-FIX seulement pour les corrections mecaniques et reversibles ; ASK pour securite, donnees, domaine, user-visible ou >20 lignes.
+
+Ne pas charger les 18 checks d'un coup. Charger seulement ceux appeles par le trigger actif.
+Les budgets `45s` / `60s` sont des limites d'attention indicatives ; ils ne prouvent pas qu'un host LLM respecte un timer.
+
+## Catalogue
+
+{{CATALOG}}
+
+## Triggers
+
+{{TRIGGERS}}
+
+## Checks
+
+{{CHECKS}}

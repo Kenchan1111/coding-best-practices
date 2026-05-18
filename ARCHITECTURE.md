@@ -1,9 +1,9 @@
 # ARCHITECTURE.md — Skill coding-best-practices, design v1
 
-**Version** : 0.1 (draft initial, sujet à arbitrage Zack)
+**Version** : 0.1 (Phase 1, Q1-Q5 et D1-D6 arbitrées)
 **Date** : 2026-05-03
 **Auteur** : Claude Opus 4.7 (supervisor + orchestrateur)
-**Statut** : `proposed` — attend sign-off Sonnet co-reviewer + GPT-5.5 implementer + Zack avant implémentation
+**Statut** : `P7-delivered/P8-review-pending` — D1-D6 arbitrées par Zack le 2026-05-04, P1-P7 livrées, P8 reviews croisées en attente
 
 ---
 
@@ -27,9 +27,9 @@ Phase 1 (NOW)         Phase 2              Phase 3              Phase 4         
 
 ### 2.1 Ce qu'on construit
 
-Une skill au format **Claude Skills** (compatible Codex/OpenCode via host adapters), nommée `coding-best-practices` (nom à arbitrer), qui :
+Une extension de skill au format **gstack-compatible / Claude Skills** (compatible Codex via host adapter Phase 1), nommée `coding-best-practices`, qui :
 
-1. **Charge le catalogue** des 18 familles / 78 sous-patterns au démarrage
+1. **Charge le catalogue** des 18 familles / 70 sous-patterns documentés au démarrage
 2. **Détecte le contexte** de chaque opération (langage cible, type d'opération : write file / write test / scan loop / review claim)
 3. **Surface les checks pertinents** au bon moment (pas tous à la fois)
 4. **Auto-fix mécaniques** quand possible (suppression code mort, ajout de `|| true` après grep, ajout d'atomic_write helper)
@@ -56,35 +56,32 @@ skill/
 ├── SKILL.md.tmpl                  # Template source de vérité
 ├── SKILL.md                       # Généré, ne pas éditer à la main
 ├── catalog/
-│   └── (18 familles, source)      # Symlink ou copie de findings/01_bug_catalog.md
+│   └── bug_catalog.md             # Copie générée depuis findings/01_bug_catalog.md
 ├── checks/
-│   ├── atomic_write.md            # Famille A
-│   ├── cascade_failure.md         # Famille B
-│   ├── scan_loop_safe.md          # Famille C
-│   ├── iteration_semantics.md     # Famille D
-│   ├── llm_hallucination.md       # Famille E ← clé
-│   ├── race_conditions.md         # Famille F
-│   ├── input_filtering.md         # Famille G
-│   ├── silent_override.md         # Famille H
-│   ├── irreversible_ops.md        # Famille I
-│   ├── bidir_test_coverage.md     # Famille J
-│   ├── architecture_smells.md     # Famille K
-│   ├── bash_specific.md           # Famille L
-│   ├── drift_detection.md         # Famille M
-│   ├── input_validation.md        # Famille N
-│   ├── intrusive_nonportable.md   # Famille O
-│   ├── contract_consistency.md    # Famille P
-│   ├── numerical_precision.md     # Famille Q
-│   └── audit_trail.md             # Famille R
+│   ├── A_atomic_write.md          # Famille A
+│   ├── B_cascade_failure.md       # Famille B
+│   ├── C_scan_loop_safe.md        # Famille C
+│   ├── D_iteration_semantics.md   # Famille D
+│   ├── E_llm_hallucination.md     # Famille E, clé
+│   ├── F_race_conditions.md       # Famille F
+│   ├── G_shell_token_filtering.md # Famille G
+│   ├── H_silent_override.md       # Famille H
+│   ├── I_irreversible_ops.md      # Famille I
+│   ├── J_bidir_test_coverage.md   # Famille J
+│   ├── K_architecture_smells.md   # Famille K
+│   ├── L_bash_specific.md         # Famille L
+│   ├── M_drift_detection.md       # Famille M
+│   ├── N_input_validation.md      # Famille N
+│   ├── O_intrusive_nonportable.md # Famille O
+│   ├── P_contract_consistency.md  # Famille P
+│   ├── Q_numerical_precision.md   # Famille Q
+│   └── R_audit_trail.md           # Famille R
 ├── triggers/
 │   ├── on_write_state_file.md     # Quand le LLM écrit un fichier d'état
 │   ├── on_write_test.md
 │   ├── on_write_scan_loop.md
 │   ├── on_review_claim.md
 │   └── on_destructive_op.md
-├── scripts/
-│   ├── gen-skill-docs.ts          # Génère SKILL.md depuis le template
-│   └── validate.ts                # Valide le format
 ├── tests/
 │   └── test_*.py                  # Tests unitaires des checks
 ├── bin/
@@ -92,7 +89,12 @@ skill/
 └── hosts/
     ├── claude.md                   # Config pour Claude Code
     ├── codex.md
-    └── opencode.md
+    ├── gstack.md
+    └── kimi.md
+scripts/
+├── gen-skill-docs.ts              # Génère skill/SKILL.md depuis le template
+├── sync-catalog.ts                # Génère skill/catalog/ depuis findings/01_bug_catalog.md
+└── validate.ts                    # Valide le format
 ```
 
 ### 3.2 Format d'un check (un fichier = une famille)
@@ -151,13 +153,20 @@ Crash mid-write = fichier tronqué = état corrompu silencieusement. Les autres 
 ```markdown
 ---
 trigger: on_write_state_file
+phase: before_edit_or_bash
+intent: Prevent corrupt, stale, or misleading persisted state.
 fires_on:
   - bash_command: 'jq.*>'
   - python_pattern: '\.write_text\(json'
   - python_pattern: 'open\(.+, ["\'](w|wb)["\']'
 calls_checks:
-  - atomic_write
-  - cascade_failure
+  - A_atomic_write
+  - B_cascade_failure
+  - M_drift_detection
+suppress_when:
+  - append_only_log
+  - throwaway_test_fixture
+preflight_budget: 45s
 ---
 
 # Trigger : écriture d'un fichier d'état
@@ -166,6 +175,12 @@ Au moment où le LLM est sur le point d'écrire un fichier qui contient
 un état persistant (DB JSON, index, catalog), surface les checks
 `atomic_write` et `cascade_failure` AVANT que l'écriture ne soit
 exécutée.
+
+Les triggers Phase 1 doivent rester courts et opérationnels. Ils contiennent :
+- un contexte d'activation concret (`fires_on`)
+- les checks à charger (`calls_checks`)
+- les cas où ne pas déclencher (`suppress_when`)
+- une phrase de preflight que le LLM doit produire avant l'edit
 
 Ne pas surface ces checks pour :
 - Logs append-only
@@ -185,7 +200,7 @@ description: |
   Surface les patterns d'erreurs LLM connus AU BON MOMENT (pas tous d'un coup).
   Triggered automatiquement quand tu écris du code touchant un fichier d'état,
   un test, une boucle de scan, ou quand tu cites un fichier:ligne dans une review.
-  Repose sur un catalogue empirique de 78 sous-patterns dans 18 familles
+  Repose sur un catalogue empirique de 70 sous-patterns documentés dans 18 familles
   observés sur 4760+ fichiers de notes LLM réelles.
 allowed-tools:
   - Read
@@ -214,33 +229,34 @@ hooks:
 
 ### D1 — Réutiliser gstack comme socle ?
 
-**Position proposée** : OUI pour l'infrastructure (gen-skill-docs, validation, hosts/, slop-scan), NON pour le contenu des checks.
+**Décision P0** : OUI pour l'infrastructure gstack (gen-skill-docs, validation, hosts/, slop-scan, review/careful/guard), NON pour le contenu des checks.
 
 - Fork `gstack/` ou en tirer juste `scripts/gen-skill-docs.ts` + `scripts/host-config.ts` ?
 - **Tradeoff** : fork = propre mais on pull pas leurs updates. Cherry-pick = leger mais drift à gérer.
-- **Recommandation** : cherry-pick `gen-skill-docs.ts` + structure `hosts/`, ne pas forker l'intégralité. À arbitrer avec Zack.
+- **Décision Zack 2026-05-04** : augmenter gstack sans fork complet pour Phase 1. Le clone `gstack/` reste la référence et le contenu produit ici doit rester greffable au pipeline gstack.
+- **Implication pratique** : ne pas développer une seconde architecture concurrente. Tout script ou format nouveau doit être justifié par rapport à `gstack/scripts/gen-skill-docs.ts`, `gstack/hosts/`, `gstack/review/`, `gstack/careful/` et `gstack/guard/`.
 
 ### D2 — Format des checks : un fichier par famille ou un fichier par sous-pattern ?
 
-**Position proposée** : un fichier par famille (18 fichiers), avec sous-patterns en sections internes. Plus maintenable que 78 fichiers.
+**Décision P0** : un fichier par famille (18 fichiers), avec sous-patterns en sections internes. Plus maintenable que 70 fichiers.
 
 ### D3 — Phase 1 inclut-elle l'auto-fix ?
 
-**Position proposée** : auto-fix UNIQUEMENT pour les patterns mécaniques sans risque (ajout de `|| true` après grep, suppression code mort flagrant). Tout ce qui touche comportement user-visible → ASK.
+**Décision P0** : auto-fix UNIQUEMENT pour les patterns mécaniques sans risque (ajout de `|| true` après grep, suppression code mort flagrant). Tout ce qui touche comportement user-visible → ASK.
 
 Reproduire le Fix-First Heuristic de gstack (`gstack/review/checklist.md:144-167`).
 
 ### D4 — Multi-LLM portability dès Phase 1 ou seulement Phase 2 ?
 
-**Position proposée** : Phase 1 cible Claude Code en priorité, mais le format SKILL.md est compatible Codex/Factory/OpenCode out of the box. **Pas d'effort actif** sur ChatGPT custom GPT / Kimi en Phase 1 — laisser Phase 2.
+**Décision P0** : Phase 1 produit un artefact SKILL.md installable sur Claude Code, Codex, Factory et OpenCode. La parité comportementale par host est Phase 2.
 
 ### D5 — Le catalogue est-il dans la skill ou externe ?
 
-**Position proposée** : symlink depuis `skill/catalog/` vers `findings/01_bug_catalog.md`. La skill embarque le contenu, mais la source de vérité reste `findings/`. Quand Phase 2 introduit la DB, la DB sera populée depuis le catalogue.
+**Décision P0** : copie générée dans `skill/catalog/`. La source de vérité reste `findings/01_bug_catalog.md`. `scripts/sync-catalog.ts` matérialise une copie portable et vérifie que les IDs A1...R2 restent stables entre runs.
 
 ### D6 — Validation runtime de la skill : statique ou dynamique ?
 
-**Position proposée** : Phase 1 = validation **statique uniquement** (frontmatter valide, links non-cassés, py_compile, unittest). Phase 2 explorera la validation dynamique (skill se teste sur des fixtures de bugs plantés).
+**Décision P0** : validation statique pendant l'implémentation, plus smoke test dynamique obligatoire avant `accepted`. Le smoke test doit vérifier le diagnostic attendu, pas seulement l'exécution du trigger.
 
 ---
 
@@ -250,8 +266,8 @@ La Phase 1 est `accepted` quand :
 
 1. ✅ `bun test` (ou `python3 -m unittest`) passe
 2. ✅ La skill installe via `./setup` dans `~/.claude/skills/coding-best-practices/`
-3. ✅ Un test E2E sur un fichier planté (bug A1 atomic_write) déclenche le check correspondant
-4. ✅ Convergence sur "ready" : Opus 4.7 + Sonnet (les deux Claude reviewers obligatoires), idéalement aussi GPT-5.5 (review d'autoscope) et Kimi délégué (indépendance famille de modèle)
+3. ✅ Un test E2E sur un fichier planté (bug A1 atomic_write) déclenche `on_write_state_file`, produit un diagnostic famille A / write_text direct, et ne fire pas sur un fichier sans bug d'atomicité
+4. ✅ Convergence sur "ready" : Opus 4.7 + Sonnet (les deux Claude reviewers obligatoires), idéalement aussi GPT-5.5 (review d'autoscope) et Kimi (review systémique)
 5. ✅ Un sign-off explicite Zack
 6. ✅ La skill ne contredit pas une règle existante de `CLAUDE.md` projet
 
@@ -345,13 +361,14 @@ C'est ici que la skill devient ce que l'utilisateur a décrit : *"les LLM ne ré
 
 ---
 
-## 7. Questions ouvertes pour arbitrage
+## 7. Décisions arbitrées avant P1
 
-1. **Nom final de la skill** : `coding-best-practices` ? `code-quality` ? `bug-shield` ? Quelque chose en français ? — pour Zack
-2. **Repo séparé ou monorepo** : la skill vit dans ce repo `Dict_AI_Coding/` ou on en fait un repo dédié ? — pour Zack
-3. **License** : MIT comme gstack ? Privée pour l'instant ? — pour Zack
-4. **gstack fork ou cherry-pick** : voir D1 — pour Zack
-5. **Première démo** : quel projet test ? Un repo planté avec bugs de chaque famille ? Ou tester direct sur Depollution_Sols ? — à coordonner avec GPT-5.5 (impl)
+1. **Nom final** : `coding-best-practices`
+2. **Repo** : monorepo `Dict_AI_Coding/` pendant Phase 1
+3. **License** : pas de licence pendant Phase 1
+4. **Git** : repo initialisé, distant `Kenchan1111/coding-best-practices`
+5. **Démo E2E** : fixture plantée d'abord, `Depollution_Sols` ensuite
+6. **D1-D6** : tranchées par Zack le 2026-05-04, voir `reviews/global_handoff/01-zack-arbitrage-d1-d6-20260504.md`
 
 ---
 

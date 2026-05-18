@@ -1,0 +1,259 @@
+#!/usr/bin/env bash
+# coding-best-practices setup - install the skill for Claude Code, Codex, and/or Kimi.
+set -euo pipefail
+umask 077
+
+SKILL_NAME="coding-best-practices"
+SOURCE_SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+PROJECT_ROOT="$(cd "$SOURCE_SKILL_DIR/.." && pwd -P)"
+CONDA_ENV="${CODING_BEST_PRACTICES_CONDA_ENV:-coding-best-practices}"
+
+HOST="auto"
+DRY_RUN=0
+YES=0
+SKIP_VALIDATE=0
+QUIET=0
+
+usage() {
+  cat <<'USAGE'
+Usage: skill/setup [options]
+
+Install the coding-best-practices skill as a symlink into agent skill dirs.
+
+Options:
+  --host <auto|claude|codex|kimi|all>  Target host(s). Default: auto.
+  --dry-run                      Print actions and run validation without linking.
+  --yes                          Do not prompt before installing.
+  --skip-validate                Skip Bun validation. Intended for tests only.
+  -q, --quiet                    Reduce output.
+  -h, --help                     Show this help.
+
+Environment:
+  CODING_BEST_PRACTICES_CONDA_ENV  Conda env used when bun/node are not on PATH.
+USAGE
+}
+
+log() {
+  if [ "$QUIET" -eq 0 ]; then
+    printf '%s\n' "$*"
+  fi
+}
+
+die() {
+  printf 'ERROR: %s\n' "$*" >&2
+  exit 1
+}
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --host)
+      [ $# -lt 2 ] && die "missing value for --host"
+      HOST="$2"
+      shift 2
+      ;;
+    --host=*)
+      HOST="${1#--host=}"
+      shift
+      ;;
+    --dry-run)
+      DRY_RUN=1
+      shift
+      ;;
+    --yes|-y)
+      YES=1
+      shift
+      ;;
+    --skip-validate)
+      SKIP_VALIDATE=1
+      shift
+      ;;
+    -q|--quiet)
+      QUIET=1
+      shift
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      die "unknown option: $1"
+      ;;
+  esac
+done
+
+case "$HOST" in
+  auto|claude|codex|kimi|all) ;;
+  *) die "unknown --host value: $HOST" ;;
+esac
+
+[ -n "${HOME:-}" ] || die "\$HOME is not set"
+[ -f "$SOURCE_SKILL_DIR/SKILL.md" ] || die "missing $SOURCE_SKILL_DIR/SKILL.md"
+
+want_claude=0
+want_codex=0
+want_kimi=0
+case "$HOST" in
+  claude)
+    want_claude=1
+    ;;
+  codex)
+    want_codex=1
+    ;;
+  kimi)
+    want_kimi=1
+    ;;
+  all)
+    want_claude=1
+    want_codex=1
+    want_kimi=1
+    ;;
+  auto)
+    if command -v claude >/dev/null 2>&1 || [ -d "$HOME/.claude" ]; then
+      want_claude=1
+    fi
+    if command -v codex >/dev/null 2>&1 || [ -d "$HOME/.codex" ]; then
+      want_codex=1
+    fi
+    if command -v kimi >/dev/null 2>&1 || [ -d "$HOME/.kimi" ]; then
+      want_kimi=1
+    fi
+    if [ "$want_claude" -eq 0 ] && [ "$want_codex" -eq 0 ] && [ "$want_kimi" -eq 0 ]; then
+      log "No Claude/Codex/Kimi install detected; defaulting to all skill directories."
+      want_claude=1
+      want_codex=1
+      want_kimi=1
+    fi
+    ;;
+esac
+
+resolve_link_target() {
+  local link_path="$1"
+  local raw_target
+  raw_target="$(readlink "$link_path")" || return 1
+  case "$raw_target" in
+    /*) ;;
+    *) raw_target="$(dirname "$link_path")/$raw_target" ;;
+  esac
+  if [ -e "$raw_target" ]; then
+    (cd "$raw_target" && pwd -P)
+  else
+    (cd "$(dirname "$raw_target")" && printf '%s/%s\n' "$(pwd -P)" "$(basename "$raw_target")")
+  fi
+}
+
+target_is_managed_link() {
+  local target="$1"
+  [ -L "$target" ] || return 1
+  [ "$(resolve_link_target "$target")" = "$SOURCE_SKILL_DIR" ]
+}
+
+detect_runner() {
+  if [ "$SKIP_VALIDATE" -eq 1 ]; then
+    return 0
+  fi
+
+  if command -v bun >/dev/null 2>&1 && command -v node >/dev/null 2>&1 && command -v python3 >/dev/null 2>&1; then
+    RUNNER_KIND="direct"
+    return 0
+  fi
+
+  if command -v conda >/dev/null 2>&1 \
+    && conda run -n "$CONDA_ENV" bun --version >/dev/null 2>&1 \
+    && conda run -n "$CONDA_ENV" node --version >/dev/null 2>&1 \
+    && conda run -n "$CONDA_ENV" python --version >/dev/null 2>&1; then
+    RUNNER_KIND="conda"
+    return 0
+  fi
+
+  die "missing bun/node/python3. Activate Conda env '$CONDA_ENV' or create it from environment.yml."
+}
+
+run_bun() {
+  if [ "${RUNNER_KIND:-}" = "direct" ]; then
+    bun "$@"
+  else
+    conda run -n "$CONDA_ENV" bun "$@"
+  fi
+}
+
+validate_skill() {
+  if [ "$SKIP_VALIDATE" -eq 1 ]; then
+    log "Skipping validation (--skip-validate)."
+    return 0
+  fi
+
+  log "Validating skill with ${RUNNER_KIND:-unknown} runner..."
+  if [ "$DRY_RUN" -eq 1 ]; then
+    (cd "$PROJECT_ROOT" && run_bun run gen:skill-docs -- --dry-run)
+  else
+    (cd "$PROJECT_ROOT" && run_bun run gen:skill-docs)
+  fi
+  (cd "$PROJECT_ROOT" && run_bun run validate)
+}
+
+install_one() {
+  local label="$1"
+  local skills_dir="$2"
+  local target="$skills_dir/$SKILL_NAME"
+
+  if [ -e "$target" ] || [ -L "$target" ]; then
+    if target_is_managed_link "$target"; then
+      log "$label: refreshing managed link $target"
+    else
+      die "$label target exists and is not managed by this repo: $target"
+    fi
+  else
+    log "$label: installing $target"
+  fi
+
+  if [ "$DRY_RUN" -eq 1 ]; then
+    log "DRY-RUN: mkdir -p $skills_dir"
+    log "DRY-RUN: ln -sfn $SOURCE_SKILL_DIR $target"
+    return 0
+  fi
+
+  mkdir -p "$skills_dir"
+  ln -sfn "$SOURCE_SKILL_DIR" "$target"
+}
+
+print_plan() {
+  log "Install source: $SOURCE_SKILL_DIR"
+  if [ "$want_claude" -eq 1 ]; then
+    log "Claude target: $HOME/.claude/skills/$SKILL_NAME"
+  fi
+  if [ "$want_codex" -eq 1 ]; then
+    log "Codex target: $HOME/.codex/skills/$SKILL_NAME"
+  fi
+  if [ "$want_kimi" -eq 1 ]; then
+    log "Kimi target: $HOME/.kimi/skills/$SKILL_NAME"
+  fi
+}
+
+detect_runner
+validate_skill
+print_plan
+
+if [ "$DRY_RUN" -eq 0 ] && [ "$YES" -eq 0 ]; then
+  if [ -t 0 ]; then
+    printf 'Install these links? [y/N] '
+    read -r reply
+    case "$reply" in
+      y|Y|yes|YES) ;;
+      *) log "Aborted."; exit 0 ;;
+    esac
+  else
+    die "non-interactive install requires --yes"
+  fi
+fi
+
+if [ "$want_claude" -eq 1 ]; then
+  install_one "claude" "$HOME/.claude/skills"
+fi
+if [ "$want_codex" -eq 1 ]; then
+  install_one "codex" "$HOME/.codex/skills"
+fi
+if [ "$want_kimi" -eq 1 ]; then
+  install_one "kimi" "$HOME/.kimi/skills"
+fi
+
+log "$SKILL_NAME setup complete."

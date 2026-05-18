@@ -1,0 +1,16 @@
+{
+  "name": "coding-best-practices",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:catalog": "node scripts/sync-catalog.ts",
+    "validate": "node scripts/validate.ts",
+    "gen:skill-docs": "node scripts/gen-skill-docs.ts",
+    "test": "python3 -m unittest discover -s skill/tests -p 'test_*.py'"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "bun": ">=1.0.0"
+  }
+}

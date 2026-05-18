@@ -1,3 +1,102 @@
+---
+generated_from: findings/01_bug_catalog.md
+source_digest: b3724cf239f0
+pattern_count: 70
+families:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+  - L
+  - M
+  - N
+  - O
+  - P
+  - Q
+  - R
+catalog_ids:
+  - A1
+  - A2
+  - A3
+  - B1
+  - B2
+  - B3
+  - C1
+  - C2
+  - D1
+  - D2
+  - D3
+  - D4
+  - D5
+  - E1
+  - E2
+  - E3
+  - E4
+  - F1
+  - F2
+  - F3
+  - G1
+  - G2
+  - G3
+  - G4
+  - H1
+  - H2
+  - H3
+  - H4
+  - I1
+  - I2
+  - J1
+  - J2
+  - J3
+  - J4
+  - K1
+  - K2
+  - K3
+  - K4
+  - K5
+  - K6
+  - L1
+  - L2
+  - L3
+  - L4
+  - L5
+  - L6
+  - L7
+  - L8
+  - L9
+  - L10
+  - M1
+  - M2
+  - M3
+  - M4
+  - N1
+  - N2
+  - N3
+  - O1
+  - O2
+  - P1
+  - P2
+  - P3
+  - P4
+  - Q1
+  - Q2
+  - Q3
+  - Q4
+  - Q5
+  - R1
+  - R2
+---
+
+<!-- AUTO-GENERATED from findings/01_bug_catalog.md - do not edit directly -->
+<!-- Regenerate: node scripts/sync-catalog.ts -->
+
 # Catalogue des erreurs de coding récurrentes des LLM
 
 **Source** : reviews/handoffs/corrections produits par Claude Sonnet 4.6, Claude Opus 4.7, ChatGPT, Codex, Kimi, Gemini, GPT-5.5 dans trois repos :

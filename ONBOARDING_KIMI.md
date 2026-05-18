@@ -56,9 +56,9 @@ Voir `reviews/global_handoff/00-zack-arbitrage-q1-q5-20260503.md` :
 - Q4 : `git init` autorisé (fait, repo distant `Kenchan1111/coding-best-practices` actif)
 - Q5 : démo E2E sur fixture plantée d'abord, puis `Depollution_Sols`
 
-### D1-D6 — convergence Opus 4.7 + GPT-5.5, attente de ta voix + Sonnet
+### D1-D6 — arbitrées par Zack, review systémique toujours utile
 
-Voir `reviews/claude-opus/proposition/01-ack-q1-q5-and-synthesis-d1-d6-20260503.md` :
+Voir `reviews/global_handoff/01-zack-arbitrage-d1-d6-20260504.md` et `reviews/claude-opus/proposition/01-ack-q1-q5-and-synthesis-d1-d6-20260503.md` :
 - D1 : cherry-pick `gen-skill-docs.ts` + `hosts/` + `slop-scan.config.json` depuis gstack
 - D2 : 18 fichiers `checks/` par famille
 - D3 : auto-fix mécanique seulement, ASK pour le reste
@@ -66,7 +66,7 @@ Voir `reviews/claude-opus/proposition/01-ack-q1-q5-and-synthesis-d1-d6-20260503.
 - D5 : **copie générée** dans `skill/catalog/` (pas symlink)
 - D6 : validation **statique** pendant l'impl + **smoke test dynamique** obligatoire avant `accepted`
 
-Zack trouve les positions GPT-5.5 sur D5/D6 raisonnables. Il attend ta voix systémique et celle de Sonnet (line-by-line) avant clôture définitive.
+Zack a autorisé le démarrage P1 le 2026-05-04 après convergence Opus 4.7 + GPT-5.5 + Sonnet. Ta voix systémique reste attendue pour renforcer P2/P5 et détecter les invariants manquants, mais elle ne bloque pas le scaffolding P1.
 
 ### Pourquoi ta voix particulièrement
 
@@ -90,7 +90,7 @@ C'est ton angle unique. Personne d'autre ne l'apporte.
 Dans cet ordre :
 
 1. **`CLAUDE.md`** (racine) — règles projet, table des rôles, conventions
-2. **`findings/01_bug_catalog.md`** — 18 familles, 78 sous-patterns. Tu vas avoir ton avis dessus comme tu l'as eu sur les patterns forensics.
+2. **`findings/01_bug_catalog.md`** — 18 familles, 70 sous-patterns documentés. Tu vas avoir ton avis dessus comme tu l'as eu sur les patterns forensics.
 3. **`findings/03_methodology.md`** — surtout §3 (convergence inter-LLM) qui te concerne directement comme 4e voix
 4. **`findings/02_gstack_review.md`** — important pour ton rôle, parce que tu vas évaluer si on a bien capté tous les patterns gstack vs notre catalogue
 5. **`reviews/global_handoff/00-zack-arbitrage-q1-q5-20260503.md`** — décisions Q1-Q5

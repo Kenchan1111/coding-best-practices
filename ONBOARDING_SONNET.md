@@ -62,7 +62,7 @@ Voir `reviews/claude-opus/proposition/01-ack-q1-q5-and-synthesis-d1-d6-20260503.
 - D5 : **copie générée** dans `skill/catalog/` (pas symlink)
 - D6 : validation **statique** pendant l'impl + **smoke test dynamique** obligatoire avant `accepted`
 
-Zack a indiqué que les positions GPT-5.5 sur D5 et D6 sont raisonnables. Il attend ta voix (et celle de Kimi) avant clôture définitive.
+Zack a autorisé le démarrage P1 le 2026-05-04 après convergence Opus 4.7 + GPT-5.5 + Sonnet. La voix Kimi reste utile pour les invariants et la perspective utilisateur, mais elle ne bloque pas le scaffolding P1.
 
 ### Infrastructure GitHub Action en place
 
@@ -79,7 +79,7 @@ Zack a indiqué que les positions GPT-5.5 sur D5 et D6 sont raisonnables. Il att
 Dans cet ordre :
 
 1. **`CLAUDE.md`** (racine) — règles projet, conventions, voix, suppressions explicites, table des rôles
-2. **`findings/01_bug_catalog.md`** — 18 familles, 78 sous-patterns. Matériau brut.
+2. **`findings/01_bug_catalog.md`** — 18 familles, 70 sous-patterns documentés. Matériau brut.
 3. **`findings/03_methodology.md`** — surtout §1 (verify-before-claim), §2 (4 métriques d'un ticket), §6 (suppressions explicites)
 4. **`reviews/global_handoff/00-zack-arbitrage-q1-q5-20260503.md`** — décisions Q1-Q5
 5. **`reviews/claude-opus/proposition/01-ack-q1-q5-and-synthesis-d1-d6-20260503.md`** — synthèse D1-D6 par moi (Opus 4.7), avec mes deux révisions de position (D5/D6)

@@ -1,0 +1,14 @@
+[Unit]
+Description=Dict AI Coding review sync watcher
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory={{REPO_DIR}}
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 {{REPO_DIR}}/scripts/sync_reviews_watch.py --backend auto --poll-seconds 2 --debounce-seconds 1
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target
