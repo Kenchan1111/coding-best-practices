@@ -1,0 +1,38 @@
+{
+  "version": "1",
+  "policy_name": "local_git_manifested",
+  "root_name": "knowledge_summaries",
+  "root_path": "knowledge/80_summaries",
+  "classification": "local_git_manifested",
+  "reason": "Generated team summaries remain local working state.",
+  "generated_at_utc": "2026-05-19T23:02:39+00:00",
+  "generated_at_local": "2026-05-20T01:02:39+02:00",
+  "exists": true,
+  "directory_count": 0,
+  "file_count": 3,
+  "symlink_count": 0,
+  "total_bytes": 40475,
+  "merkle_root": "8bb4252c50e271f91c82e7c8454eefa5026eec8000a58b4bdc3e399523796a20",
+  "directories": [],
+  "files": [
+    {
+      "path": "team_review_changelog.md",
+      "size_bytes": 22673,
+      "sha256": "058c7282d67cdac93f0754c0f903cdd59cb36f430cdaeaf2a4d8fc5de9a0d29b",
+      "leaf_hash": "45d9323b28b431c2c3315425f0cc258458eac7457c1fecfb7947309a8a3a5606"
+    },
+    {
+      "path": "team_review_digest.md",
+      "size_bytes": 12263,
+      "sha256": "8f46d66f2424e73eacbec4504f397bb7572429d3d03d5bf4dc093df632930712",
+      "leaf_hash": "96770c1db57285f29af3e607abff10068f9f848eccb32e20caf9881009b2cbe8"
+    },
+    {
+      "path": "team_review_latest.md",
+      "size_bytes": 5539,
+      "sha256": "3528eea570ccc8639c7c9e474e4a23726ea5c273fd33ff3ad36b6536136e7153",
+      "leaf_hash": "5453b2827f195308cfb9d4d6658850a4b5339a689901a190ff86047938200e29"
+    }
+  ],
+  "symlinks": []
+}

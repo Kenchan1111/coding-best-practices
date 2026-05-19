@@ -1,0 +1,43 @@
+{
+  "version": "1",
+  "policy_name": "local_git_manifested",
+  "description": "Keep local evidence payloads on disk while pushing deterministic manifests and tracked-source inventories.",
+  "local_roots": [
+    {
+      "name": "change_sessions",
+      "path": "change_sessions",
+      "classification": "local_git_manifested",
+      "reason": "Imported and local change proof stays on the workstation."
+    },
+    {
+      "name": "review_sessions",
+      "path": "review_sessions",
+      "classification": "local_git_manifested",
+      "reason": "Future review proof sessions are local-only evidence."
+    },
+    {
+      "name": "knowledge_summaries",
+      "path": "knowledge/80_summaries",
+      "classification": "local_git_manifested",
+      "reason": "Generated team summaries remain local working state."
+    },
+    {
+      "name": "mcp",
+      "path": "mcp",
+      "classification": "local_git_manifested",
+      "reason": "Local MCP catalog state and guard proof remain local."
+    }
+  ],
+  "manifest_dir": "ops/local_git_manifests",
+  "summary_manifest": "ops/local_git_manifests/index.json",
+  "pushable_manifest": "ops/local_git_manifests/pushable_tracked.json",
+  "exclude_from_pushable_manifest": [
+    "ops/local_git_manifests/"
+  ],
+  "ignore_rules": [
+    "change_sessions/",
+    "review_sessions/",
+    "knowledge/80_summaries/",
+    "mcp/"
+  ]
+}

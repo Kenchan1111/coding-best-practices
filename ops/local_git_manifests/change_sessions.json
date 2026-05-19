@@ -1,0 +1,42 @@
+{
+  "version": "1",
+  "policy_name": "local_git_manifested",
+  "root_name": "change_sessions",
+  "root_path": "change_sessions",
+  "classification": "local_git_manifested",
+  "reason": "Imported and local change proof stays on the workstation.",
+  "generated_at_utc": "2026-05-19T23:02:39+00:00",
+  "generated_at_local": "2026-05-20T01:02:39+02:00",
+  "exists": true,
+  "directory_count": 1,
+  "file_count": 3,
+  "symlink_count": 0,
+  "total_bytes": 22855,
+  "merkle_root": "f4ba9e7ebe28bfc33663ee590f7af5ab1aa3be4214de3922c64dbdb64d9db6f3",
+  "directories": [
+    {
+      "path": "20260507T235259+0200_gstack"
+    }
+  ],
+  "files": [
+    {
+      "path": "20260507T235259+0200_gstack/change_receipt.json",
+      "size_bytes": 1178,
+      "sha256": "80424518feaf76b0fbe92d70a051846afad1bd20d1aa5878dbe72eb9ada1e872",
+      "leaf_hash": "8cf106216700cc6ebd6360875a3ca49f8d9b52afab1859772cdb64ff23be1a49"
+    },
+    {
+      "path": "20260507T235259+0200_gstack/session.json",
+      "size_bytes": 18651,
+      "sha256": "8240f6b114c5fa6d3c923b06c09a17dbc7b877374b1de55f40dbd49221046d2b",
+      "leaf_hash": "ea76b5ff9c212e291f8c1f9f3f1f125762d1a52bde94d6eac2729874a1219870"
+    },
+    {
+      "path": "20260507T235259+0200_gstack/task_snapshot.md",
+      "size_bytes": 3026,
+      "sha256": "8da381f31234375e65f6ff5fc1477d44dd1f188cbaabafa33c74b1d5500fecab",
+      "leaf_hash": "1b7a1172085ff4fdef46f92e7f43b570712d5bbc64c39876f23d68d90d73ca94"
+    }
+  ],
+  "symlinks": []
+}

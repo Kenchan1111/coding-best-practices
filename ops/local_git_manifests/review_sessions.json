@@ -1,0 +1,19 @@
+{
+  "version": "1",
+  "policy_name": "local_git_manifested",
+  "root_name": "review_sessions",
+  "root_path": "review_sessions",
+  "classification": "local_git_manifested",
+  "reason": "Future review proof sessions are local-only evidence.",
+  "generated_at_utc": "2026-05-19T23:02:39+00:00",
+  "generated_at_local": "2026-05-20T01:02:39+02:00",
+  "exists": false,
+  "directory_count": 0,
+  "file_count": 0,
+  "symlink_count": 0,
+  "total_bytes": 0,
+  "merkle_root": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "directories": [],
+  "files": [],
+  "symlinks": []
+}

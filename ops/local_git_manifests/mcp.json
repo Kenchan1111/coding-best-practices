@@ -1,0 +1,295 @@
+{
+  "version": "1",
+  "policy_name": "local_git_manifested",
+  "root_name": "mcp",
+  "root_path": "mcp",
+  "classification": "local_git_manifested",
+  "reason": "Local MCP catalog state and guard proof remain local.",
+  "generated_at_utc": "2026-05-19T23:02:39+00:00",
+  "generated_at_local": "2026-05-20T01:02:39+02:00",
+  "exists": true,
+  "directory_count": 13,
+  "file_count": 37,
+  "symlink_count": 2,
+  "total_bytes": 242788,
+  "merkle_root": "ea1b110e211fb2261c2b2baf5385caef7a8e5662cd42f3fb36441594ddae7dee",
+  "directories": [
+    {
+      "path": "repo-change-guard"
+    },
+    {
+      "path": "repo-change-guard/20260505T210528+0200_dict_ai_coding"
+    },
+    {
+      "path": "repo-change-guard/20260505T215213+0200_dict_ai_coding"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/home"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/home/.claude"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/home/.claude/skills"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/home/.codex"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/home/.codex/skills"
+    },
+    {
+      "path": "repo-change-guard/20260514T082412+0200_dict_ai_coding"
+    },
+    {
+      "path": "repo-change-guard/20260518T_worktree_cleanup_dict_ai_coding"
+    },
+    {
+      "path": "repo-change-guard/20260519T_local_git_policy_dict_ai_coding"
+    }
+  ],
+  "files": [
+    {
+      "path": "catalog.json",
+      "size_bytes": 16892,
+      "sha256": "3ea11b87c89098c9ad5002f85b94b8c9bea991f146f1f9878d5f9ec1cd8790fa",
+      "leaf_hash": "abd9571c6abf71fb91363f87310f47b12ea3c8b1a4d3662afeaff5fe66c11f2a"
+    },
+    {
+      "path": "repo-change-guard/20260505T210528+0200_dict_ai_coding/change_receipt.json",
+      "size_bytes": 756,
+      "sha256": "d91eaa110e23cd46b408b0f6fb9487e021ed6686cd054cf812aa5d17908f4c38",
+      "leaf_hash": "f0b01508ab8aa9e0df1be3f8eb307e66b8e947aa57cc01b861862fb3ea0c8d46"
+    },
+    {
+      "path": "repo-change-guard/20260505T210528+0200_dict_ai_coding/closeout.md",
+      "size_bytes": 4042,
+      "sha256": "e5f6319fdbb522fbafacb99649715c20825db084aa2174f3402b841785e8129d",
+      "leaf_hash": "601f3379561945a3ccc8af31227fb3f64bfae446fcdbfe4e1810ad870f2738d2"
+    },
+    {
+      "path": "repo-change-guard/20260505T210528+0200_dict_ai_coding/closeout.md.change-receipt.json",
+      "size_bytes": 756,
+      "sha256": "d91eaa110e23cd46b408b0f6fb9487e021ed6686cd054cf812aa5d17908f4c38",
+      "leaf_hash": "33b08e8cfe23dd2314ead6606a8e2c41d46a85dd7d36090111fc7ebabe70c379"
+    },
+    {
+      "path": "repo-change-guard/20260505T210528+0200_dict_ai_coding/session.json",
+      "size_bytes": 8791,
+      "sha256": "7975e95f1022d7a07f9d0d684eeaa4c909403872b2714ed70231695afe3eec66",
+      "leaf_hash": "59c6a9aef66375ef1232f379c266ffb2446781505dcd37b2884599249e4c124b"
+    },
+    {
+      "path": "repo-change-guard/20260505T210528+0200_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 2463,
+      "sha256": "cf76cbb4b8dc0dbcf8c48f5a9a7d3a488871f284640d1e582eee48c241fb9242",
+      "leaf_hash": "bf7b99be497b9a4581a954e4a974f4bf01da8f7f74a044fa4f83b4217a6b01d4"
+    },
+    {
+      "path": "repo-change-guard/20260505T215213+0200_dict_ai_coding/change_receipt.json",
+      "size_bytes": 734,
+      "sha256": "012a9be209688b72c53cfade3fa1fd61233a2108f37272c847935fc66e6a68c9",
+      "leaf_hash": "e6905ac28b1210529d195c052a21473c20c1f058847262d9a182e8618b50ab0c"
+    },
+    {
+      "path": "repo-change-guard/20260505T215213+0200_dict_ai_coding/closeout.md",
+      "size_bytes": 4123,
+      "sha256": "0fd27bae2e9bc0ada657b2ce23e2e552bb295d7c64e00cf99ea1cca74d6e4661",
+      "leaf_hash": "d5a2e3cfd2ba53a8449d0cb2f6be7f378742c9392e8ee6733ad7147924a08114"
+    },
+    {
+      "path": "repo-change-guard/20260505T215213+0200_dict_ai_coding/closeout.md.change-receipt.json",
+      "size_bytes": 734,
+      "sha256": "012a9be209688b72c53cfade3fa1fd61233a2108f37272c847935fc66e6a68c9",
+      "leaf_hash": "f90004a5d1b1e0b2da7a797ab8dbc7cc5b7e9097e52e2144d887a0f1c81a6911"
+    },
+    {
+      "path": "repo-change-guard/20260505T215213+0200_dict_ai_coding/session.json",
+      "size_bytes": 10474,
+      "sha256": "a5c0c01be1199bd6259e672cd9f5d930f3087341d6da823d95722a72eec89144",
+      "leaf_hash": "0c7c82a5fa22dccef838cb79d3553310eb1a7b1569fb3560c7a45552660d02ff"
+    },
+    {
+      "path": "repo-change-guard/20260505T215213+0200_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 2644,
+      "sha256": "f9d47f6b4f5fb95cf72210fcfd8c8e7929b40b528df89b23c626e0c17dc0484b",
+      "leaf_hash": "b39c962024c5410113411d1d7d6a45fb3e424aa7d835944dba49ff1cd47e8a80"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/change_receipt.json",
+      "size_bytes": 731,
+      "sha256": "c82ddcb01ea2d59b79a0516ef992f541dd3fdb23ba03d098477c1acec5c2f85c",
+      "leaf_hash": "eb93732599b9f90ad153b89f00345b80afe22bce7001d4269d62369384e65aed"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/closeout.md",
+      "size_bytes": 4225,
+      "sha256": "d4920ee09deb03cb2ebb3810d584627fb99af9472b8a02624890f31afc3f096f",
+      "leaf_hash": "7a6b7ca6fc8f0482ef144673cea90e63e5ecbfdbd7d1a12d74492ea637b95476"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/closeout.md.change-receipt.json",
+      "size_bytes": 731,
+      "sha256": "c82ddcb01ea2d59b79a0516ef992f541dd3fdb23ba03d098477c1acec5c2f85c",
+      "leaf_hash": "ca162b036e92ae88e9518fdc7f01b3b82f9c3e1026f0ed98ccfc8efd1ad2a2aa"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/mock-agent.log",
+      "size_bytes": 393,
+      "sha256": "a5c1c694841369bdfb3eb009193f9103bc8a23dddd34c6802d3f339f7f893be6",
+      "leaf_hash": "38faa124f8aa4d6b4ed229f8fcae43d3d3a197a5c814a7c7088c55407510da01"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/result.json",
+      "size_bytes": 3861,
+      "sha256": "62fc99cd490cbf96376d772c4b5311ac1bf3d3a459a3b8da5408a2b236e07d32",
+      "leaf_hash": "744d20683d07b0aeb2905204e9fe678e9b102b3bffe43cff11cce1db4a3b38e3"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/setup.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "c1e66ef0c7bac980ea9d59e82d7e300ec19dcaa2c9c33c02be46438d9200dcd2"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/session.json",
+      "size_bytes": 8704,
+      "sha256": "340a70e67ecdc284fb2360dcc2a7fd64d4f159212c23c8def378bcd4b51f267d",
+      "leaf_hash": "51c589d369f906b5bbb5bd7e3819e48f32f8e0443696e3be21a97ed97d0c44df"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 2474,
+      "sha256": "f1568ba5a111162cc66653a27523f52ee366f84f2f093073262e502ee24f6dcf",
+      "leaf_hash": "92fc237d5eb7d909cd0cddc7d8c8af693a0b30ab5f80037157a478b5b55f32b2"
+    },
+    {
+      "path": "repo-change-guard/20260514T082412+0200_dict_ai_coding/change_receipt.json",
+      "size_bytes": 9200,
+      "sha256": "ab1af1bc5ec677c4f0e91b5315c730c96fc2793025450ffb930a466758606a67",
+      "leaf_hash": "4cefd82582e2f5bb5c534ea4a227ef32f24ae6df263bba85257ac0ac2c8a0944"
+    },
+    {
+      "path": "repo-change-guard/20260514T082412+0200_dict_ai_coding/closeout.md",
+      "size_bytes": 13184,
+      "sha256": "1119033a512b78f4a026bc94ec682624d13c59a3b4f53e0c951d7ee0818924e3",
+      "leaf_hash": "c8759c33ff2d604e155609c52f5f54008184174fcc68bc65e38e6f00c6071b4c"
+    },
+    {
+      "path": "repo-change-guard/20260514T082412+0200_dict_ai_coding/closeout.md.change-receipt.json",
+      "size_bytes": 9200,
+      "sha256": "ab1af1bc5ec677c4f0e91b5315c730c96fc2793025450ffb930a466758606a67",
+      "leaf_hash": "90fb4088696dc43e10242fa8f0c8f123985ec0027c8dd5f86310c6698a0f960c"
+    },
+    {
+      "path": "repo-change-guard/20260514T082412+0200_dict_ai_coding/closeout_template.md",
+      "size_bytes": 1085,
+      "sha256": "604fb7193dfac81c898fe7d7ecd2f0da2b769760013cde3c5712e7860213984b",
+      "leaf_hash": "2986bcc3eadbf036618269aea97fcd1ef69f8a75c6409e9bc9011186e7841b16"
+    },
+    {
+      "path": "repo-change-guard/20260514T082412+0200_dict_ai_coding/session.json",
+      "size_bytes": 30868,
+      "sha256": "e86201e9b077afe9ac7f439ba8964ec1f0bd6324801e54d215cd8841c650fc4f",
+      "leaf_hash": "2ec98fcf1728baee4e1c85ef335982433ded13b1e8373c84e9d976bc32b5dbce"
+    },
+    {
+      "path": "repo-change-guard/20260514T082412+0200_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 11097,
+      "sha256": "5efcd2662de647ae5c5b397dfe6afc9f8cd7947763654217b1983f9dd031a068",
+      "leaf_hash": "58c9dc2e38268238485ba9c1b4f2dd0134a639ac66ecaed3b9f01a940fbbafff"
+    },
+    {
+      "path": "repo-change-guard/20260518T_worktree_cleanup_dict_ai_coding/change_receipt.json",
+      "size_bytes": 9955,
+      "sha256": "171d1b0dcb90ce6bbdc9f130cb0fd6aaa15e738e5d4a3a43d34c3c77221378a0",
+      "leaf_hash": "6f1f93955e0673d24b382e5fdece2ae40cd47c22ec3dde9aca4ef540f0ecd002"
+    },
+    {
+      "path": "repo-change-guard/20260518T_worktree_cleanup_dict_ai_coding/closeout.md",
+      "size_bytes": 4236,
+      "sha256": "4eb3187c58262856b59435e2ba6307d9525601012ad027a2de4af044750f21ad",
+      "leaf_hash": "fc64f01cf09c24b4f28f0c589a0cb4a39da8b22e09eaa3371b227a65f7a5b12e"
+    },
+    {
+      "path": "repo-change-guard/20260518T_worktree_cleanup_dict_ai_coding/closeout.md.change-receipt.json",
+      "size_bytes": 9955,
+      "sha256": "171d1b0dcb90ce6bbdc9f130cb0fd6aaa15e738e5d4a3a43d34c3c77221378a0",
+      "leaf_hash": "085672a4f5193ad5deca4a9ec21bbdb9d7e762d73d1086b46e938f83857ca6b6"
+    },
+    {
+      "path": "repo-change-guard/20260518T_worktree_cleanup_dict_ai_coding/closeout_template.md",
+      "size_bytes": 11016,
+      "sha256": "5e643ef036985299b7f4e6ada26139b95577cf3d4cb5768e96f2746cc322806b",
+      "leaf_hash": "a9764cccafbe9ffc602319fea2cfa367d3f5d5545005be103c85fe9df6857084"
+    },
+    {
+      "path": "repo-change-guard/20260518T_worktree_cleanup_dict_ai_coding/session.json",
+      "size_bytes": 26071,
+      "sha256": "8d5f77ff8d542b03bbe0ec68bee08208f1da2d761fdb86114a5395ec9307e02f",
+      "leaf_hash": "1badd83bab024f2cb3eb1aa032a29aa64748ca29570b7f32b4de5fb79c8e5e3a"
+    },
+    {
+      "path": "repo-change-guard/20260518T_worktree_cleanup_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 10853,
+      "sha256": "d5b09872cc78270b04432dc4afd52f61679d4b66c5795c62163ade32be48c838",
+      "leaf_hash": "0979d97c5a7d1083fdafd7f9a20c0312921ee7f318786737036a469c8e9eb587"
+    },
+    {
+      "path": "repo-change-guard/20260519T_local_git_policy_dict_ai_coding/change_receipt.json",
+      "size_bytes": 1430,
+      "sha256": "864cf14297906c5e759b53c50fc99efb11dd8bf46438d6f2197fe42f06630d07",
+      "leaf_hash": "b916762b88e5cf04c82b43d6845a29fa349e5d67549541a7777d296e602fa873"
+    },
+    {
+      "path": "repo-change-guard/20260519T_local_git_policy_dict_ai_coding/closeout.md",
+      "size_bytes": 5168,
+      "sha256": "04f42a4997263db4e7836e0e5e76765426abbde96dde8b3d1adeeea599d9ea90",
+      "leaf_hash": "b34e0e995cd63f0cc2a110ba70a07be225fc96ec4275d7baeb386dee1e16112e"
+    },
+    {
+      "path": "repo-change-guard/20260519T_local_git_policy_dict_ai_coding/closeout.md.change-receipt.json",
+      "size_bytes": 1430,
+      "sha256": "864cf14297906c5e759b53c50fc99efb11dd8bf46438d6f2197fe42f06630d07",
+      "leaf_hash": "2beb09177267740367169df744a43deb43966703a3d5f466dd28ec2bb1e4dd15"
+    },
+    {
+      "path": "repo-change-guard/20260519T_local_git_policy_dict_ai_coding/closeout_template.md",
+      "size_bytes": 3249,
+      "sha256": "c23a9a92f5bd214476e17a00ac7375a9e630e2c7fea61c5d99806e5a73115f04",
+      "leaf_hash": "3807621706ca91cafe62171dd3868a2d5808b5067708a51f160afb963348a43e"
+    },
+    {
+      "path": "repo-change-guard/20260519T_local_git_policy_dict_ai_coding/session.json",
+      "size_bytes": 8177,
+      "sha256": "9182bc2dbb60bf258caccd6a54098d8e33220b03773630b6c0c6f723e143b68f",
+      "leaf_hash": "837b085815a01cd85a03120c0b4d004b5c804e8d53cf3c805a9120f2a6dc60b6"
+    },
+    {
+      "path": "repo-change-guard/20260519T_local_git_policy_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 3086,
+      "sha256": "dfdea59661af130de0ad4facfd668177627d4b0747eb83f2426695efe1bbb4d1",
+      "leaf_hash": "ea28d86e299589281467d6e6405f8808dc4de613df748e1d6163f0102ae6159e"
+    }
+  ],
+  "symlinks": [
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/home/.claude/skills/coding-best-practices",
+      "target": "/home/zack/Documents/Divers/Dict_AI_Coding/skill",
+      "sha256": "3192037798ced1f21e1a70e0463bfed0f92daa5a23752daff030812ebf49a51d",
+      "leaf_hash": "4e5140d2161b07b56246ec81bc97e483ce455944d180bdd04ea0947d768c3d3b"
+    },
+    {
+      "path": "repo-change-guard/20260506T202353+0200_dict_ai_coding/p7-e2e-proof/home/.codex/skills/coding-best-practices",
+      "target": "/home/zack/Documents/Divers/Dict_AI_Coding/skill",
+      "sha256": "3192037798ced1f21e1a70e0463bfed0f92daa5a23752daff030812ebf49a51d",
+      "leaf_hash": "c6230ab12c16c2f2ef61fe663e2efa84c98181a344812e298fa41ead9e3f3d6b"
+    }
+  ]
+}

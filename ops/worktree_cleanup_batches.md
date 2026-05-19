@@ -44,16 +44,16 @@ Restore rule:
 
 ## Batch B - Local-Git Manifest Boundary
 
-Status: recommended before pushing a clean public repo.
+Status: implemented for evidence roots; review bus still pending.
 
-Candidate local-only roots:
+Implemented local-only roots:
 
-- `mcp/repo-change-guard/`
 - `change_sessions/`
+- `review_sessions/`
 - `knowledge/80_summaries/`
-- possibly `reviews/` if Zack decides raw review notes should remain local
+- `mcp/`
 
-Required implementation:
+Implemented pieces:
 
 - a policy file such as `ops/local_git_policy.json`
 - generated manifests under `ops/local_git_manifests/`

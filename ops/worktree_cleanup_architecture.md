@@ -58,6 +58,13 @@ Before any archive move or local-git migration:
 - run validation before and after the batch
 - leave review evidence in place until the sync bus policy is explicit
 
+The first local-only boundary is now established for:
+
+- `change_sessions/`
+- `review_sessions/`
+- `knowledge/80_summaries/`
+- `mcp/`
+
 ## Validation Gate
 
 Minimum checks for this repo:
@@ -76,7 +83,7 @@ unit manually before closing the batch.
 - no cache deletion
 - no review note overwrite
 - no broad archive of `reviews/`
-- no `.gitignore` hiding of active source before the local-only manifest policy
-  is decided
-- no migration of `mcp/`, `knowledge/`, or `change_sessions/` without a guard
-  equivalent to the Depollution_Sols `local_git_manifested` policy
+- no `.gitignore` hiding of active source outside the declared
+  `local_git_manifested` policy
+- no extension of the local-only boundary to `reviews/` before cross-model
+  arbitration

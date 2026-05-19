@@ -52,6 +52,8 @@ Classification:
 These are small but important. Do not delete or hide them without a local
 manifest policy.
 
+These paths are now under the active `local_git_manifested` boundary.
+
 ## Review Sync Projections
 
 Pattern:
@@ -98,6 +100,34 @@ Consumer:
 
 These files are generated, but not worthless. They should either be committed as
 navigation artifacts or represented by a local manifest policy.
+
+`knowledge/80_summaries/` and `mcp/catalog.json` are now represented by the
+active local-git manifests rather than pushed as raw payload.
+
+## Local Git Manifests
+
+Files:
+
+- `ops/local_git_manifests/change_sessions.json`
+- `ops/local_git_manifests/review_sessions.json`
+- `ops/local_git_manifests/knowledge_summaries.json`
+- `ops/local_git_manifests/mcp.json`
+- `ops/local_git_manifests/pushable_tracked.json`
+- `ops/local_git_manifests/index.json`
+
+Classification:
+
+- `protocol_evidence`
+
+Producer:
+
+- `scripts/local_git_guard.py`
+
+Consumer:
+
+- pre-commit and pre-push hooks
+- future cleanup and audit work
+- human review of local-only boundary drift
 
 ## Service And Sync Runtime
 

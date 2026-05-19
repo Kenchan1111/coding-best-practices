@@ -45,3 +45,9 @@ tmp/
 
 # Claude Code local settings (per-machine)
 .claude/settings.local.json
+
+# Local git manifested payloads
+change_sessions/
+review_sessions/
+knowledge/80_summaries/
+mcp/

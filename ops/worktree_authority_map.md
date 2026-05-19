@@ -53,8 +53,9 @@ These paths are generated but still valuable evidence:
 - `knowledge/80_summaries/*.md`: generated team review digest, changelog, and
   latest summary.
 
-These are not disposable. They are candidates for a future
-`local_git_manifested` policy if the repo should not push raw local evidence.
+These are not disposable. They are now represented by a
+`local_git_manifested` policy: the payload stays local, while pushable manifests
+live under `ops/local_git_manifests/`.
 
 ## Runtime State
 
@@ -92,8 +93,8 @@ rebuildable cache.
 
 ## Open Arbitration Points
 
-- whether `reviews/`, `knowledge/`, `mcp/`, and `change_sessions/` remain
-  tracked payloads or become `local_git_manifested`
+- whether `reviews/` should later join the local-only boundary or remain
+  pushable review bus content
 - whether `gstack/` should stay as a local ignored clone or be replaced by a
   tracked reference manifest
 - whether generated review summaries should be committed or treated as local

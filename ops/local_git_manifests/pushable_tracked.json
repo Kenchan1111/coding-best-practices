@@ -1,0 +1,1078 @@
+{
+  "version": "1",
+  "policy_name": "local_git_manifested",
+  "generated_at_utc": "2026-05-19T23:02:39+00:00",
+  "generated_at_local": "2026-05-20T01:02:39+02:00",
+  "git_head": "e0fec91336f6b2b553a9b6d700582caa57d8c88c",
+  "reviewed_revision": "e0fec91336f6b2b553a9b6d700582caa57d8c88c+dirty",
+  "file_selection": "git ls-files --cached minus local_git roots and excluded manifest self",
+  "file_count": 152,
+  "total_bytes": 692760,
+  "merkle_root": "187ed7b4c3ae6527d326186536bd58327598b64b92c2977728f420e6eaf101e2",
+  "files": [
+    {
+      "path": ".githooks/pre-commit",
+      "kind": "file",
+      "size_bytes": 223,
+      "sha256": "b2e0c31e097559c1c793e5dbb801a7d959932438383442605f732cceac02e101",
+      "leaf_hash": "7e4600e5448820e0bf82d26fbc9dce831abfa52ecd06f989e7cfc15df3f7412f"
+    },
+    {
+      "path": ".githooks/pre-push",
+      "kind": "file",
+      "size_bytes": 185,
+      "sha256": "77bc5bddb59e99eceae85a8e150792a87aa97929388a768b7aee1bfba93e7748",
+      "leaf_hash": "942914beb32a4c1a74f882cf2679462c8cda6ac72426f6b64fb3facbe69b5241"
+    },
+    {
+      "path": ".github/workflows/claude-code-review.yml",
+      "kind": "file",
+      "size_bytes": 1433,
+      "sha256": "ce8fe14a843b7409412e99beb3d7b0566532ac582528ac6f7f889ffde9465a62",
+      "leaf_hash": "9380a026f34404702ef4ea69776df4b9bb7515c148a2df33f1fe888c5069f5a8"
+    },
+    {
+      "path": ".github/workflows/claude.yml",
+      "kind": "file",
+      "size_bytes": 1886,
+      "sha256": "11b83242c6ea5288748ed0fc1fbe6dc7501103ee185df84486324034d930cad6",
+      "leaf_hash": "d0a48d9de6f35db7200261a70a12be273bc66cc9892e8c8d294ab91e829814e9"
+    },
+    {
+      "path": ".gitignore",
+      "kind": "file",
+      "size_bytes": 631,
+      "sha256": "8756e3488986e137717ae248a54001590337d39bb2f334a095bee1ad650fdd5b",
+      "leaf_hash": "f9d0c01416a60d0c22c28813e6eb9eb566573218b5ea21279c0add908ce63aa0"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "kind": "file",
+      "size_bytes": 16879,
+      "sha256": "f73c234a90e96f1f99a818e187861b69711901f7413f8cd848a383a506256ce3",
+      "leaf_hash": "020e8c6cae7f57aa23896596fec15abcfc8b892b4be3c060ac8ad9785ca12ccb"
+    },
+    {
+      "path": "CLAUDE.md",
+      "kind": "file",
+      "size_bytes": 11764,
+      "sha256": "2931825ccb2bcad770a6cfac421d778adfed19c4b0592f3d62233e2d00d28dd0",
+      "leaf_hash": "c2f50e328cf0d3865a39c704a0e1423a1c49015f9bd0f6b13e00cdfaa929ed28"
+    },
+    {
+      "path": "ONBOARDING_GPT55.md",
+      "kind": "file",
+      "size_bytes": 11894,
+      "sha256": "cfb1d0a6cd9f87b90307f955aaf7d7998a51792e8191ec73f7cbed4d81a092e8",
+      "leaf_hash": "6f9cf381fe5f30e77fec5a2a187635ad5b8f77b87ed3e4a5ca9c018524c87470"
+    },
+    {
+      "path": "ONBOARDING_KIMI.md",
+      "kind": "file",
+      "size_bytes": 12609,
+      "sha256": "00b53716cef680cc2101abc0af7d5b959eb7c84ea934d17253e0651dc84ee577",
+      "leaf_hash": "4871e92d68015a3a26018a96e76905f77d308a44743407905c2d7cf850b95223"
+    },
+    {
+      "path": "ONBOARDING_OPUS47.md",
+      "kind": "file",
+      "size_bytes": 4529,
+      "sha256": "2ddae1384bdf823ff88078eb5e35fa44d55484764df7525d231117fcc4265169",
+      "leaf_hash": "b52a082c6306fb79e011f1383175a6b4188e8825487eb4fd2ddfcbb97aefbe60"
+    },
+    {
+      "path": "ONBOARDING_SONNET.md",
+      "kind": "file",
+      "size_bytes": 10656,
+      "sha256": "0b545782af3fb6ac25419ec5331c70bf943724c1b6a3cc1774daf9959a192cd1",
+      "leaf_hash": "f96bf3c514136a0513d2478747f4ba70682f7ed84ba2321b21ceb0cd97f3fad1"
+    },
+    {
+      "path": "REVIEW_SYNC.md",
+      "kind": "file",
+      "size_bytes": 1618,
+      "sha256": "3409b3afb75916d7c813e2eadc20aa55036f93ca4a1836a99ad1ad388f9c5e04",
+      "leaf_hash": "c3f6adbf1be16eb7acce1a40485cae70526685cba93e67f6650d406fca5acfe6"
+    },
+    {
+      "path": "TODOS.md",
+      "kind": "file",
+      "size_bytes": 10599,
+      "sha256": "2d0346ba5d972ac26e61bb733371361f164954a49f03b26fafc1a24b4e2ed974",
+      "leaf_hash": "319c0d3c9391eaba973f5f83661469a0f5d5fc278d2e84fde995248010bc0811"
+    },
+    {
+      "path": "environment.lock.linux-64.txt",
+      "kind": "file",
+      "size_bytes": 6719,
+      "sha256": "d309b64f3c924be7a3dce341b5781fbcd4dc496527c96999e3aa3e0a1eb5c455",
+      "leaf_hash": "76b274eda47e28f94c06ab4ee67212e57ae155f5deaea4e3b5d32be723cf9853"
+    },
+    {
+      "path": "environment.yml",
+      "kind": "file",
+      "size_bytes": 375,
+      "sha256": "f2ea2f70f3c5fdcc2a3fe211ad8df2b97a79fb5f87ca0433819a98b75915326f",
+      "leaf_hash": "423eac4453adec084db87538e54e62bafb89dc3c0049890c3220dd6af1fe633e"
+    },
+    {
+      "path": "findings/01_bug_catalog.md",
+      "kind": "file",
+      "size_bytes": 31305,
+      "sha256": "b3724cf239f04daf3604e4663b160094b3c4de2a584abc7fb3dc07525225e88b",
+      "leaf_hash": "c29c9f227f9c7999b7b11e1a9b77b2718b523bd9476e18575cfc89a1af967bda"
+    },
+    {
+      "path": "findings/02_gstack_review.md",
+      "kind": "file",
+      "size_bytes": 9268,
+      "sha256": "54d4d743712d882fcc5bc263367491c2c073bf0b6a118dc223969106e5874c33",
+      "leaf_hash": "567068291fc276297dfd54eaecf41c4d539668e30db83edc439fee146d0351c3"
+    },
+    {
+      "path": "findings/03_methodology.md",
+      "kind": "file",
+      "size_bytes": 10031,
+      "sha256": "63d7b0be15088c67d56dbcf299dfe5b2e8df50a80a6db3643ff9d9799ba427d7",
+      "leaf_hash": "63c59714e0d0b2913431233f6b8750efec9875f4a6dbe5f3c5679cd86c60708e"
+    },
+    {
+      "path": "install-review-sync-user-service.sh",
+      "kind": "file",
+      "size_bytes": 1349,
+      "sha256": "0ffd5c3d294ab3eb683efdfa4193632104501364cb935860ea42dd231354fad2",
+      "leaf_hash": "88f5b658c1941968d394313aeab7c5b4adb1dc35333f117362c6b8c95caed74c"
+    },
+    {
+      "path": "ops/local_git_manifest_architecture.md",
+      "kind": "file",
+      "size_bytes": 2819,
+      "sha256": "e4b6a8c1578584c4c617fd9030279b148605520346db6eb2331150d4d3889b61",
+      "leaf_hash": "9b9d3062aa817583e03738699301e0d213df2a0a4ce8397027b85dde907f556a"
+    },
+    {
+      "path": "ops/local_git_policy.json",
+      "kind": "file",
+      "size_bytes": 1364,
+      "sha256": "6cedde457c7bc8286b097140774feab169ff543089f5103f84e8df57abbf21bd",
+      "leaf_hash": "57f3873d59f1b589ba8d2153c960be9e0a772e258ced50cf7c5a621010f3164a"
+    },
+    {
+      "path": "ops/worktree_authority_map.md",
+      "kind": "file",
+      "size_bytes": 3880,
+      "sha256": "661e8d34551a81547cb45a5d763fa034d104a5ea95f1fb5db46553136abd4bac",
+      "leaf_hash": "eb84c3d6fc6e4877f6b77a4d7974ecfb09301e439eaff6ebf909703b3fc5178e"
+    },
+    {
+      "path": "ops/worktree_cleanup_architecture.md",
+      "kind": "file",
+      "size_bytes": 3120,
+      "sha256": "a4e6637b837ccdec48a9a2ece2ac90b2b910c6125192958f81872af403b24404",
+      "leaf_hash": "0a74309695cf76954bd130b6676e1b00d1064e6bd2b5638f032e144b878103df"
+    },
+    {
+      "path": "ops/worktree_cleanup_batches.md",
+      "kind": "file",
+      "size_bytes": 2949,
+      "sha256": "6b69d286f6c55832b1b32f47200ed8f243f3c7522b18dc29b99abdb0771ccb93",
+      "leaf_hash": "c62778ceac8b3426a19fffb8a29da2d077c6305077f981b7dbc5d5a19d4d7f54"
+    },
+    {
+      "path": "ops/worktree_generated_artifacts_map.md",
+      "kind": "file",
+      "size_bytes": 3859,
+      "sha256": "78f52da0490996188f3b2434b0a113ac98e537ae495c47842a1db10bd1b9e5dd",
+      "leaf_hash": "4b57ab4415526a4435f081fde297bea20bfc1aeab5ef4a96399676fed98fa68c"
+    },
+    {
+      "path": "package.json",
+      "kind": "file",
+      "size_bytes": 409,
+      "sha256": "d3deaae444e64624d333f3e0e8efbde603053c4dcafc5f655b3179c07f4943e1",
+      "leaf_hash": "2a624c6f0522f01775a60f96467e70cdc4778692ce444534eb0b4e5cf3666e9d"
+    },
+    {
+      "path": "reviews/claude-opus/corrections/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "cd79dbdd3cb9212dcc17da39731ee653d47a8af031c8604874d0c5c4bfca736c"
+    },
+    {
+      "path": "reviews/claude-opus/handoff/00-zack-arbitrage-q1-q5-20260503.md",
+      "kind": "file",
+      "size_bytes": 3953,
+      "sha256": "239d4b3abc07e3c26beaf40fe16ea7da128ddb2d49f81303e9418a01125d8b4d",
+      "leaf_hash": "ec7f93de526b3b43c2c1af2883054b2fd7f9148e814b7432a76a1b9db1b56cf6"
+    },
+    {
+      "path": "reviews/claude-opus/handoff/01-zack-arbitrage-d1-d6-20260504.md",
+      "kind": "file",
+      "size_bytes": 2651,
+      "sha256": "cf33870ab7bcd097b42785e293addefae995ff96a5f3b15489f04f47aade09cf",
+      "leaf_hash": "8106113f0cfb3133a784cb035399d62e736d57cf88fd83d35a64d7298d4d69ab"
+    },
+    {
+      "path": "reviews/claude-opus/handoff/02-p7-ready-for-cross-review-20260507.md",
+      "kind": "file",
+      "size_bytes": 5207,
+      "sha256": "78c9233b7baf5487cd41b78f9af9d6c801b1fbafdb2aa989eeee6e3cee43e2fb",
+      "leaf_hash": "58fdbc9dc76666a98bbaba1c14c07c395757c9616920ca5dffd4382365d7904d"
+    },
+    {
+      "path": "reviews/claude-opus/handoff/03-gbrain-fixes-security-roadmap-20260510.md",
+      "kind": "file",
+      "size_bytes": 8247,
+      "sha256": "4b90d53aaffd7ca3d0e995d03708987a000f9cb47c8ebbae8599aefa18357f1b",
+      "leaf_hash": "48a1816fc77288f7b26b6adf469fdca6536dad1bb147f4093a310c020f2e7f51"
+    },
+    {
+      "path": "reviews/claude-opus/handoff/04-kimi-skill-corrections-20260512.md",
+      "kind": "file",
+      "size_bytes": 5883,
+      "sha256": "d2a40c124418ecf2e6c924604f15e6e48245dab1b37641ff77ea9377c7df4abd",
+      "leaf_hash": "b485d0f6cbb6b59682b0687e5d1b43a91ecdd645c272657df117fc2d5ef2ad4b"
+    },
+    {
+      "path": "reviews/claude-opus/proposition/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "d51cc8741ae7b58b039b2187895a604549cf3dbb20556b79271c0f86a664ab01"
+    },
+    {
+      "path": "reviews/claude-opus/proposition/01-ack-q1-q5-and-synthesis-d1-d6-20260503.md",
+      "kind": "file",
+      "size_bytes": 11817,
+      "sha256": "f8acdefeccb34d1ed47e04aeaf3b63e8d6e66f4a4714432be823dfd996c4065c",
+      "leaf_hash": "ec7d0d5c810e2ab7530cc7822e9dd256bf449084c805c13f4a8e5ddd7fbe4e55"
+    },
+    {
+      "path": "reviews/claude-opus/proposition/02-p8-review-20260507.md",
+      "kind": "file",
+      "size_bytes": 14081,
+      "sha256": "8a02045e29868782d0a23346cde652867a9e231f94560ca9af5b1e3a7bbdf015",
+      "leaf_hash": "0828bd133fb0542119daa6c44edae2c2002d2bec1a4c64e094b21f71b2cef801"
+    },
+    {
+      "path": "reviews/claude-opus/proposition/03-skills-ecosystem-review-20260509.md",
+      "kind": "file",
+      "size_bytes": 12947,
+      "sha256": "61ebcbd532443848cb0c69d5943513081a4cd17d3bc68ea5ea3a8e438b90b9c1",
+      "leaf_hash": "7f8c6c20ace22eaaf428850ef689532c5aa148bdc3097d900674cf56f691ce61"
+    },
+    {
+      "path": "reviews/claude-opus/proposition/04-skills-improvements-and-gpt55-tasks-20260512.md",
+      "kind": "file",
+      "size_bytes": 15848,
+      "sha256": "80888287668f7e59aec17d4fbbfe992217f01ce151be408e7fe8c70a016efcf1",
+      "leaf_hash": "aeeb4bae46bf5a755be30fe3fa50736cbd2a2b3a5b4dad8076c74d8bdfaf6dff"
+    },
+    {
+      "path": "reviews/claude-sonnet/corrections/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "5f1956de2da1134349c401561da33df77ebf07200d039e26031b06c0a9802cdc"
+    },
+    {
+      "path": "reviews/claude-sonnet/handoff/00-zack-arbitrage-q1-q5-20260503.md",
+      "kind": "file",
+      "size_bytes": 3953,
+      "sha256": "239d4b3abc07e3c26beaf40fe16ea7da128ddb2d49f81303e9418a01125d8b4d",
+      "leaf_hash": "78d24052e47b27e291206a3317850f2376a45fd816a3b1007a59e696b19bd34c"
+    },
+    {
+      "path": "reviews/claude-sonnet/handoff/01-zack-arbitrage-d1-d6-20260504.md",
+      "kind": "file",
+      "size_bytes": 2651,
+      "sha256": "cf33870ab7bcd097b42785e293addefae995ff96a5f3b15489f04f47aade09cf",
+      "leaf_hash": "44eea332d4238b4d4d342640183fbc366bfd4d578c3e7b9211ee4c76539de57f"
+    },
+    {
+      "path": "reviews/claude-sonnet/handoff/02-p7-ready-for-cross-review-20260507.md",
+      "kind": "file",
+      "size_bytes": 5207,
+      "sha256": "78c9233b7baf5487cd41b78f9af9d6c801b1fbafdb2aa989eeee6e3cee43e2fb",
+      "leaf_hash": "a9423b2c3ddd5d5b03ec9e8e19b7f00323e49d7b8d0163bafc49aeaaaed9e2a4"
+    },
+    {
+      "path": "reviews/claude-sonnet/handoff/03-gbrain-fixes-security-roadmap-20260510.md",
+      "kind": "file",
+      "size_bytes": 8247,
+      "sha256": "4b90d53aaffd7ca3d0e995d03708987a000f9cb47c8ebbae8599aefa18357f1b",
+      "leaf_hash": "6bed26a7d6275b0eb5584e91b590914ab6dd5b06e967450f0ac5217973bdb10f"
+    },
+    {
+      "path": "reviews/claude-sonnet/handoff/04-kimi-skill-corrections-20260512.md",
+      "kind": "file",
+      "size_bytes": 5883,
+      "sha256": "d2a40c124418ecf2e6c924604f15e6e48245dab1b37641ff77ea9377c7df4abd",
+      "leaf_hash": "49cbe871e8f2b9bd0450021314472855e9b72d5da829ac1931c083aa934b6aa0"
+    },
+    {
+      "path": "reviews/claude-sonnet/proposition/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "73f9459b59ab03d13c102c6884f7b128d1c17f6fcd93b3c4a3891db4dae401f6"
+    },
+    {
+      "path": "reviews/claude-sonnet/proposition/01-onboarding-and-d5-d6-review-20260504.md",
+      "kind": "file",
+      "size_bytes": 10379,
+      "sha256": "5d198830b0047401a3168a80180815c19e2c56c5798ce791c1f7519a9b42b2d5",
+      "leaf_hash": "63d0ec89cbd6c7b50458ee904b890ab8355141a7aeec115f0ac7c17f8b4f7113"
+    },
+    {
+      "path": "reviews/global_handoff/00-zack-arbitrage-q1-q5-20260503.md",
+      "kind": "file",
+      "size_bytes": 3739,
+      "sha256": "d5a27495b65efaf296cf2514a6fe117336b0aa84bb1ecf87759476b5394f18fe",
+      "leaf_hash": "0405ae12ccd7402a29c7f713097905b59be468cb1a4e1d41feab8539ebadf0d1"
+    },
+    {
+      "path": "reviews/global_handoff/01-zack-arbitrage-d1-d6-20260504.md",
+      "kind": "file",
+      "size_bytes": 2441,
+      "sha256": "2455cd1c36c54ef5a7df2777598733c179b51f5a5227a9848de030f02f542ee7",
+      "leaf_hash": "78d588ceb6742a4532bf0c5b12c29e48a3504e88abbd67fb2a70e56df87fcf5e"
+    },
+    {
+      "path": "reviews/global_handoff/02-p7-ready-for-cross-review-20260507.md",
+      "kind": "file",
+      "size_bytes": 5208,
+      "sha256": "4bba7aedbef9deda6b055fb686b4712a2824e119ec2b1eb2928cb6d0494c3581",
+      "leaf_hash": "10835f3deae6df2835c4514322220c23f140594aa8080ba6393839e74a0d5eb6"
+    },
+    {
+      "path": "reviews/global_handoff/03-gbrain-fixes-security-roadmap-20260510.md",
+      "kind": "file",
+      "size_bytes": 8248,
+      "sha256": "a1ab3352a284108c08553229b0e092fa574e0402d88259fe70bf9f95fe8d9501",
+      "leaf_hash": "d1bc1b56b50408226f5023d7e054f3e441eaa72e035f045127af0b60783b222d"
+    },
+    {
+      "path": "reviews/global_handoff/04-kimi-skill-corrections-20260512.md",
+      "kind": "file",
+      "size_bytes": 5884,
+      "sha256": "9aa95e18432d5eb7030d747d4afe70590f43a79d8ff9160bd0d5a68af49833cd",
+      "leaf_hash": "15df836d02ff66727a7887baaca9399b6ad869291ec849a0239a2d9335911b83"
+    },
+    {
+      "path": "reviews/gpt-5.5/corrections/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "0ff88a9fa6e9c22bdb861fc0cc5c10cb797628ac77bbe86f6599db50306afe9f"
+    },
+    {
+      "path": "reviews/gpt-5.5/corrections/01-review-sync-managed-copies-20260504.md",
+      "kind": "file",
+      "size_bytes": 2255,
+      "sha256": "262ddeb3c2bf22d7128ec91c3f5ccd6c51110cc352dba76bd1892c87f8796a59",
+      "leaf_hash": "22f72db4c03e104cfffe6044c3d241ccbaf5e30db43341393301d5edc32845a5"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/00-zack-arbitrage-q1-q5-20260503.md",
+      "kind": "file",
+      "size_bytes": 3953,
+      "sha256": "239d4b3abc07e3c26beaf40fe16ea7da128ddb2d49f81303e9418a01125d8b4d",
+      "leaf_hash": "d9359113d2511d974d62e74433966be877edc44f37fe625707abced51ab57ae9"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/01-zack-arbitrage-d1-d6-20260504.md",
+      "kind": "file",
+      "size_bytes": 2651,
+      "sha256": "cf33870ab7bcd097b42785e293addefae995ff96a5f3b15489f04f47aade09cf",
+      "leaf_hash": "982b8cbbde1b27114fff2579685ca6272c3c912efe8e06ed9ac0c930621bb8fd"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/02-p7-ready-for-cross-review-20260507.md",
+      "kind": "file",
+      "size_bytes": 4976,
+      "sha256": "8f21b49ea545e44ffe0587ceb912f211bc7df0e6920a324baf128d20cde929d8",
+      "leaf_hash": "0b2275432a46ec1389da2eb064e91e7c40633887133973e71c4514ce6a71432f"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/03-gbrain-fixes-security-roadmap-20260510.md",
+      "kind": "file",
+      "size_bytes": 7906,
+      "sha256": "c1217d85fedaf18e5b677054abb5c4f7c009eb5241c916d0c686115fbe1a30d6",
+      "leaf_hash": "0ae66d6b95fdf6b291afeb4783d0665cb4e932e4cfca0bdf90a344732350b202"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/03-gbrain-fixes-security-roadmap-20260510.md.change-receipt.json",
+      "kind": "file",
+      "size_bytes": 1178,
+      "sha256": "80424518feaf76b0fbe92d70a051846afad1bd20d1aa5878dbe72eb9ada1e872",
+      "leaf_hash": "2caca1bde9eb0d018122dceee04eb1d8ad00f3279f79e35fa35830079aa4927d"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/04-kimi-skill-corrections-20260512.md",
+      "kind": "file",
+      "size_bytes": 5661,
+      "sha256": "adf73b652e80b05a441332e592fb81849822ce0890115923c03a42c967c566a4",
+      "leaf_hash": "e1b649b0c1d4195900ac1dfa4abf14ffb44398a011c23c892fce3de4aeb1db7c"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "e3ff621d921875ea851131ca7568390c4cb5da9d0d89d36e8153f97993488918"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/01-onboarding-acknowledgment-20260503.md",
+      "kind": "file",
+      "size_bytes": 8198,
+      "sha256": "1abed0fb0316f5446d73b47a676a157a14a6cdeea641f2e5be7324424aadd751",
+      "leaf_hash": "6a95498073a32b993f513a106ccd768d26d6984c0846d7b78cd913344d59f5ae"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/02-session-state-20260503-2219.md",
+      "kind": "file",
+      "size_bytes": 1381,
+      "sha256": "509f7b43fa89863f045c3816f7572fe20d51239e54b228b0fb78dd69a28616b8",
+      "leaf_hash": "ac43a54c02eb91508141a2631dc59a4a2bf6be02f2602fb49361177837fccadb"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/03-review-sync-import-20260503.md",
+      "kind": "file",
+      "size_bytes": 2477,
+      "sha256": "9228541f5545878bc6343fe043f2fd2043172fd8435887ff9d671d3502bcbf5b",
+      "leaf_hash": "a8984a2ecf41b128df0f7773b373b12db38c5f2c17cb7f63539049e9b08b7a53"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/04-review-sync-collision-variants-20260503.md",
+      "kind": "file",
+      "size_bytes": 1559,
+      "sha256": "e33e40cecfba5d045e9c76aad620de76787d67baee8ac784153b1653544c84d7",
+      "leaf_hash": "316834168f09fc477bdd937721e95116aaf8eb2e2047b9ed396b6b767b3ca640"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/05-pre-p1-architecture-refresh-20260504.md",
+      "kind": "file",
+      "size_bytes": 3220,
+      "sha256": "0fcd1503a15e021c7da41a144a1d0ca6153cd280ccfa45bc1e873c80f05af6d5",
+      "leaf_hash": "534cfa52d03bf0d8c620941d9b54955977bb9727c5e97b32d6ed9a7a57527f83"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/06-scaffolding-20260504.md",
+      "kind": "file",
+      "size_bytes": 1526,
+      "sha256": "49bf5a81655e4a90936a484f2d2e291e0d4f77cec3471262a754af163c28c65c",
+      "leaf_hash": "4c72e516eef4316d6c964caf0490ed148004bab5acbc996e6848129ea50408a8"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/07-p2-core-checks-gstack-alignment-20260504.md",
+      "kind": "file",
+      "size_bytes": 2605,
+      "sha256": "aa5f4a3389b14eba9ef94dcf1701ebb7897ee2263321d42d4256fe636e57877e",
+      "leaf_hash": "694625ebc68a15b2d3bf1bb825999c226828e90da830a2896f84eb0662e6889e"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/07b-p2-high-checks-gstack-alignment-20260504.md",
+      "kind": "file",
+      "size_bytes": 2581,
+      "sha256": "36ebc197ab6e2c54022810997271cd6e9ce7739d98d34996cc1ed74bd91fafd7",
+      "leaf_hash": "6814aa7e7dfa4cb2678a853f88a3e2bf7b8affe531d86f2037c1a6aead0a73ec"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/07c-p2-complete-checks-20260504.md",
+      "kind": "file",
+      "size_bytes": 1665,
+      "sha256": "e5e72c64eb83541b55ce310b2f456f04c66094bab07ee261adc028e0011c4126",
+      "leaf_hash": "e541e4622989552f27df6db61e02bc0765877a8251151dfc665859f2f9c85faa"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/08-triggers-20260504.md",
+      "kind": "file",
+      "size_bytes": 2293,
+      "sha256": "dbeaec0360d2ea084c70b311169e325cc06270c48e17bb1b3d6fb66524d6c8b1",
+      "leaf_hash": "a4ce5ed8559286d5b58e9fb8cd30f46785062f65c38ddbd678b397d53dd2031d"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/09-gen-and-validate-20260504.md",
+      "kind": "file",
+      "size_bytes": 3119,
+      "sha256": "33e4cd9d523c949447fd30e3bf3dbb49b5c26cb511390780e806771edc36c0b0",
+      "leaf_hash": "b132dfb1ff17c60cea123aa7461c31ae0b6a3ea2200a6d885c92479f2549b0a5"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/10-tests-20260504.md",
+      "kind": "file",
+      "size_bytes": 2405,
+      "sha256": "700918c7176f21e84a1e39a7440b4ad62de85e2b2254fcaa02782123d986e66e",
+      "leaf_hash": "2fa4a9f191a47cb452b8b3e28d7628a2a94227fc6847e4fcae570854eeba9357"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/11-setup-20260505.md",
+      "kind": "file",
+      "size_bytes": 1936,
+      "sha256": "2d758fa9f6f42fa7d8d02c7e89420083aea1656704282ddb34fb7863fa11cd16",
+      "leaf_hash": "652f90020ae0274adb3f7d280b2a699fcb95d921d8e8bc26495c13ee361a53a4"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/12-e2e-demo-20260506.md",
+      "kind": "file",
+      "size_bytes": 2055,
+      "sha256": "4f1a7fee8ff808fa0b5dfb214add24afe40c11c63d920d4ac84ed10311e670e9",
+      "leaf_hash": "2af5eea4551e77d64197f6c0f0db2e91ddc5c0822538144903bd1e92f72cfad5"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/13-gbrain-implementation-review-20260507.md",
+      "kind": "file",
+      "size_bytes": 6958,
+      "sha256": "df6581b9f40b1ee87a41c8cff23e9874fca029c05b1310f57e139b68a79ce6af",
+      "leaf_hash": "69e9bf7bcc6f4c6b3f98332fd709113ec686695963de7e4ca3ba4d2770e7f6a6"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/14-cross-host-skill-synthesis-20260511.md",
+      "kind": "file",
+      "size_bytes": 8274,
+      "sha256": "84dfab8f86c2a8d5b04210bce88a0e952e58e2ef3b01b402fa45fce6e8f0f673",
+      "leaf_hash": "ec377d268aceb2e8fa0f0f13e076e6cb2ecd7619f141587025d2d02514f1f211"
+    },
+    {
+      "path": "reviews/gpt-5.5/proposition/15-internal-skill-corrections-review-20260511.md",
+      "kind": "file",
+      "size_bytes": 3462,
+      "sha256": "b00ace4416a501a671ae4da9276e86c7ff3d69e2b800164ee4717574e2ec78f2",
+      "leaf_hash": "dfe662ddab20b7756a09451eecccd77a5f59db4e57def0570c234b52310835d3"
+    },
+    {
+      "path": "reviews/kimi/corrections/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "e441ee1480bf87fe865c8e49a29ed380130d948ab696c7031a927ff6ccd9a645"
+    },
+    {
+      "path": "reviews/kimi/handoff/00-zack-arbitrage-q1-q5-20260503.md",
+      "kind": "file",
+      "size_bytes": 3953,
+      "sha256": "239d4b3abc07e3c26beaf40fe16ea7da128ddb2d49f81303e9418a01125d8b4d",
+      "leaf_hash": "1a4559cfe04b0ee8fd6a0f04b94237cc23752bdff1abcfd5aece322a037ca652"
+    },
+    {
+      "path": "reviews/kimi/handoff/01-zack-arbitrage-d1-d6-20260504.md",
+      "kind": "file",
+      "size_bytes": 2651,
+      "sha256": "cf33870ab7bcd097b42785e293addefae995ff96a5f3b15489f04f47aade09cf",
+      "leaf_hash": "a635be5bf161868496ca92db8c28419418a264ab69e214d93696e5286410c036"
+    },
+    {
+      "path": "reviews/kimi/handoff/02-p7-ready-for-cross-review-20260507.md",
+      "kind": "file",
+      "size_bytes": 5207,
+      "sha256": "78c9233b7baf5487cd41b78f9af9d6c801b1fbafdb2aa989eeee6e3cee43e2fb",
+      "leaf_hash": "48cde7e1774324890ea4be7d58971530ac1294bf15db86f44b3e3ed6a973d7e8"
+    },
+    {
+      "path": "reviews/kimi/handoff/03-gbrain-fixes-security-roadmap-20260510.md",
+      "kind": "file",
+      "size_bytes": 8247,
+      "sha256": "4b90d53aaffd7ca3d0e995d03708987a000f9cb47c8ebbae8599aefa18357f1b",
+      "leaf_hash": "466b82f18fbb9c6e87f2172e811c7bd0adb6e6439fd60a6baefa7a9b4e63a790"
+    },
+    {
+      "path": "reviews/kimi/handoff/04-kimi-skill-corrections-20260512.md",
+      "kind": "file",
+      "size_bytes": 5883,
+      "sha256": "d2a40c124418ecf2e6c924604f15e6e48245dab1b37641ff77ea9377c7df4abd",
+      "leaf_hash": "aaf7a54dce8c348ca337a429669d439d177d7710f1f9f5701665c4033bbbea39"
+    },
+    {
+      "path": "reviews/kimi/proposition/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "6291359e269857bb791af744220bcd4b7db36a56b0d03450f926517f276c7a5d"
+    },
+    {
+      "path": "reviews/kimi/proposition/03-p7-systemic-and-user-review-20260507.md",
+      "kind": "file",
+      "size_bytes": 12192,
+      "sha256": "31b535c0541a933df8348573ede4f4100958815bdadc8da54352037970d1942a",
+      "leaf_hash": "93eb9a2aad0c64fde2d98410dfe5e84e5b3c028b5d809c0bc3b4f637088e2cdf"
+    },
+    {
+      "path": "reviews/kimi/proposition/04-skill-claude-review-20260511.md",
+      "kind": "file",
+      "size_bytes": 7500,
+      "sha256": "739cd59d4db4bf743cf9c376febaa8a4a144354c687f4c6493b24a6c8fef2fd7",
+      "leaf_hash": "4ee18468e558cda9c896081c2480e296ec563cc1a00cc244bad76d97e5e59e32"
+    },
+    {
+      "path": "reviews/kimi/proposition/05-skill-codex-chatgpt-review-20260511.md",
+      "kind": "file",
+      "size_bytes": 10646,
+      "sha256": "2d4a37698bc47e3c44a3f4d943524eb132abd7b5980a5469c72c2615a37eb47e",
+      "leaf_hash": "e63fe6a324b99c2169c7cec1aab69972c476f00d4a1b02e1519915d9906e820f"
+    },
+    {
+      "path": "scripts/gen-skill-docs.ts",
+      "kind": "file",
+      "size_bytes": 4297,
+      "sha256": "3ba22af818685844b5b52eb8939cf1001cd519c735218210fdeba78d3c5a8c6c",
+      "leaf_hash": "f73913115d1f07892b6f1966bb3d5e9780d5a5aa25099e729d34589e7a7a0919"
+    },
+    {
+      "path": "scripts/knowledge_os.py",
+      "kind": "file",
+      "size_bytes": 7869,
+      "sha256": "747c88ba76be4756fdebf104cc549a24ddf0311804b088e92e1b308a6d819db3",
+      "leaf_hash": "e2951c18a6462bc486ccdb68c4f1c33c2fb1f22a75c70ede6ee56a6e5fc1e5ba"
+    },
+    {
+      "path": "scripts/local_git_guard.py",
+      "kind": "file",
+      "size_bytes": 20826,
+      "sha256": "4fc2c326dd2ccaa5339adf0939d3bbe1112017731bc15b8c90e920b857f7d770",
+      "leaf_hash": "8773925afb791326370406c059fc4c8410e5bea6f3b10c115301b2af1a939a60"
+    },
+    {
+      "path": "scripts/skill-lib.ts",
+      "kind": "file",
+      "size_bytes": 3872,
+      "sha256": "1520e80255e31fee3e5b7413923f8a04eb2b67798931a019973acfcf3f15edea",
+      "leaf_hash": "29656e104bd32200130cf5b4f114837ccf49936c32c0d3734d71ad73450d24e4"
+    },
+    {
+      "path": "scripts/sync-catalog.ts",
+      "kind": "file",
+      "size_bytes": 2562,
+      "sha256": "58f331fa676580e465f32e4fb56b4415db967bdac290dd80b7f48378a5f13d4b",
+      "leaf_hash": "e429280fded0b60039618166460520cc57a1fd5b60983ab5de3dec965a6cee62"
+    },
+    {
+      "path": "scripts/sync_reviews.py",
+      "kind": "file",
+      "size_bytes": 20560,
+      "sha256": "fd12165298eac992ebbd7784b986c7ec23ee25318936c8ad3291956dc0d60b0d",
+      "leaf_hash": "4d7431a4a514d4fbcf0cd42920bf145dfd19dea1668b676cf33052be69b5cded"
+    },
+    {
+      "path": "scripts/sync_reviews_watch.py",
+      "kind": "file",
+      "size_bytes": 10573,
+      "sha256": "a6d41d2c6ac905d34f7698ebcca22cfa936a091ebd47dae5bf6145fc5ad3c849",
+      "leaf_hash": "2ff7c5440b293de62901f7548059c52191a6c20c14a947504d51180833c4f63f"
+    },
+    {
+      "path": "scripts/validate.ts",
+      "kind": "file",
+      "size_bytes": 7480,
+      "sha256": "547ee9bbbf5cde874792fab652f151c44db7cc4d2996a940f0db41a48b0c5ec7",
+      "leaf_hash": "820a44980a40027961e3994f3be02f083899390f239c997d9df2bb2cb482c0a0"
+    },
+    {
+      "path": "skill/.gitkeep",
+      "kind": "file",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leaf_hash": "cdfb4f88e0b587444539d6a482c853b9f6c8218965d4d7b772d77d149bc47227"
+    },
+    {
+      "path": "skill/README.md",
+      "kind": "file",
+      "size_bytes": 2672,
+      "sha256": "4bf26f808a5427427c97817270c3fc666d9c41b6cfa36c8f5100962e0c1ce737",
+      "leaf_hash": "bab912871ac582ce52edb2fefe6413c80f19a8ed0adc625429539881b81371e9"
+    },
+    {
+      "path": "skill/SKILL.md",
+      "kind": "file",
+      "size_bytes": 21366,
+      "sha256": "e2da620d59a4425eb1032cac0ae721e365f6014a4fc25a09a3e37cc7482af38d",
+      "leaf_hash": "78ca6508ab272ec2b56ffb03db6bf802f4a0d12a3d24a31a4ae043b7a398149e"
+    },
+    {
+      "path": "skill/SKILL.md.tmpl",
+      "kind": "file",
+      "size_bytes": 2193,
+      "sha256": "a5777c3adadbacabc7458d9bf9cde4622e823deb2f0a7b50b2a6232e3763fdf1",
+      "leaf_hash": "ab6f5becb3930ad3d6708f4aa142eca2786d43f9a4f738e3a46d4f324beadd4d"
+    },
+    {
+      "path": "skill/bin/.gitkeep",
+      "kind": "file",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "leaf_hash": "8c6ce2447c2af9af3ffc424d2aad7a8321de73f86c6cfff93a66948309aa9399"
+    },
+    {
+      "path": "skill/catalog/.gitkeep",
+      "kind": "file",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "leaf_hash": "ae87b67885fdd7fad4e658f1d30b44dfc192f990a5574aa4cdabbf2eb2eb0edf"
+    },
+    {
+      "path": "skill/catalog/bug_catalog.md",
+      "kind": "file",
+      "size_bytes": 32155,
+      "sha256": "d99e1a46397667730a029224e76f90f590e332ccafc2eb3c8aeeecb95907755f",
+      "leaf_hash": "235401a4ae703241ca5abbc5c54203d474573aab8f1d5244e3192a629b98ea61"
+    },
+    {
+      "path": "skill/checks/.gitkeep",
+      "kind": "file",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "leaf_hash": "d028d52b965749f7818c192aa789b4d583460d21a485e996f404597d297713da"
+    },
+    {
+      "path": "skill/checks/A_atomic_write.md",
+      "kind": "file",
+      "size_bytes": 2406,
+      "sha256": "e8aff69406e24a906cd6d355d17df00863274ebf4c403b2c39a881d0131e130f",
+      "leaf_hash": "257449d0a9e77a8acced342dbfc60fa6041526d6cacda49b57d12c4ebf8f4c91"
+    },
+    {
+      "path": "skill/checks/B_cascade_failure.md",
+      "kind": "file",
+      "size_bytes": 2472,
+      "sha256": "37b84921ff220f663c85278e897e15c7040a58a7864262285c203feef977d5b2",
+      "leaf_hash": "7f7a90a71494ac5216db7e522cc63e480d8d726e7e2ea65aa4c1866dcad9eea4"
+    },
+    {
+      "path": "skill/checks/C_scan_loop_safe.md",
+      "kind": "file",
+      "size_bytes": 2250,
+      "sha256": "0f87be8bc0b4edf97b56f4b2a8e4038820936445726f671439ee6769236ade46",
+      "leaf_hash": "81bba34d20c9fb4493988181e72017a1ec3acc4b11e0eeaf9acfea0de3436d74"
+    },
+    {
+      "path": "skill/checks/D_iteration_semantics.md",
+      "kind": "file",
+      "size_bytes": 2543,
+      "sha256": "25d3920e2a81e29d5e0f079f77e8f3938446f0b4ae41e6663e51125038874923",
+      "leaf_hash": "7c24074a032333284b644776f9c30eda15c9d0c6e5df7ae81db108e2bd9b5e74"
+    },
+    {
+      "path": "skill/checks/E_llm_hallucination.md",
+      "kind": "file",
+      "size_bytes": 2576,
+      "sha256": "b9f4ebca636e9bc427be537edb752c13311ef4f0635f9bbb83b0615085b581a8",
+      "leaf_hash": "53801eb801b322903ca7d02577dd5bfbd5100f9b6729568be475f2d757c801c7"
+    },
+    {
+      "path": "skill/checks/F_race_conditions.md",
+      "kind": "file",
+      "size_bytes": 2629,
+      "sha256": "f813f2a99e9e864432d45e1026e9407770c2a5acc7921613b0f3d35fd8c08b1e",
+      "leaf_hash": "1f2522d4fd7cdc793cc6cd97ecbfb8f707f85a7cd00272b62dd6e44949a845ed"
+    },
+    {
+      "path": "skill/checks/G_shell_token_filtering.md",
+      "kind": "file",
+      "size_bytes": 2810,
+      "sha256": "07733eeb8367d9d054067d4899ab605ca14801c07b6fb3c969e42724b6f1913b",
+      "leaf_hash": "2b9a7d3725f4c56e7ab77b4b53b1f9c849943a56fa0bd500e53ab5c6330c1465"
+    },
+    {
+      "path": "skill/checks/H_silent_override.md",
+      "kind": "file",
+      "size_bytes": 2667,
+      "sha256": "cf854567cff941d94fd28de6bb5252b8c349b0d881c2428df077828b81cc2c26",
+      "leaf_hash": "73f8588b0133002cb6199392a108f89b932527a3f7ead449f074de9b7f386531"
+    },
+    {
+      "path": "skill/checks/I_irreversible_ops.md",
+      "kind": "file",
+      "size_bytes": 2054,
+      "sha256": "4134744a37ce958c98f774d86f494e0ad5a7ea9c8d8f8b2591d2996c0059459f",
+      "leaf_hash": "7e6ae45e42a0dcb2d4645f9de7225cdab67dd8b39c3c9d7d95b2d8d7b901e122"
+    },
+    {
+      "path": "skill/checks/J_bidir_test_coverage.md",
+      "kind": "file",
+      "size_bytes": 2417,
+      "sha256": "807e954d7e26a45af4b8848775b14ce5399c53c43c4fe0759b27aff8b8d37519",
+      "leaf_hash": "0699140a830c9a3cffa4c4c28e586c582ac1f1c5aa257c7d41275b6e1b81cb7c"
+    },
+    {
+      "path": "skill/checks/K_architecture_smells.md",
+      "kind": "file",
+      "size_bytes": 2797,
+      "sha256": "803bf18878f4ede8bc7ba1ed0576836e3863c8029b39d79b334c573f4cded55f",
+      "leaf_hash": "9ce908d5019171bb56aaa202290a5006c58175461c7aef59b41a974a23fb8a2d"
+    },
+    {
+      "path": "skill/checks/L_bash_specific.md",
+      "kind": "file",
+      "size_bytes": 2717,
+      "sha256": "6c9e4069b0b718e21dbbdd4d2b7ebff1d24dcae48e6c447b1ece562624bd5926",
+      "leaf_hash": "fb6e1e2f2603ae372afba00fdbbb65cbdc57fb729989e7935e9c7562e1b93b68"
+    },
+    {
+      "path": "skill/checks/M_drift_detection.md",
+      "kind": "file",
+      "size_bytes": 2132,
+      "sha256": "747e2343e1cd72afe2bf9906d4bac268cffa9fb14ec779173f431c61fe0eb666",
+      "leaf_hash": "aa999bdf01a592ebbe9bac124f54fd57de5586e85c2d7ca5406b561ecf7f7277"
+    },
+    {
+      "path": "skill/checks/N_input_validation.md",
+      "kind": "file",
+      "size_bytes": 2250,
+      "sha256": "a1cc4381fc9bd1d7c400f413379c363dfacdba2536282e84ee988a95d028b748",
+      "leaf_hash": "bcd33e9257aa1109ecc892a663669724003037054cde97d5812e0c360990244b"
+    },
+    {
+      "path": "skill/checks/O_intrusive_nonportable.md",
+      "kind": "file",
+      "size_bytes": 2054,
+      "sha256": "704c504a9977f45cb964f95ab05273a9f4a41947f0037ce45418b77830b683aa",
+      "leaf_hash": "e0b7c46988fe79892a4571745e1941d476a00bd5ed28678de7f07c20bfac6a1c"
+    },
+    {
+      "path": "skill/checks/P_contract_consistency.md",
+      "kind": "file",
+      "size_bytes": 2029,
+      "sha256": "d7f8f46a704282afecbbadfda047862b32df5276380df2246ff6b28ee3a896db",
+      "leaf_hash": "2885515827717a9a5042a2395853553d8b18a476471a439d9dd0edab90f1ee24"
+    },
+    {
+      "path": "skill/checks/Q_numerical_precision.md",
+      "kind": "file",
+      "size_bytes": 2317,
+      "sha256": "627dbc1496ab03437cd3ed2dd1041d8ac637841a81d6be92ff669e61c9a0068e",
+      "leaf_hash": "dc87e222a25bd2feb746ec308306286304815f8032ebe99a7529dee367109522"
+    },
+    {
+      "path": "skill/checks/R_audit_trail.md",
+      "kind": "file",
+      "size_bytes": 2269,
+      "sha256": "10a739bfea33317215aa8bb0f8d424b750f7d18f14454272881bcefc8a437ea9",
+      "leaf_hash": "27a6ad6c6fb18e8bc6bc3af6cee6095afde6fcd44d41608bc6c58495a8ece979"
+    },
+    {
+      "path": "skill/hosts/claude.md",
+      "kind": "file",
+      "size_bytes": 1476,
+      "sha256": "847839d8c4157320d4dbb0434edc6c1d4d87b6eddbf7b6b45f5b3af3bdc20367",
+      "leaf_hash": "a7e99d6ecfc773465bf8c61f64318ab294fb1a332da696d00a649e18e4b261b3"
+    },
+    {
+      "path": "skill/hosts/codex.md",
+      "kind": "file",
+      "size_bytes": 1907,
+      "sha256": "cfaf12c3b2996964dfcf75ff92912eb4971e474a2da4b07e93ef9d871e461a59",
+      "leaf_hash": "c87f2abcda4d1d9ded2cebc6881f7acbde248993b25ed9b950503a1422c7ce55"
+    },
+    {
+      "path": "skill/hosts/gstack.md",
+      "kind": "file",
+      "size_bytes": 1119,
+      "sha256": "3cdfe2923d6e3e344e7cbaa4a89a2eaf693024872f08e215445b6527d1754db6",
+      "leaf_hash": "ecbed29d30acc250469af10abfdcdf32e2dfa7f7cda23cd3523b77c1e90b83bd"
+    },
+    {
+      "path": "skill/hosts/kimi.md",
+      "kind": "file",
+      "size_bytes": 809,
+      "sha256": "a3c0139a80e0cc20a3059cea32de567d018f2618089e3c0f6c51b8e7cb44834f",
+      "leaf_hash": "be44937362f155e023b6fd349de1e86c63f8ab409ed21231a7fb0f4c8db1d79b"
+    },
+    {
+      "path": "skill/scripts/.gitkeep",
+      "kind": "file",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "leaf_hash": "03f09984d1daa8ca00630b9e3d045b642b0b494f500526dd46fd0958649ef827"
+    },
+    {
+      "path": "skill/setup",
+      "kind": "file",
+      "size_bytes": 5940,
+      "sha256": "e660b7a649e099c816826dcb50592b7d33e0cd87fb5a3d59a4a1b93732e33ced",
+      "leaf_hash": "3543d06643bd5b245f82f3d5665117202e646444f624aa524607dde546706d1d"
+    },
+    {
+      "path": "skill/tests/.gitkeep",
+      "kind": "file",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "leaf_hash": "34ca05bfa45688307c402e9f46b85b328105b774d4928a2b125f201e3e826a0a"
+    },
+    {
+      "path": "skill/tests/e2e/mock_agent.py",
+      "kind": "file",
+      "size_bytes": 7505,
+      "sha256": "9b916c802a6cf32df62104b0f6ee468ae5b91a65dfaa83f8105c8cbf36a4d6da",
+      "leaf_hash": "481e6f5aaf89ed21f3bf7323e6f661d4f482697690a4fe41d0e580f86d0b9e63"
+    },
+    {
+      "path": "skill/tests/e2e/run.sh",
+      "kind": "file",
+      "size_bytes": 3174,
+      "sha256": "24968e16f6bccf7ebe2ff7f7818e933b99d9b104bfef392baba8cc9a941f6a9c",
+      "leaf_hash": "987444f3628c60b6c01eddd4c50ff0f743c575a4e00a7bf36de12b91e812bd56"
+    },
+    {
+      "path": "skill/tests/fixtures/planted-bugs/atomic_write_bad.py",
+      "kind": "file",
+      "size_bytes": 145,
+      "sha256": "7c511720dceb99079ad48df9788b24d571642274fe2ef26fdf1fb594ca7b5c0e",
+      "leaf_hash": "62d7b8d1959c5e61fadd05a220e5cd31ec4f5a114ae4507b8c88d4cf94ef4be0"
+    },
+    {
+      "path": "skill/tests/fixtures/planted-bugs/bidir_test_bad.py",
+      "kind": "file",
+      "size_bytes": 263,
+      "sha256": "344272e1f366a49b0b55dd4f1a9c02d3bda4fcdf4ee264f5f1274644490b7d29",
+      "leaf_hash": "bb514ba2dbac83c54afaabc0241d4079f9f137a400a0fc0a0aa01c2ef48d6449"
+    },
+    {
+      "path": "skill/tests/fixtures/planted-bugs/cascade_failure_bad.py",
+      "kind": "file",
+      "size_bytes": 144,
+      "sha256": "4a821e27c1b2edb5c6e5f3d4f99734f429865cd5f37fb203f5e04d3294eb1008",
+      "leaf_hash": "4f447c489f623d3a911e7a790bf54d23b30cb3481293fe53291194a3d454bae3"
+    },
+    {
+      "path": "skill/tests/fixtures/planted-bugs/scan_loop_bad.py",
+      "kind": "file",
+      "size_bytes": 241,
+      "sha256": "ef8460e147a09fb47704ebe04f8e113c9ae28c6a653103c7b4e7e78f099d6689",
+      "leaf_hash": "d46ac5f6316d9e1d942b5c82bdf8ae0d1dab9380b637c738c4e1faddf5a22744"
+    },
+    {
+      "path": "skill/tests/test_check_atomic_write.py",
+      "kind": "file",
+      "size_bytes": 1272,
+      "sha256": "dc470fb8d9aa2736d45cf7abdecca771b96b6db4959b3b20d06f2cf4b969e2b1",
+      "leaf_hash": "c9baf53a3c1ed97ca7ac12d3f91ddc0eabd12604b70a7b4862ef2a8bf8613807"
+    },
+    {
+      "path": "skill/tests/test_check_bidir_test.py",
+      "kind": "file",
+      "size_bytes": 1241,
+      "sha256": "81bcbd49ee1da8c4522ed8132e623f72148bdd4ab52d737834375859d4820cc4",
+      "leaf_hash": "c3d60642b9b5dcad7561d27fea7cd0e225634271923e90415d9335ef2ffbf170"
+    },
+    {
+      "path": "skill/tests/test_check_cascade_failure.py",
+      "kind": "file",
+      "size_bytes": 829,
+      "sha256": "be334321fcd863cfcca0774ca7c20a2194e3a4ff3a5ac1170cb477b093b93c54",
+      "leaf_hash": "404c5af5fa89dc3a9b40f2c7ade70e830900299c9eb136fd6f6274a801c1eb5a"
+    },
+    {
+      "path": "skill/tests/test_check_llm_hallucination.py",
+      "kind": "file",
+      "size_bytes": 1537,
+      "sha256": "924305e7d6d883e47493acb01c7ad3f542e40876e44c030676557c635d81bbdd",
+      "leaf_hash": "6d2ce44acb82800fa827a9f6697664947b1cc46236ec1748e56a2f0b7c882a8b"
+    },
+    {
+      "path": "skill/tests/test_check_scan_loop.py",
+      "kind": "file",
+      "size_bytes": 1210,
+      "sha256": "011a97d270c492e4735ef7a548c1cbd3cdd04ec636f55540946beacb189e7aac",
+      "leaf_hash": "ed80d43e0bec1e136ee6e99ade50d875bc10da63813df6b7fb29ff165fc5c8e8"
+    },
+    {
+      "path": "skill/tests/test_e2e_harness.py",
+      "kind": "file",
+      "size_bytes": 1383,
+      "sha256": "0d0647880a6ac11784ff25c6d038a09b110b59196668fefdd2c7b165ac90dbda",
+      "leaf_hash": "ccb5781de1bb0e1dd8809cb749a1645210d9667c04eca9e04ab7bfbaadb9213b"
+    },
+    {
+      "path": "skill/tests/test_helpers.py",
+      "kind": "file",
+      "size_bytes": 2875,
+      "sha256": "54bed03446df9c4a37f5ee2f4aff48d12622d137f10fc8de74a8235cbc60e17c",
+      "leaf_hash": "2ed7018e60ea1d8e37736bf904335dd7e182b3d65d57131603c837577f5add94"
+    },
+    {
+      "path": "skill/tests/test_local_git_guard.py",
+      "kind": "file",
+      "size_bytes": 8868,
+      "sha256": "004f00f10d3e281ac7dbccae3dac195efd84613eb10121435cd74bd6564ae8c7",
+      "leaf_hash": "4527a1e115963998e98a1fcf7418e874e318f4422ce9b6091f19cc9abcfd1d84"
+    },
+    {
+      "path": "skill/tests/test_setup_install.py",
+      "kind": "file",
+      "size_bytes": 4783,
+      "sha256": "c501dc67742d7e15d5ca86ee2faedd5ee7fd7b4027ada28888b08d3e305311d1",
+      "leaf_hash": "f5a6cdfc2c4c5f57e25a430d6375c843c33a8cb773050435dd142d8c00865246"
+    },
+    {
+      "path": "skill/tests/test_sync_reviews_watch.py",
+      "kind": "file",
+      "size_bytes": 2972,
+      "sha256": "86c9be3b39682f42a2cb48cd851240191cfeab5fe1b6a31aa9fcb9c011e5ee9b",
+      "leaf_hash": "168c703efb00ba725b7c81f7ace9fc1bd3e11a9ad575792f2d779a03ad8d3da6"
+    },
+    {
+      "path": "skill/tests/test_validate.py",
+      "kind": "file",
+      "size_bytes": 2995,
+      "sha256": "e73e752a9eb3d8bbc0738a67822adee8677c1e76b0b670568854524bd0abdd86",
+      "leaf_hash": "9c15936e843f42d5176305268767678b0a2ce318c54b9b765e9d13823fefb23a"
+    },
+    {
+      "path": "skill/triggers/.gitkeep",
+      "kind": "file",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "leaf_hash": "127e044b6b2d3f6dc825bfc3096cec8aca9aefe505aed1a2e66a035712fb7ad9"
+    },
+    {
+      "path": "skill/triggers/on_destructive_op.md",
+      "kind": "file",
+      "size_bytes": 2432,
+      "sha256": "ac1742a19795798c7bfc0d2a39c6a62654b78141163c2cd95508f8e36bdc36cc",
+      "leaf_hash": "ae8b7f48518bc207db92c0c03c96dbd75fac944ad73c91e9af98af83ffdba496"
+    },
+    {
+      "path": "skill/triggers/on_review_claim.md",
+      "kind": "file",
+      "size_bytes": 1985,
+      "sha256": "94d61ec3e571d721a2331a700852b6e49d3995e2a585e23122aa31e0421332bf",
+      "leaf_hash": "dc3c6091a1d3db5d199236e78922bfab87b113730abf7d1be26791703169d1fd"
+    },
+    {
+      "path": "skill/triggers/on_write_scan_loop.md",
+      "kind": "file",
+      "size_bytes": 2053,
+      "sha256": "b6de0faf1829b929c5ed2a0c6c6331fdbb759b7650b8383ae9ba30e834ef6a73",
+      "leaf_hash": "8011f669176987679b11b0898687462e71214dcb4515bd60b9eacb00ee39dacd"
+    },
+    {
+      "path": "skill/triggers/on_write_state_file.md",
+      "kind": "file",
+      "size_bytes": 2127,
+      "sha256": "74ff7eca513c1288e06d1962a8ba301494b5103ba57e55539916c1ffd0f23f8e",
+      "leaf_hash": "327ebdfac2b7425eac227283ef08323a18143fc2f0eca835e89e48377bcccd1c"
+    },
+    {
+      "path": "skill/triggers/on_write_test.md",
+      "kind": "file",
+      "size_bytes": 1898,
+      "sha256": "8651883233880bb41205b02cef9c7e1a2f38f7c96df59cd8276d4f4a9d4a96e6",
+      "leaf_hash": "65e6679f27a3a2a4d8abbbbc3fff77784c6356e04a895ba45409c0232135978a"
+    },
+    {
+      "path": "skill/uninstall",
+      "kind": "file",
+      "size_bytes": 4012,
+      "sha256": "4b9bc481993586981b0dedb9462d5c095e14d504a41eca23fcfaa63cb5e13f2f",
+      "leaf_hash": "f473dde93d553479e9138e44971cfcb91c9e53cd5f7748d53e4e1731c1a3ab89"
+    },
+    {
+      "path": "systemd/dict-ai-coding-review-sync-watch.service",
+      "kind": "file",
+      "size_bytes": 345,
+      "sha256": "31fcb3930db0350d985cf9589f39ac2619c207a6146ba8a1923456762daf9c73",
+      "leaf_hash": "cf076d363b32d77f23a564371f2e8676db2f856d1e8886b74a1beedfff248ede"
+    }
+  ]
+}
