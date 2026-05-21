@@ -2,8 +2,10 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import {
+  EXPECTED_FAMILIES,
   ROOT,
   atomicWrite,
+  extractCatalogIds,
   parseFrontmatter,
   readText,
   sha256Short,
@@ -12,23 +14,7 @@ import {
 
 const SOURCE = join(ROOT, "findings/01_bug_catalog.md");
 const TARGET = join(ROOT, "skill/catalog/bug_catalog.md");
-const EXPECTED_FAMILIES = "ABCDEFGHIJKLMNOPQR".split("");
 const ACCEPT_ID_CHANGE = process.argv.includes("--accept-id-change");
-
-function extractCatalogIds(content) {
-  const ids = new Set();
-  for (const match of content.matchAll(/^### ([A-R]\d+)\./gm)) {
-    ids.add(match[1]);
-  }
-  for (const match of content.matchAll(/^\| (L\d+) \|/gm)) {
-    ids.add(match[1]);
-  }
-  return [...ids].sort((left, right) => {
-    const familyCompare = left[0].localeCompare(right[0]);
-    if (familyCompare !== 0) return familyCompare;
-    return Number(left.slice(1)) - Number(right.slice(1));
-  });
-}
 
 function extractExistingIds() {
   if (!existsSync(TARGET)) return [];

@@ -3,53 +3,17 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from frontmatter_utils import parse_frontmatter_file
+
 ROOT = Path(__file__).resolve().parents[2]
 SKILL = ROOT / "skill"
 
 
 def parse_frontmatter(path: Path) -> tuple[dict[str, object], str]:
-    text = path.read_text(encoding="utf-8")
-    if not text.startswith("---\n"):
-        raise AssertionError(f"{path}: missing frontmatter")
-
-    end = text.find("\n---", 4)
-    if end == -1:
-        raise AssertionError(f"{path}: unterminated frontmatter")
-
-    raw = text[4:end]
-    body = text[text.find("\n", end + 4) + 1 :]
-    metadata: dict[str, object] = {}
-    current_key: str | None = None
-
-    for line in raw.splitlines():
-        if not line.strip():
-            continue
-        match = re.match(r"^([A-Za-z0-9_-]+):(?:\s*(.*))?$", line)
-        if match:
-            key, value = match.groups()
-            value = (value or "").strip()
-            current_key = key
-            if not value:
-                metadata[key] = []
-            elif value.startswith("[") and value.endswith("]"):
-                metadata[key] = [
-                    item.strip().strip("'\"")
-                    for item in value[1:-1].split(",")
-                    if item.strip()
-                ]
-                current_key = None
-            else:
-                metadata[key] = value.strip("'\"")
-                current_key = None
-            continue
-
-        item = re.match(r"^\s*-\s*(.+)$", line)
-        if item and current_key:
-            metadata.setdefault(current_key, [])
-            assert isinstance(metadata[current_key], list)
-            metadata[current_key].append(item.group(1).strip().strip("'\""))
-
-    return metadata, body
+    try:
+        return parse_frontmatter_file(path)
+    except ValueError as exc:
+        raise AssertionError(str(exc)) from exc
 
 
 def load_check(stem: str) -> tuple[dict[str, object], str]:

@@ -207,6 +207,11 @@ Format de chaque fichier : voir `ARCHITECTURE.md` §3.2 pour le template exact.
 
 - Corrections post-review Kimi : host Kimi minimal, setup/uninstall Kimi, notes Claude/Codex renforcées, contrat anglais court dans `SKILL.md`, validation regex des triggers. Voir `reviews/gpt-5.5/handoff/04-kimi-skill-corrections-20260512.md`.
 
+### 2026-05-21
+
+- Durcissement pre-sign-off : `scripts/validate.ts` et `scripts/sync-catalog.ts` valident maintenant le catalogue contre la source canonique `findings/01_bug_catalog.md` au lieu d'un hardcoding de compte.
+- Durcissement pre-sign-off : parser frontmatter YAML partage entre `skill/tests/test_helpers.py` et `skill/tests/e2e/mock_agent.py`, avec tests dedies sur derive catalogue et frontmatter.
+
 ---
 
 *Créé le 2026-05-03 par Claude Opus 4.7 (supervisor + orchestrateur).*

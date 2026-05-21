@@ -1,14 +1,14 @@
 {
   "version": "1",
   "policy_name": "local_git_manifested",
-  "generated_at_utc": "2026-05-19T23:02:39+00:00",
-  "generated_at_local": "2026-05-20T01:02:39+02:00",
-  "git_head": "e0fec91336f6b2b553a9b6d700582caa57d8c88c",
-  "reviewed_revision": "e0fec91336f6b2b553a9b6d700582caa57d8c88c+dirty",
+  "generated_at_utc": "2026-05-21T18:29:19+00:00",
+  "generated_at_local": "2026-05-21T20:29:19+02:00",
+  "git_head": "8267365d040afca499f04500f6feecb5767783ea",
+  "reviewed_revision": "8267365d040afca499f04500f6feecb5767783ea+dirty",
   "file_selection": "git ls-files --cached minus local_git roots and excluded manifest self",
-  "file_count": 152,
-  "total_bytes": 692760,
-  "merkle_root": "187ed7b4c3ae6527d326186536bd58327598b64b92c2977728f420e6eaf101e2",
+  "file_count": 160,
+  "total_bytes": 722839,
+  "merkle_root": "b2048190a00f7dace2f13457c04e36329cb1b71d85595b1a01c47c11338e55dd",
   "files": [
     {
       "path": ".githooks/pre-commit",
@@ -48,9 +48,9 @@
     {
       "path": "ARCHITECTURE.md",
       "kind": "file",
-      "size_bytes": 16879,
-      "sha256": "f73c234a90e96f1f99a818e187861b69711901f7413f8cd848a383a506256ce3",
-      "leaf_hash": "020e8c6cae7f57aa23896596fec15abcfc8b892b4be3c060ac8ad9785ca12ccb"
+      "size_bytes": 17133,
+      "sha256": "ebdfde6bc9004d23211e88c8ef25cdba01862ab4682cbac12f1da39d57324e64",
+      "leaf_hash": "35efe396180f445b81616f4d588730633ae3c12bda626e88465160cbe53cb8a6"
     },
     {
       "path": "CLAUDE.md",
@@ -97,9 +97,9 @@
     {
       "path": "TODOS.md",
       "kind": "file",
-      "size_bytes": 10599,
-      "sha256": "2d0346ba5d972ac26e61bb733371361f164954a49f03b26fafc1a24b4e2ed974",
-      "leaf_hash": "319c0d3c9391eaba973f5f83661469a0f5d5fc278d2e84fde995248010bc0811"
+      "size_bytes": 11010,
+      "sha256": "8bb3a2acb95bab431d5598da330042ad8bed1a86bfdde62dbfb93dd17951fd8c",
+      "leaf_hash": "ba708668e0fa9ad6465ee4da70427ab58c03e59fdc81b3730443e6d675851bfc"
     },
     {
       "path": "environment.lock.linux-64.txt",
@@ -235,6 +235,13 @@
       "leaf_hash": "b485d0f6cbb6b59682b0687e5d1b43a91ecdd645c272657df117fc2d5ef2ad4b"
     },
     {
+      "path": "reviews/claude-opus/handoff/05-phase1-pre-signoff-hardening-20260521.md",
+      "kind": "file",
+      "size_bytes": 4715,
+      "sha256": "6bb79d80eb1f8c6205eaef3e021cc3c9f729d339a1b89f8fe7f0af42ef342388",
+      "leaf_hash": "17c004c0ec30ba8847be8e8ade3f7fc5357468ea809568aea3c94298e5a54c19"
+    },
+    {
       "path": "reviews/claude-opus/proposition/.gitkeep",
       "kind": "file",
       "size_bytes": 0,
@@ -312,6 +319,13 @@
       "leaf_hash": "49cbe871e8f2b9bd0450021314472855e9b72d5da829ac1931c083aa934b6aa0"
     },
     {
+      "path": "reviews/claude-sonnet/handoff/05-phase1-pre-signoff-hardening-20260521.md",
+      "kind": "file",
+      "size_bytes": 4715,
+      "sha256": "6bb79d80eb1f8c6205eaef3e021cc3c9f729d339a1b89f8fe7f0af42ef342388",
+      "leaf_hash": "f2befd33b78495247c5913f1ed265b8f4ed55dcc6591af6177f7da21eca38ed3"
+    },
+    {
       "path": "reviews/claude-sonnet/proposition/.gitkeep",
       "kind": "file",
       "size_bytes": 0,
@@ -359,6 +373,13 @@
       "size_bytes": 5884,
       "sha256": "9aa95e18432d5eb7030d747d4afe70590f43a79d8ff9160bd0d5a68af49833cd",
       "leaf_hash": "15df836d02ff66727a7887baaca9399b6ad869291ec849a0239a2d9335911b83"
+    },
+    {
+      "path": "reviews/global_handoff/05-phase1-pre-signoff-hardening-20260521.md",
+      "kind": "file",
+      "size_bytes": 4716,
+      "sha256": "53193db176948838817659ee4c76cfb683196eaf117a9e1899e29dd726e78685",
+      "leaf_hash": "5c381a28aa5706dcbd0a2074ab22dc531ff28d5c5d0e02151bc2fd24c37be56c"
     },
     {
       "path": "reviews/gpt-5.5/corrections/.gitkeep",
@@ -415,6 +436,13 @@
       "size_bytes": 5661,
       "sha256": "adf73b652e80b05a441332e592fb81849822ce0890115923c03a42c967c566a4",
       "leaf_hash": "e1b649b0c1d4195900ac1dfa4abf14ffb44398a011c23c892fce3de4aeb1db7c"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/05-phase1-pre-signoff-hardening-20260521.md",
+      "kind": "file",
+      "size_bytes": 4487,
+      "sha256": "d621181442e98d1bb8a5b5245f2b565de85b9108bdb80cbb3657c80846878957",
+      "leaf_hash": "f0ff5a152165287b3aa2830b9c0b89a49f2fff30fd3f85be6be3b6a061be728c"
     },
     {
       "path": "reviews/gpt-5.5/proposition/.gitkeep",
@@ -585,6 +613,13 @@
       "leaf_hash": "aaf7a54dce8c348ca337a429669d439d177d7710f1f9f5701665c4033bbbea39"
     },
     {
+      "path": "reviews/kimi/handoff/05-phase1-pre-signoff-hardening-20260521.md",
+      "kind": "file",
+      "size_bytes": 4715,
+      "sha256": "6bb79d80eb1f8c6205eaef3e021cc3c9f729d339a1b89f8fe7f0af42ef342388",
+      "leaf_hash": "e09a250ec44eb51c9bc297b25c08980ab00fd5f195cd1ac5f50d08cb1cbeaac4"
+    },
+    {
       "path": "reviews/kimi/proposition/.gitkeep",
       "kind": "file",
       "size_bytes": 0,
@@ -636,16 +671,16 @@
     {
       "path": "scripts/skill-lib.ts",
       "kind": "file",
-      "size_bytes": 3872,
-      "sha256": "1520e80255e31fee3e5b7413923f8a04eb2b67798931a019973acfcf3f15edea",
-      "leaf_hash": "29656e104bd32200130cf5b4f114837ccf49936c32c0d3734d71ad73450d24e4"
+      "size_bytes": 4407,
+      "sha256": "b37bc6a6f208fcb0d84dc5a6777474254d0fa65f0f35cf167e5a01191e04f564",
+      "leaf_hash": "aee3107c9374fd51e13ffeb7f35e7fa84718ddf749f24011330e7d16842af6aa"
     },
     {
       "path": "scripts/sync-catalog.ts",
       "kind": "file",
-      "size_bytes": 2562,
-      "sha256": "58f331fa676580e465f32e4fb56b4415db967bdac290dd80b7f48378a5f13d4b",
-      "leaf_hash": "e429280fded0b60039618166460520cc57a1fd5b60983ab5de3dec965a6cee62"
+      "size_bytes": 2083,
+      "sha256": "0c2960ffa121a4c9ace567c008a89f53d801141b027b18ffb589ada6a0050f90",
+      "leaf_hash": "5e8ee07cb2862d6c02912c31129b5ee72a3da0c2619b17d6bd1f6e2d0cb412bf"
     },
     {
       "path": "scripts/sync_reviews.py",
@@ -664,9 +699,9 @@
     {
       "path": "scripts/validate.ts",
       "kind": "file",
-      "size_bytes": 7480,
-      "sha256": "547ee9bbbf5cde874792fab652f151c44db7cc4d2996a940f0db41a48b0c5ec7",
-      "leaf_hash": "820a44980a40027961e3994f3be02f083899390f239c997d9df2bb2cb482c0a0"
+      "size_bytes": 8471,
+      "sha256": "48a51a6efdc049eab8cfa0279db75b62a654b6dfc4561badbf5ceabc001ccaf4",
+      "leaf_hash": "f401f5cabc6925b982b99376ee1395a8b788c3d5beb420def601ddd8c6def09f"
     },
     {
       "path": "skill/.gitkeep",
@@ -678,9 +713,9 @@
     {
       "path": "skill/README.md",
       "kind": "file",
-      "size_bytes": 2672,
-      "sha256": "4bf26f808a5427427c97817270c3fc666d9c41b6cfa36c8f5100962e0c1ce737",
-      "leaf_hash": "bab912871ac582ce52edb2fefe6413c80f19a8ed0adc625429539881b81371e9"
+      "size_bytes": 2973,
+      "sha256": "aad70bddb137e206daeb3f348f436d3436ca3864aef006d5a85b6a4e8064d97f",
+      "leaf_hash": "750aa784d06ff9127e19057a2e2f2845d5d144291621286521a83ae1bc44cc0e"
     },
     {
       "path": "skill/SKILL.md",
@@ -902,9 +937,9 @@
     {
       "path": "skill/tests/e2e/mock_agent.py",
       "kind": "file",
-      "size_bytes": 7505,
-      "sha256": "9b916c802a6cf32df62104b0f6ee468ae5b91a65dfaa83f8105c8cbf36a4d6da",
-      "leaf_hash": "481e6f5aaf89ed21f3bf7323e6f661d4f482697690a4fe41d0e580f86d0b9e63"
+      "size_bytes": 6359,
+      "sha256": "43cbc1639ab00fd4a03f337b89cc1b91df0247d4448bd137e52af7770f2dc95f",
+      "leaf_hash": "e215983ff3cae4f4d852f5e1ff5a9be7a583c421b054de033367f12236002a9f"
     },
     {
       "path": "skill/tests/e2e/run.sh",
@@ -940,6 +975,13 @@
       "size_bytes": 241,
       "sha256": "ef8460e147a09fb47704ebe04f8e113c9ae28c6a653103c7b4e7e78f099d6689",
       "leaf_hash": "d46ac5f6316d9e1d942b5c82bdf8ae0d1dab9380b637c738c4e1faddf5a22744"
+    },
+    {
+      "path": "skill/tests/frontmatter_utils.py",
+      "kind": "file",
+      "size_bytes": 1354,
+      "sha256": "07f7a3018d5fa4398a936c09ed7e0b327b71ede696a9d681983c18fc8e6b1886",
+      "leaf_hash": "2e00ab3dd43878b40494715ca9799f84d6ba35d3eecfd9fa7f87ed46027429b3"
     },
     {
       "path": "skill/tests/test_check_atomic_write.py",
@@ -984,11 +1026,18 @@
       "leaf_hash": "ccb5781de1bb0e1dd8809cb749a1645210d9667c04eca9e04ab7bfbaadb9213b"
     },
     {
+      "path": "skill/tests/test_frontmatter_utils.py",
+      "kind": "file",
+      "size_bytes": 1431,
+      "sha256": "258cf285432b9211ca3e6761418e283c7738a73ae12560864d6342d290517e07",
+      "leaf_hash": "445e4ff0ec1f4cfa8260a3d1acf9bfc547577a2e8cd82f5fe5feffb102ecf6b4"
+    },
+    {
       "path": "skill/tests/test_helpers.py",
       "kind": "file",
-      "size_bytes": 2875,
-      "sha256": "54bed03446df9c4a37f5ee2f4aff48d12622d137f10fc8de74a8235cbc60e17c",
-      "leaf_hash": "2ed7018e60ea1d8e37736bf904335dd7e182b3d65d57131603c837577f5add94"
+      "size_bytes": 1608,
+      "sha256": "c7e3dc30b37622b5cf74f63b6028e4d6b23d81ff9d7a1d3c7aa7cdf5d01d76d0",
+      "leaf_hash": "68dc10e4e6e40912b246b82064359a683ee1d28d78b5304b027d0b8eba7f0277"
     },
     {
       "path": "skill/tests/test_local_git_guard.py",
@@ -1005,6 +1054,13 @@
       "leaf_hash": "f5a6cdfc2c4c5f57e25a430d6375c843c33a8cb773050435dd142d8c00865246"
     },
     {
+      "path": "skill/tests/test_sync_catalog.py",
+      "kind": "file",
+      "size_bytes": 2695,
+      "sha256": "f06a99e85de647c16e3839038758916803de3375516014f9b2deeee0bc57791e",
+      "leaf_hash": "072ba1a0479b9c23564b306e4cf4bc6ad88f49801ac55089f2b6234fc8a99faa"
+    },
+    {
       "path": "skill/tests/test_sync_reviews_watch.py",
       "kind": "file",
       "size_bytes": 2972,
@@ -1014,9 +1070,9 @@
     {
       "path": "skill/tests/test_validate.py",
       "kind": "file",
-      "size_bytes": 2995,
-      "sha256": "e73e752a9eb3d8bbc0738a67822adee8677c1e76b0b670568854524bd0abdd86",
-      "leaf_hash": "9c15936e843f42d5176305268767678b0a2ce318c54b9b765e9d13823fefb23a"
+      "size_bytes": 4646,
+      "sha256": "321a52457cedc3d0cf37e1f2f84a22aab7ef38005ad653a750a47a7bfb4eadab",
+      "leaf_hash": "fbde367ecfaa210048fb7ed33236b417ba5c62318db1919b9159d5f4f801cf55"
     },
     {
       "path": "skill/triggers/.gitkeep",

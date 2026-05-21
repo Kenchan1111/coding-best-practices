@@ -271,6 +271,11 @@ La Phase 1 est `accepted` quand :
 5. ✅ Un sign-off explicite Zack
 6. ✅ La skill ne contredit pas une règle existante de `CLAUDE.md` projet
 
+**Boundary P7** : le harness E2E mock prouve l'installation de l'artefact et le
+mapping trigger/check sur fixtures plantees. Il ne prouve pas la compliance
+live d'un host reel ; cette limite doit rester explicite jusqu'a un smoke test
+host-side separe.
+
 Pas accepted si :
 - Une famille du catalogue n'est pas représentée (au moins 1 check par famille, même minimal)
 - Validation runtime non implémentée (au minimum `bun run validate` ou équivalent)

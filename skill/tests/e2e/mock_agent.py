@@ -12,45 +12,14 @@ import argparse
 import json
 import os
 from pathlib import Path
+import sys
 from typing import Any
 
+TESTS_DIR = Path(__file__).resolve().parents[1]
+if str(TESTS_DIR) not in sys.path:
+    sys.path.insert(0, str(TESTS_DIR))
 
-def parse_frontmatter(path: Path) -> dict[str, Any]:
-    text = path.read_text(encoding="utf-8")
-    if not text.startswith("---\n"):
-        raise ValueError(f"{path}: missing frontmatter")
-    end = text.find("\n---", 4)
-    if end == -1:
-        raise ValueError(f"{path}: unterminated frontmatter")
-
-    metadata: dict[str, Any] = {}
-    current_key: str | None = None
-    for line in text[4:end].splitlines():
-        if not line.strip():
-            continue
-        if ":" in line and not line.startswith(" "):
-            key, raw_value = line.split(":", 1)
-            value = raw_value.strip()
-            current_key = key
-            if not value:
-                metadata[key] = []
-            elif value.startswith("[") and value.endswith("]"):
-                metadata[key] = [
-                    item.strip().strip("'\"")
-                    for item in value[1:-1].split(",")
-                    if item.strip()
-                ]
-                current_key = None
-            else:
-                metadata[key] = value.strip("'\"")
-                current_key = None
-            continue
-
-        stripped = line.strip()
-        if current_key and stripped.startswith("- "):
-            metadata.setdefault(current_key, [])
-            metadata[current_key].append(stripped[2:].strip().strip("'\""))
-    return metadata
+from frontmatter_utils import parse_frontmatter_file
 
 
 def atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -176,7 +145,7 @@ def main() -> int:
         "J_bidir_test_coverage",
     ]
     checks = {
-        name: parse_frontmatter(skill_dir / "checks" / f"{name}.md")
+        name: parse_frontmatter_file(skill_dir / "checks" / f"{name}.md")[0]
         for name in required_checks
     }
 

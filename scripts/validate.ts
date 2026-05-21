@@ -2,15 +2,16 @@
 import { existsSync } from "node:fs";
 import { basename, join } from "node:path";
 import {
+  EXPECTED_FAMILIES,
   ROOT,
   SKILL_DIR,
+  extractCatalogIds,
   listMarkdownFiles,
   parseFrontmatterFile,
   readText,
   relativePath,
 } from "./skill-lib.ts";
 
-const EXPECTED_FAMILIES = "ABCDEFGHIJKLMNOPQR".split("");
 const EXPECTED_TRIGGERS = [
   "on_write_state_file",
   "on_write_test",
@@ -189,16 +190,45 @@ function validateTriggers(checksByStem) {
 
 function validateCatalog() {
   const catalogPath = join(SKILL_DIR, "catalog/bug_catalog.md");
+  const sourcePath = join(ROOT, "findings/01_bug_catalog.md");
   if (!existsSync(catalogPath)) {
     errors.push("skill/catalog/bug_catalog.md: missing, run node scripts/sync-catalog.ts");
     return;
   }
-  const { metadata } = parseFrontmatterFile(catalogPath);
-  if (Number(metadata.pattern_count) !== 70) {
-    errors.push("skill/catalog/bug_catalog.md: pattern_count must be 70");
+  if (!existsSync(sourcePath)) {
+    errors.push("findings/01_bug_catalog.md: missing canonical source for catalog validation");
+    return;
   }
-  if (!Array.isArray(metadata.catalog_ids) || metadata.catalog_ids.length !== 70) {
-    errors.push("skill/catalog/bug_catalog.md: catalog_ids must contain 70 entries");
+
+  const expectedIds = extractCatalogIds(readText(sourcePath));
+  const expectedFamilies = new Set(expectedIds.map((id) => id[0]));
+  for (const family of EXPECTED_FAMILIES) {
+    if (!expectedFamilies.has(family)) {
+      errors.push(`findings/01_bug_catalog.md: missing family ${family}`);
+    }
+  }
+
+  const { metadata } = parseFrontmatterFile(catalogPath);
+  if (Number(metadata.pattern_count) !== expectedIds.length) {
+    errors.push(
+      `skill/catalog/bug_catalog.md: pattern_count must match canonical source count ${expectedIds.length}`
+    );
+  }
+  if (!Array.isArray(metadata.catalog_ids)) {
+    errors.push("skill/catalog/bug_catalog.md: catalog_ids must be a list");
+    return;
+  }
+
+  const actualIds = metadata.catalog_ids.map((item) => String(item));
+  if (actualIds.length !== expectedIds.length) {
+    errors.push(
+      `skill/catalog/bug_catalog.md: catalog_ids must contain ${expectedIds.length} canonical entries`
+    );
+  }
+  if (actualIds.join("\n") !== expectedIds.join("\n")) {
+    errors.push(
+      "skill/catalog/bug_catalog.md: catalog_ids drift from findings/01_bug_catalog.md, run node scripts/sync-catalog.ts"
+    );
   }
 }
 

@@ -79,4 +79,8 @@ Installations ciblees Phase 1 :
 
 P1-P7 livres : scaffolding, 18 checks, 5 triggers contextuels, generation,
 validation Bun, setup/install/uninstall idempotents, et E2E mock deterministe.
+Durcissement pre-sign-off livre : validation du catalogue alignee sur la source
+canonique et parseur frontmatter YAML partage entre tests et harness E2E.
 La Phase 1 attend encore P8 : reviews croisees Opus/Sonnet/Kimi et sign-off.
+Le harness E2E mock prouve le chargement de l'artefact et le mapping
+checks/triggers sur fixtures plantees, pas la compliance live d'un host reel.

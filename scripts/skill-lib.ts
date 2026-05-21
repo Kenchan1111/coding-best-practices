@@ -8,6 +8,7 @@ export const ROOT = process.env.SKILL_PROJECT_ROOT
   ? resolve(process.env.SKILL_PROJECT_ROOT)
   : resolve(dirname(fileURLToPath(import.meta.url)), "..");
 export const SKILL_DIR = join(ROOT, "skill");
+export const EXPECTED_FAMILIES = "ABCDEFGHIJKLMNOPQR".split("");
 
 export function readText(path) {
   return readFileSync(path, "utf8");
@@ -116,6 +117,21 @@ export function stripQuotes(value) {
 
 export function yamlList(items, indent = "") {
   return items.map((item) => `${indent}- ${item}`).join("\n");
+}
+
+export function extractCatalogIds(content) {
+  const ids = new Set();
+  for (const match of content.matchAll(/^### ([A-R]\d+)\./gm)) {
+    ids.add(match[1]);
+  }
+  for (const match of content.matchAll(/^\| (L\d+) \|/gm)) {
+    ids.add(match[1]);
+  }
+  return [...ids].sort((left, right) => {
+    const familyCompare = left[0].localeCompare(right[0]);
+    if (familyCompare !== 0) return familyCompare;
+    return Number(left.slice(1)) - Number(right.slice(1));
+  });
 }
 
 export function firstParagraphAfterHeading(body, heading) {
