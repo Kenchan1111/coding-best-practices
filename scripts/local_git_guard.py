@@ -66,7 +66,9 @@ def compute_merkle_root(leaf_hashes: list[str]) -> str:
     level = list(leaf_hashes)
     while len(level) > 1:
         if len(level) % 2 == 1:
-            level.append(level[-1])
+            # CVE-2012-2459 mitigation: use a deterministic padding hash
+            # that can never collide with a legitimate leaf hash.
+            level.append(sha256_bytes(b"__MERKLE_PAD__"))
         next_level: list[str] = []
         for index in range(0, len(level), 2):
             next_level.append(sha256_bytes((level[index] + level[index + 1]).encode("ascii")))

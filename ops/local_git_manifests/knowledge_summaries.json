@@ -5,33 +5,33 @@
   "root_path": "knowledge/80_summaries",
   "classification": "local_git_manifested",
   "reason": "Generated team summaries remain local working state.",
-  "generated_at_utc": "2026-05-21T18:29:19+00:00",
-  "generated_at_local": "2026-05-21T20:29:19+02:00",
+  "generated_at_utc": "2026-05-22T18:11:21+00:00",
+  "generated_at_local": "2026-05-22T20:11:21+02:00",
   "exists": true,
   "directory_count": 0,
   "file_count": 3,
   "symlink_count": 0,
-  "total_bytes": 41879,
-  "merkle_root": "49df13bbacb45c5706743e1ebbb1a3e7b9c2a6cc3dae82de139f5f8c1f520e16",
+  "total_bytes": 44963,
+  "merkle_root": "6551fb4a000a5653a6c8b85f9402a9bf770ce5674efd44d0a2ec020dcecd51ac",
   "directories": [],
   "files": [
     {
       "path": "team_review_changelog.md",
-      "size_bytes": 24077,
-      "sha256": "79a222da0a37d32c73d9175f8c3058c55a87c82e21bbee88c388dedd77ea9587",
-      "leaf_hash": "255f7c8def5a66c57e183378bc39024863054eac0ec890404f94c73e735f39cf"
+      "size_bytes": 26417,
+      "sha256": "8c6ef84cf87a1aaff136d219a68214107ce6c58a177f5fe9cf7dbbc318c3ffb2",
+      "leaf_hash": "dc3c8f0f5307947a3d9b35efa835599de4459a3d41c379d1624511a16cbb68f6"
     },
     {
       "path": "team_review_digest.md",
-      "size_bytes": 12263,
-      "sha256": "1fa16559bea88699f48f3b0328bd18118bcf4d6637f891caeba9826d4e3481f3",
-      "leaf_hash": "e7196b92271de7f0d5857d65df6cf607d9d2181a0f92fdffa72f19ff908328ad"
+      "size_bytes": 12800,
+      "sha256": "83fdcb8831cb42e159cd3849861d3b72a0defab409ea8fad52b2c9fc67220bba",
+      "leaf_hash": "7d55e0db7ff8446852740b367374e9e75bbbbf1cf7dba29272d9d02f9765dbbe"
     },
     {
       "path": "team_review_latest.md",
-      "size_bytes": 5539,
-      "sha256": "48f52426ded9421627084570b0f1ae5a7ad5ee10d19f687336e6280bbd701d18",
-      "leaf_hash": "a021304c9e646cab64ac4cbd3f4fa9e997e160e3bde9727491975e18cc3a4102"
+      "size_bytes": 5746,
+      "sha256": "c5802cd55651a4f91fe39f3dc6a811ad9069028c39e1605a4f0eac3ab8c949e3",
+      "leaf_hash": "dd6d3dd3d3dfd1fe0bf5bc9e19b065e3ad3c5db5a730af50118759f8e9b2fb3a"
     }
   ],
   "symlinks": []

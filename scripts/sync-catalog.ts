@@ -52,10 +52,6 @@ function main() {
     throw new Error(`catalog missing families: ${missingFamilies.join(", ")}`);
   }
 
-  if (ids.length !== 70) {
-    throw new Error(`expected 70 catalog IDs, found ${ids.length}`);
-  }
-
   const existingIds = extractExistingIds();
   if (existingIds.length > 0 && existingIds.join("\n") !== ids.join("\n") && !ACCEPT_ID_CHANGE) {
     throw new Error(

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import importlib.util
 import subprocess
 import sys
 import tempfile
@@ -11,6 +12,16 @@ from test_helpers import ROOT
 
 
 SCRIPT = ROOT / "scripts" / "local_git_guard.py"
+
+
+def load_local_git_guard_module():
+    sys.path.insert(0, str(SCRIPT.parent))
+    spec = importlib.util.spec_from_file_location("local_git_guard", SCRIPT)
+    module = importlib.util.module_from_spec(spec)
+    assert spec is not None and spec.loader is not None
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
 
 
 def run(cmd: list[str], *, cwd: Path) -> subprocess.CompletedProcess[str]:
@@ -36,6 +47,10 @@ def git(repo: Path, *args: str) -> None:
 
 
 class LocalGitGuardTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.local_git_guard = load_local_git_guard_module()
+
     def init_repo(self, repo: Path) -> None:
         repo.mkdir(parents=True, exist_ok=True)
         git(repo, "init")
@@ -169,6 +184,12 @@ class LocalGitGuardTest(unittest.TestCase):
             )
             self.assertEqual(verify.returncode, 1)
             self.assertIn("knowledge/80_summaries: mismatch for merkle_root", verify.stderr)
+
+    def test_merkle_padding_distinguishes_odd_leaf_count_from_duplicate_last_leaf(self):
+        odd_root = self.local_git_guard.compute_merkle_root(["a", "b", "c"])
+        duplicated_last_root = self.local_git_guard.compute_merkle_root(["a", "b", "c", "c"])
+
+        self.assertNotEqual(odd_root, duplicated_last_root)
 
     def test_hook_check_refreshes_and_stages_manifests(self):
         with tempfile.TemporaryDirectory() as tmp:

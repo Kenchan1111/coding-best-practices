@@ -14,7 +14,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 REVIEW_ROOT = ROOT / "reviews"
 GLOBAL_HANDOFF_DIR = REVIEW_ROOT / "global_handoff"
-DEFAULT_AGENTS = ("claude-opus", "claude-sonnet", "gpt-5.5")
+DEFAULT_AGENTS = ("claude-opus", "claude-sonnet", "gpt-5.5", "kimi")
 RESERVED_REVIEW_DIRS = {"global_handoff"}
 REVIEW_KINDS = ("handoff", "corrections", "proposition")
 

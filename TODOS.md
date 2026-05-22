@@ -212,6 +212,20 @@ Format de chaque fichier : voir `ARCHITECTURE.md` §3.2 pour le template exact.
 - Durcissement pre-sign-off : `scripts/validate.ts` et `scripts/sync-catalog.ts` valident maintenant le catalogue contre la source canonique `findings/01_bug_catalog.md` au lieu d'un hardcoding de compte.
 - Durcissement pre-sign-off : parser frontmatter YAML partage entre `skill/tests/test_helpers.py` et `skill/tests/e2e/mock_agent.py`, avec tests dedies sur derive catalogue et frontmatter.
 
+### 2026-05-21 (post-review Kimi swarm)
+
+- Review systemique intransigeante complete livree : `reviews/kimi/proposition/06-swarm-code-review-intransigeant-20260521.md`.
+- Triage locale synchronisee sur l'etat du code :
+  - `scripts/sync-catalog.ts` n'a plus le hardcoding `70`.
+  - `scripts/local_git_guard.py` n'utilise plus le duplicate-last Merkle.
+  - `scripts/knowledge_os.py` inclut `kimi` dans `DEFAULT_AGENTS`.
+  - `skill/bin/README.md` documente explicitement le stub Phase 1.
+- La note Kimi reste une source de review, pas un etat accepte du repo :
+  - certains points restent des limites ouvertes ou des ameliorations futures ;
+  - le point "zero test unitaire sur local_git_guard.py" n'est pas retenu comme fait, car `skill/tests/test_local_git_guard.py` existe deja ;
+  - toute conclusion de correction doit rester ancree dans le code courant et les validations de cette branche.
+- Re-validation complete post-sync attendue avant toute nouvelle conclusion P8.
+
 ---
 
 *Créé le 2026-05-03 par Claude Opus 4.7 (supervisor + orchestrateur).*

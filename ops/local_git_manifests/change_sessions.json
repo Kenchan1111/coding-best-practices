@@ -5,14 +5,14 @@
   "root_path": "change_sessions",
   "classification": "local_git_manifested",
   "reason": "Imported and local change proof stays on the workstation.",
-  "generated_at_utc": "2026-05-21T18:29:19+00:00",
-  "generated_at_local": "2026-05-21T20:29:19+02:00",
+  "generated_at_utc": "2026-05-22T18:11:21+00:00",
+  "generated_at_local": "2026-05-22T20:11:21+02:00",
   "exists": true,
   "directory_count": 1,
   "file_count": 3,
   "symlink_count": 0,
   "total_bytes": 22855,
-  "merkle_root": "f4ba9e7ebe28bfc33663ee590f7af5ab1aa3be4214de3922c64dbdb64d9db6f3",
+  "merkle_root": "fae985800b8e5a3fb9106c3f78ea4742309add39e474514dadd674ef9caeb276",
   "directories": [
     {
       "path": "20260507T235259+0200_gstack"

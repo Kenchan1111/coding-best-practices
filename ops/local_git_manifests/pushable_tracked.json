@@ -1,14 +1,14 @@
 {
   "version": "1",
   "policy_name": "local_git_manifested",
-  "generated_at_utc": "2026-05-21T18:29:19+00:00",
-  "generated_at_local": "2026-05-21T20:29:19+02:00",
-  "git_head": "8267365d040afca499f04500f6feecb5767783ea",
-  "reviewed_revision": "8267365d040afca499f04500f6feecb5767783ea+dirty",
+  "generated_at_utc": "2026-05-22T18:11:22+00:00",
+  "generated_at_local": "2026-05-22T20:11:22+02:00",
+  "git_head": "2a80f05a66db995fe88dcf1ab1fbf18ea0787a95",
+  "reviewed_revision": "2a80f05a66db995fe88dcf1ab1fbf18ea0787a95+dirty",
   "file_selection": "git ls-files --cached minus local_git roots and excluded manifest self",
-  "file_count": 160,
-  "total_bytes": 722839,
-  "merkle_root": "b2048190a00f7dace2f13457c04e36329cb1b71d85595b1a01c47c11338e55dd",
+  "file_count": 168,
+  "total_bytes": 759217,
+  "merkle_root": "b29fba8c58b4d2bcd0ef54cb9c52cb6bf347fe81a1bc157921581798a3778ffa",
   "files": [
     {
       "path": ".githooks/pre-commit",
@@ -97,9 +97,9 @@
     {
       "path": "TODOS.md",
       "kind": "file",
-      "size_bytes": 11010,
-      "sha256": "8bb3a2acb95bab431d5598da330042ad8bed1a86bfdde62dbfb93dd17951fd8c",
-      "leaf_hash": "ba708668e0fa9ad6465ee4da70427ab58c03e59fdc81b3730443e6d675851bfc"
+      "size_bytes": 11984,
+      "sha256": "f0888b6ae34576848487c16a5f5c9ea49f1a3a5b64c81cd65d067795c09f1a13",
+      "leaf_hash": "d98ee381083b2eaef07c95af9c6748aaa507e738db7320e50641c9cd1e9d144c"
     },
     {
       "path": "environment.lock.linux-64.txt",
@@ -242,6 +242,13 @@
       "leaf_hash": "17c004c0ec30ba8847be8e8ade3f7fc5357468ea809568aea3c94298e5a54c19"
     },
     {
+      "path": "reviews/claude-opus/handoff/06-local-sync-after-kimi-review-20260522.md",
+      "kind": "file",
+      "size_bytes": 3825,
+      "sha256": "97fb20108f043d0024ec184ffa14440d3ad8acc649b14c24851fad5fac3cc76b",
+      "leaf_hash": "d6b50398d5b9ea8eea4a77d53d747dbf981bc18429e28acbfc8adac571179774"
+    },
+    {
       "path": "reviews/claude-opus/proposition/.gitkeep",
       "kind": "file",
       "size_bytes": 0,
@@ -326,6 +333,13 @@
       "leaf_hash": "f2befd33b78495247c5913f1ed265b8f4ed55dcc6591af6177f7da21eca38ed3"
     },
     {
+      "path": "reviews/claude-sonnet/handoff/06-local-sync-after-kimi-review-20260522.md",
+      "kind": "file",
+      "size_bytes": 3825,
+      "sha256": "97fb20108f043d0024ec184ffa14440d3ad8acc649b14c24851fad5fac3cc76b",
+      "leaf_hash": "f9f95db8eababc8657eb0b63e7678302bfae141d0663a30eacdf74967d9ca2a0"
+    },
+    {
       "path": "reviews/claude-sonnet/proposition/.gitkeep",
       "kind": "file",
       "size_bytes": 0,
@@ -380,6 +394,13 @@
       "size_bytes": 4716,
       "sha256": "53193db176948838817659ee4c76cfb683196eaf117a9e1899e29dd726e78685",
       "leaf_hash": "5c381a28aa5706dcbd0a2074ab22dc531ff28d5c5d0e02151bc2fd24c37be56c"
+    },
+    {
+      "path": "reviews/global_handoff/06-local-sync-after-kimi-review-20260522.md",
+      "kind": "file",
+      "size_bytes": 3826,
+      "sha256": "429e27ba4b6a89dc48171c0b54b0ec55ab1320484a00fb9c1dcd0e07f6f17708",
+      "leaf_hash": "a5be7ac8f5c0f67f41d069535c3d9c093b4bc9070f9d2a08fd2a2b66e5946b65"
     },
     {
       "path": "reviews/gpt-5.5/corrections/.gitkeep",
@@ -443,6 +464,13 @@
       "size_bytes": 4487,
       "sha256": "d621181442e98d1bb8a5b5245f2b565de85b9108bdb80cbb3657c80846878957",
       "leaf_hash": "f0ff5a152165287b3aa2830b9c0b89a49f2fff30fd3f85be6be3b6a061be728c"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/06-local-sync-after-kimi-review-20260522.md",
+      "kind": "file",
+      "size_bytes": 3595,
+      "sha256": "8993e79e3758b18a8028c4168da9c34655ade6e32b8efb45a036614050e01dba",
+      "leaf_hash": "9f2e95f949a8ecc3169eba83ef89d1c1b8b7089800525cc9ad2af4dbd4af40d1"
     },
     {
       "path": "reviews/gpt-5.5/proposition/.gitkeep",
@@ -620,6 +648,13 @@
       "leaf_hash": "e09a250ec44eb51c9bc297b25c08980ab00fd5f195cd1ac5f50d08cb1cbeaac4"
     },
     {
+      "path": "reviews/kimi/handoff/06-local-sync-after-kimi-review-20260522.md",
+      "kind": "file",
+      "size_bytes": 3825,
+      "sha256": "97fb20108f043d0024ec184ffa14440d3ad8acc649b14c24851fad5fac3cc76b",
+      "leaf_hash": "6678882bf83550dfca846a9a58fa4ae8c7e40f641c90e722a513d15d77987673"
+    },
+    {
       "path": "reviews/kimi/proposition/.gitkeep",
       "kind": "file",
       "size_bytes": 0,
@@ -648,6 +683,13 @@
       "leaf_hash": "e63fe6a324b99c2169c7cec1aab69972c476f00d4a1b02e1519915d9906e820f"
     },
     {
+      "path": "reviews/kimi/proposition/06-swarm-code-review-intransigeant-20260521.md",
+      "kind": "file",
+      "size_bytes": 14185,
+      "sha256": "f1029bd3e30964f2e6ab9e7ba67771ac38a8bf31e65d87ae684e578747d5e72a",
+      "leaf_hash": "70573c361de275130df35079d636a8526a06708dfc496c1b1adecc124f551415"
+    },
+    {
       "path": "scripts/gen-skill-docs.ts",
       "kind": "file",
       "size_bytes": 4297,
@@ -657,30 +699,30 @@
     {
       "path": "scripts/knowledge_os.py",
       "kind": "file",
-      "size_bytes": 7869,
-      "sha256": "747c88ba76be4756fdebf104cc549a24ddf0311804b088e92e1b308a6d819db3",
-      "leaf_hash": "e2951c18a6462bc486ccdb68c4f1c33c2fb1f22a75c70ede6ee56a6e5fc1e5ba"
+      "size_bytes": 7877,
+      "sha256": "229f97c56b85583a22b8b8651b7e25f9f4ddeb889ced8cf8c315f40065ab8ec1",
+      "leaf_hash": "4727e13155a8ec55c050f06a2191d597e5eedc65aadbeb868e0339c9a327c572"
     },
     {
       "path": "scripts/local_git_guard.py",
       "kind": "file",
-      "size_bytes": 20826,
-      "sha256": "4fc2c326dd2ccaa5339adf0939d3bbe1112017731bc15b8c90e920b857f7d770",
-      "leaf_hash": "8773925afb791326370406c059fc4c8410e5bea6f3b10c115301b2af1a939a60"
+      "size_bytes": 20987,
+      "sha256": "d4c38fa726d3264c60e0dc8948282d36b14ab2a78ec42ada0e5b046f2182abc1",
+      "leaf_hash": "de26e114bfa03307bc3d28a14c60e341890115e12ec3c35ec9eb858774b83a8f"
     },
     {
       "path": "scripts/skill-lib.ts",
       "kind": "file",
-      "size_bytes": 4407,
-      "sha256": "b37bc6a6f208fcb0d84dc5a6777474254d0fa65f0f35cf167e5a01191e04f564",
-      "leaf_hash": "aee3107c9374fd51e13ffeb7f35e7fa84718ddf749f24011330e7d16842af6aa"
+      "size_bytes": 4557,
+      "sha256": "83be0f65d569fbc8643b06a4ebc0839629b8bde00ddcbb86d4e3ab0e322394f9",
+      "leaf_hash": "6abc3ac0344ab6ac4dada9c477ae5a7333afd514cb0938d611c8fd305122cffe"
     },
     {
       "path": "scripts/sync-catalog.ts",
       "kind": "file",
-      "size_bytes": 2083,
-      "sha256": "0c2960ffa121a4c9ace567c008a89f53d801141b027b18ffb589ada6a0050f90",
-      "leaf_hash": "5e8ee07cb2862d6c02912c31129b5ee72a3da0c2619b17d6bd1f6e2d0cb412bf"
+      "size_bytes": 1982,
+      "sha256": "07dc81c02b2ed3095900fc73d31cf42a14dd4bc363ebde1d9f7bbe013e33a8c6",
+      "leaf_hash": "8ec7fe0a34ffadc4cfd65ac5613e474e05a5afabaec994250adec107f6665028"
     },
     {
       "path": "scripts/sync_reviews.py",
@@ -737,6 +779,13 @@
       "size_bytes": 1,
       "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
       "leaf_hash": "8c6ce2447c2af9af3ffc424d2aad7a8321de73f86c6cfff93a66948309aa9399"
+    },
+    {
+      "path": "skill/bin/README.md",
+      "kind": "file",
+      "size_bytes": 320,
+      "sha256": "45dd40e769d3131937797d45d4e47c3f65b4ed2271a508eeee60e7e0807dbc5c",
+      "leaf_hash": "cff0668e61fe394e187a14f4fa7d1df533d939449b8d9ba8d2ad1792d37fa947"
     },
     {
       "path": "skill/catalog/.gitkeep",
@@ -1040,11 +1089,18 @@
       "leaf_hash": "68dc10e4e6e40912b246b82064359a683ee1d28d78b5304b027d0b8eba7f0277"
     },
     {
+      "path": "skill/tests/test_knowledge_os.py",
+      "kind": "file",
+      "size_bytes": 984,
+      "sha256": "49685f2d18a9dc20ab05b00539c613ef1a9ea1c39dad7f79ab2f870e204a6c70",
+      "leaf_hash": "e9479c02ba6d39748301068e3ac9e3b34aa44516841f2b76c769343216b532fe"
+    },
+    {
       "path": "skill/tests/test_local_git_guard.py",
       "kind": "file",
-      "size_bytes": 8868,
-      "sha256": "004f00f10d3e281ac7dbccae3dac195efd84613eb10121435cd74bd6564ae8c7",
-      "leaf_hash": "4527a1e115963998e98a1fcf7418e874e318f4422ce9b6091f19cc9abcfd1d84"
+      "size_bytes": 9669,
+      "sha256": "30192485eaa5a3cb1c16e94f03bbc3776fa5a6101646889b6ed567a48901e4b7",
+      "leaf_hash": "67bbabf7a0116fcabd5a8f3f428a4b6a106acf3124e11bcfb65f8b4f2cd48d75"
     },
     {
       "path": "skill/tests/test_setup_install.py",

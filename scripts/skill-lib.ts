@@ -8,6 +8,8 @@ export const ROOT = process.env.SKILL_PROJECT_ROOT
   ? resolve(process.env.SKILL_PROJECT_ROOT)
   : resolve(dirname(fileURLToPath(import.meta.url)), "..");
 export const SKILL_DIR = join(ROOT, "skill");
+// Must be kept in sync with findings/01_bug_catalog.md families.
+// When adding a new family, update this list and add the corresponding check file.
 export const EXPECTED_FAMILIES = "ABCDEFGHIJKLMNOPQR".split("");
 
 export function readText(path) {
