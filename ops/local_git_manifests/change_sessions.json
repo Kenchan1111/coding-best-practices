@@ -5,17 +5,20 @@
   "root_path": "change_sessions",
   "classification": "local_git_manifested",
   "reason": "Imported and local change proof stays on the workstation.",
-  "generated_at_utc": "2026-05-22T18:11:21+00:00",
-  "generated_at_local": "2026-05-22T20:11:21+02:00",
+  "generated_at_utc": "2026-05-23T07:04:45+00:00",
+  "generated_at_local": "2026-05-23T09:04:45+02:00",
   "exists": true,
-  "directory_count": 1,
-  "file_count": 3,
+  "directory_count": 2,
+  "file_count": 9,
   "symlink_count": 0,
-  "total_bytes": 22855,
-  "merkle_root": "fae985800b8e5a3fb9106c3f78ea4742309add39e474514dadd674ef9caeb276",
+  "total_bytes": 45369,
+  "merkle_root": "9617d16afaaa992a6e15da69392361e5fa07100b792f11f824d8498f6681b85e",
   "directories": [
     {
       "path": "20260507T235259+0200_gstack"
+    },
+    {
+      "path": "20260523T010647+0200_dict_ai_coding"
     }
   ],
   "files": [
@@ -36,6 +39,42 @@
       "size_bytes": 3026,
       "sha256": "8da381f31234375e65f6ff5fc1477d44dd1f188cbaabafa33c74b1d5500fecab",
       "leaf_hash": "1b7a1172085ff4fdef46f92e7f43b570712d5bbc64c39876f23d68d90d73ca94"
+    },
+    {
+      "path": "20260523T010647+0200_dict_ai_coding/change_receipt.json",
+      "size_bytes": 1203,
+      "sha256": "6aac3a475695271801b1470fe95e932b189277f888d77b01f3f3db3ba5e7603b",
+      "leaf_hash": "f546b85a50020bfd79d286c3c6e70f3de7b57aecc00cb9574e5dc7198160d04f"
+    },
+    {
+      "path": "20260523T010647+0200_dict_ai_coding/closeout.md",
+      "size_bytes": 4979,
+      "sha256": "6da9086f0f58859ba35407b7a7a2d505e51022914f78178d80a661c6a86ae189",
+      "leaf_hash": "6c3d342d7a83984fd12c0864a2c5a091766103fca4128d883543e834febdfd5c"
+    },
+    {
+      "path": "20260523T010647+0200_dict_ai_coding/closeout.md.change-receipt.json",
+      "size_bytes": 1203,
+      "sha256": "6aac3a475695271801b1470fe95e932b189277f888d77b01f3f3db3ba5e7603b",
+      "leaf_hash": "b9dff133731ae2e55b3520481f9a9abb433c93271fd297318ba3f20ec21941d1"
+    },
+    {
+      "path": "20260523T010647+0200_dict_ai_coding/closeout_template.md",
+      "size_bytes": 2880,
+      "sha256": "18f200a1186e714a16bd832a8671962827fabea697c410ad1a2a8f06e68612ca",
+      "leaf_hash": "5d31eb00efc64ecdd5372d75e7a2ea176dc6169414612dc6e117b7f0f6073c81"
+    },
+    {
+      "path": "20260523T010647+0200_dict_ai_coding/session.json",
+      "size_bytes": 9255,
+      "sha256": "b6b210ba78da0ca8659238e21aa37e3367586cd70b2f536b8eddff10592a5bc0",
+      "leaf_hash": "777f6b00d79454c721c5db081f080878c0a90a77cbbcaf8429be909fefb0e029"
+    },
+    {
+      "path": "20260523T010647+0200_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 2994,
+      "sha256": "befd2e6039add8dbf5a18718707225aa745a3891910a5f6f72014a3fb63bad0e",
+      "leaf_hash": "d7cde0c722233875751325890b30e53d3e6033217c932ebc6481d603c654a7dc"
     }
   ],
   "symlinks": []

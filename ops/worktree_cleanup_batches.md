@@ -2,116 +2,229 @@
 
 ## Goal
 
-Define the cleanup order for this repo. The order intentionally avoids hiding
-active untracked source behind `.gitignore` before the source is frozen.
+Turn the archive-first cleanup architecture and the worktree cartographies into
+an executable sequence without deleting information or destabilizing the review
+bus.
 
-## Batch 0 - Freeze And Source Commit
+This document is operational. It assumes:
 
-Status: required before archive moves.
+- cleanup is reversible
+- no direct deletion is allowed in normal batches
+- the current `local_git_manifested` boundary is already active
+- `reviews/` remains pushable until a separate arbitration changes that policy
 
-Actions:
+## Global Preconditions
 
-- create `safety/worktree-cleanup-YYYYMMDD` or a Git bundle
-- commit or otherwise freeze canonical source surfaces
-- include `skill/`, `scripts/`, `systemd/`, setup files, governance docs,
-  `findings/`, and source review notes
-- run the validation gate before and after the freeze
+Before any executed batch:
 
-Do not perform `git clean` during this batch.
+1. create a safety freeze:
+   - branch, bundle, or both
+2. confirm `canonical_source` is already committed or otherwise frozen
+3. refresh and verify local manifests if local evidence changed:
+   - `python3 scripts/local_git_guard.py build-manifests`
+   - `python3 scripts/local_git_guard.py verify --strict`
+4. rerun the minimum guard basket:
+   - `python3 -m unittest discover -s skill/tests -p 'test_*.py'`
+   - `node scripts/validate.ts`
+   - `node scripts/gen-skill-docs.ts --dry-run`
+   - `python3 scripts/sync_reviews.py --once`
+   - `git diff --check`
 
-## Batch A - Compiled Noise Archive
+## Global Stop Rules
 
-Status: safe after Batch 0.
+Stop the batch immediately if:
 
-Candidate paths:
+- a candidate path is still consumed by an active entrypoint in
+  `ops/worktree_execution_dependencies_map.md`
+- local manifests drift unexpectedly after a move
+- `reviews/` or other source notes would need to be overwritten
+- a path has no restore rule
+- a path is still under policy arbitration
+
+## Batch 0 - Freeze and Baseline Capture
+
+### Intent
+
+Re-establish a trustworthy baseline before any archive motion begins.
+
+### Scope
+
+Freeze, not archive:
+
+- `skill/`
+- `scripts/`
+- `ops/`
+- `systemd/`
+- setup/install surfaces
+- governance docs and `findings/`
+- source review notes that are meant to remain versioned
+
+### Required actions
+
+- capture the exact starting revision
+- confirm that ignored/local-only trees are classified, not mistaken for noise
+- verify the current local-git boundary
+- record any pending arbitration before later batches run
+
+### Output
+
+- a restorable baseline
+- a live validation snapshot
+- no file movement
+
+## Batch A - Compiled Noise Only
+
+### Intent
+
+Handle the safest rebuildable surfaces first.
+
+### Candidate paths
 
 - `scripts/__pycache__/`
 - `skill/tests/__pycache__/`
 - `skill/tests/e2e/__pycache__/`
 - `skill/tests/fixtures/planted-bugs/__pycache__/`
+- other ignored cache/bytecode surfaces matched by `.gitignore`
 
-Preferred action:
+### Explicit exclusions
 
-- keep ignored in place by default
-- if the active worktree must be cleared, move the cache directories to a
-  manifest-backed archive
-- do not delete cache directories as part of normal cleanup
+- no source under `skill/`
+- no `reviews/`
+- no `change_sessions/`
+- no `knowledge/80_summaries/`
+- no `mcp/`
 
-Restore rule:
+### Default action
 
-- restore from archive if provenance matters
-- rerun Python tests to regenerate caches if only runtime bytecode is needed
+- keep ignored caches in place by default
+- if a cleaner worktree is desired, move caches to a manifest-backed archive
+- do not delete
 
-## Batch B - Local-Git Manifest Boundary
+### Post-batch validation
 
-Status: implemented for evidence roots; review bus still pending.
+- rerun the minimum guard basket
+- ensure no active script now points at an archived cache path
 
-Implemented local-only roots:
+## Batch B - Local-Git Boundary Verification
+
+### Intent
+
+Treat the existing local-only boundary as a cleanup invariant.
+
+### Scope
+
+Verify only:
 
 - `change_sessions/`
 - `review_sessions/`
 - `knowledge/80_summaries/`
 - `mcp/`
+- `ops/local_git_manifests/*`
 
-Implemented pieces:
+### Required actions
 
-- a policy file such as `ops/local_git_policy.json`
-- generated manifests under `ops/local_git_manifests/`
-- pre-commit and pre-push verification hooks
-- `.gitignore` entries only after manifests exist
+- rebuild manifests if any local evidence changed
+- verify strict consistency
+- confirm that no tracked or staged payload leaked under local-only roots
+- confirm that `review_sessions/` may legitimately be absent
 
-Rationale:
+### Output
 
-- preserves filenames, sizes, hashes, and Merkle-style roots without pushing raw
-  collaboration payloads
+- a green `local_git` boundary that later batches may rely on
 
-## Batch C - Review Bus Normalization
+### Blockers
 
-Status: blocked until review bus policy is final.
+- do not change the boundary in this batch
+- do not move `reviews/` here
 
-Rules to preserve:
+## Batch C - Reference Clone Handling
 
-- source-agent notes are authoritative
-- managed projections are identified by `sync_managed_copy: true`
-- `reviews/global_handoff/` remains the shared reservoir until a replacement is
-  designed
-- no handoff or proposition is overwritten
+### Intent
 
-Potential future cleanup:
+Reduce repo-root clutter from external clones without touching product source or
+protocol evidence.
 
-- replace redundant peer copies with manifests
-- keep `global_handoff` as generated integration surface
-- keep source proposals and corrections versioned
-
-## Batch D - Reference Clone Policy
-
-Status: optional.
-
-Current ignored clones:
+### Candidates
 
 - `gstack/`
 - `dictionary-of-ai-coding/`
 
-Preferred action:
+### Default rule
 
-- keep ignored locally
-- add a tracked reference manifest only if long-term reproducibility matters
+- keep ignored locally if they remain useful
+- archive only if the operator explicitly wants a cleaner active tree
+- never commit the clone payloads to this repo
 
-Do not commit these clones directly. `gstack/` is large and contains its own
-dependency tree.
+### Required manifest details if archived
 
-## Batch E - Archive Candidates
+- remote/provenance note
+- observed commit hash when available
+- reason for relocation
+- restore rule back to repo root or another declared reference location
 
-Status: none approved yet.
+### Post-batch validation
 
-No document or review artifact is currently approved for archive.
+- rerun the minimum guard basket
+- confirm no live script depends on clone contents
 
-If future archive candidates appear, each batch must include:
+## Batch D - Review Bus And Other Blocked Surfaces
 
-- `manifest.json`
-- original path
-- archived path
-- classification
-- reason
-- restore rule
-- validation result after the move
+### Intent
+
+List surfaces that are not cleanup candidates until governance changes.
+
+### Explicitly blocked surfaces
+
+- `reviews/`
+- `reviews/global_handoff/`
+- peer managed copies
+- source proposals, handoffs, and corrections
+- local-git policy files themselves
+- active source under `skill/`, `scripts/`, `ops/`, `systemd/`
+
+### Rule
+
+- this batch moves nothing
+- it records pending decisions only
+
+## Batch E - Future Archive Candidates
+
+### Intent
+
+Define how a later archive wave must behave once a new candidate is approved.
+
+### Approval requirements
+
+Every approved archive candidate must have:
+
+- a fixed classification
+- a written reason
+- a restore rule
+- a batch manifest entry
+- post-batch validation proof
+
+No document, review artifact, or evidence payload is pre-approved for archive
+just because it is old.
+
+## Archive Manifest Minimum
+
+Every executed archive batch must produce:
+
+- `archive/worktree_cleanup/<batch_id>/manifest.json`
+- `archive/worktree_cleanup/<batch_id>/notes.md`
+- `archive/worktree_cleanup/<batch_id>/payload/...`
+
+Each manifest entry must contain:
+
+- `original_path`
+- `archived_path`
+- `classification`
+- `reason`
+- `restore_rule`
+
+## What This Runbook Does Not Do
+
+- it does not execute file moves by itself
+- it does not settle the `reviews/` authority question
+- it does not widen the `local_git_manifested` boundary
+- it does not authorize destructive cleanup

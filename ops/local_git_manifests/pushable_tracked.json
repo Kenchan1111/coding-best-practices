@@ -1,14 +1,14 @@
 {
   "version": "1",
   "policy_name": "local_git_manifested",
-  "generated_at_utc": "2026-05-22T18:11:22+00:00",
-  "generated_at_local": "2026-05-22T20:11:22+02:00",
-  "git_head": "2a80f05a66db995fe88dcf1ab1fbf18ea0787a95",
-  "reviewed_revision": "2a80f05a66db995fe88dcf1ab1fbf18ea0787a95+dirty",
+  "generated_at_utc": "2026-05-23T07:04:45+00:00",
+  "generated_at_local": "2026-05-23T09:04:45+02:00",
+  "git_head": "46a3c2a0d12af8d1347c7bdf34f032b0eddc554e",
+  "reviewed_revision": "46a3c2a0d12af8d1347c7bdf34f032b0eddc554e+dirty",
   "file_selection": "git ls-files --cached minus local_git roots and excluded manifest self",
-  "file_count": 168,
-  "total_bytes": 759217,
-  "merkle_root": "b29fba8c58b4d2bcd0ef54cb9c52cb6bf347fe81a1bc157921581798a3778ffa",
+  "file_count": 169,
+  "total_bytes": 774052,
+  "merkle_root": "a724f4623284389c65f0439344df18fb636257ec624b08e82034881a12472b13",
   "files": [
     {
       "path": ".githooks/pre-commit",
@@ -160,30 +160,37 @@
     {
       "path": "ops/worktree_authority_map.md",
       "kind": "file",
-      "size_bytes": 3880,
-      "sha256": "661e8d34551a81547cb45a5d763fa034d104a5ea95f1fb5db46553136abd4bac",
-      "leaf_hash": "eb84c3d6fc6e4877f6b77a4d7974ecfb09301e439eaff6ebf909703b3fc5178e"
+      "size_bytes": 4970,
+      "sha256": "6a7d2bf2544e015200029c3ee77234021a1ce314094b1ac2cad1bc48633c0a75",
+      "leaf_hash": "de9bdcd9ec9e9ae69c97ae2ec5ee08396f150ccf8e919b6bec134218d0b80efc"
     },
     {
       "path": "ops/worktree_cleanup_architecture.md",
       "kind": "file",
-      "size_bytes": 3120,
-      "sha256": "a4e6637b837ccdec48a9a2ece2ac90b2b910c6125192958f81872af403b24404",
-      "leaf_hash": "0a74309695cf76954bd130b6676e1b00d1064e6bd2b5638f032e144b878103df"
+      "size_bytes": 5111,
+      "sha256": "877d3edc3f8f85aac069059fbb1acda9778be659e27fe5828dfc8e3ebbe07a25",
+      "leaf_hash": "a037b495cfbd8906333a4946f9efc9351eef69c0e1b1a2c34a943aaefb9c41d9"
     },
     {
       "path": "ops/worktree_cleanup_batches.md",
       "kind": "file",
-      "size_bytes": 2949,
-      "sha256": "6b69d286f6c55832b1b32f47200ed8f243f3c7522b18dc29b99abdb0771ccb93",
-      "leaf_hash": "c62778ceac8b3426a19fffb8a29da2d077c6305077f981b7dbc5d5a19d4d7f54"
+      "size_bytes": 5639,
+      "sha256": "c931bdccc40f530d61a635d4b3a8f5fb52948eceba8b3cfe7133d342de9ca09c",
+      "leaf_hash": "94b6a3d241561de853efc123a023bb14903d6fb7a32ac32b69739dbdb06bf358"
+    },
+    {
+      "path": "ops/worktree_execution_dependencies_map.md",
+      "kind": "file",
+      "size_bytes": 7517,
+      "sha256": "739311e15366d1154bb75fe4af32e3c0530165b602a310d77c54362e8f64476d",
+      "leaf_hash": "2f1244c282b164bdd0ebe3ebc7ea4cfd1397a2779ebdef268be1b1d0d36e0ba0"
     },
     {
       "path": "ops/worktree_generated_artifacts_map.md",
       "kind": "file",
-      "size_bytes": 3859,
-      "sha256": "78f52da0490996188f3b2434b0a113ac98e537ae495c47842a1db10bd1b9e5dd",
-      "leaf_hash": "4b57ab4415526a4435f081fde297bea20bfc1aeab5ef4a96399676fed98fa68c"
+      "size_bytes": 5406,
+      "sha256": "073f31064c178055b0e0d2fef3d800cb202b1b1c7a014fa124090c54ad922749",
+      "leaf_hash": "f46d335b27cb562ab384ea640dfbe4cdae6e15ef8b375fa2788d7d756980b8c4"
     },
     {
       "path": "package.json",
