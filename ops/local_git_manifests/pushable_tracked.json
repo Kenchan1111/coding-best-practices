@@ -1,14 +1,14 @@
 {
   "version": "1",
   "policy_name": "local_git_manifested",
-  "generated_at_utc": "2026-05-23T07:04:45+00:00",
-  "generated_at_local": "2026-05-23T09:04:45+02:00",
-  "git_head": "46a3c2a0d12af8d1347c7bdf34f032b0eddc554e",
-  "reviewed_revision": "46a3c2a0d12af8d1347c7bdf34f032b0eddc554e+dirty",
+  "generated_at_utc": "2026-05-24T09:47:52+00:00",
+  "generated_at_local": "2026-05-24T11:47:52+02:00",
+  "git_head": "366f611c6cca8fac2dc0fe247ca9e88554652375",
+  "reviewed_revision": "366f611c6cca8fac2dc0fe247ca9e88554652375+dirty",
   "file_selection": "git ls-files --cached minus local_git roots and excluded manifest self",
-  "file_count": 169,
-  "total_bytes": 774052,
-  "merkle_root": "a724f4623284389c65f0439344df18fb636257ec624b08e82034881a12472b13",
+  "file_count": 177,
+  "total_bytes": 493790987,
+  "merkle_root": "268aff414513da3e6e46fe491af75e9dcc09803a2735ab20d76cd2201803d984",
   "files": [
     {
       "path": ".githooks/pre-commit",
@@ -100,6 +100,62 @@
       "size_bytes": 11984,
       "sha256": "f0888b6ae34576848487c16a5f5c9ea49f1a3a5b64c81cd65d067795c09f1a13",
       "leaf_hash": "d98ee381083b2eaef07c95af9c6748aaa507e738db7320e50641c9cd1e9d144c"
+    },
+    {
+      "path": "archive/worktree_snapshot/20260524_full/manifest.json",
+      "kind": "file",
+      "size_bytes": 5193,
+      "sha256": "0832cfcd034429f48d06efa065f1c5dd0b99c2c648e1ace50a0cc8fcd88d8fca",
+      "leaf_hash": "e96a8b002fe1e12f3d6ede4142d6e3a235597ddf5473eab14feec87c8aa45a65"
+    },
+    {
+      "path": "archive/worktree_snapshot/20260524_full/notes.md",
+      "kind": "file",
+      "size_bytes": 1515,
+      "sha256": "9dd733617639db0ebc7263a52c2e35a4f701046799f59aadf6780f4d268dc576",
+      "leaf_hash": "f205856e506b7f2fce91854b974d598929cdf7ce1007ee901bfa968b50ab8bd8"
+    },
+    {
+      "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-000",
+      "kind": "file",
+      "size_bytes": 94371840,
+      "sha256": "b9514db9f604ba333c6300ba7264dbfbb36b465c2a4e4fdb99984ce237e95ee8",
+      "leaf_hash": "abcb4bc5ae334ec66853d47b945d16794c904bfac2636a944525a4d165b06a51"
+    },
+    {
+      "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-001",
+      "kind": "file",
+      "size_bytes": 94371840,
+      "sha256": "83b35154ebbddffadc55d7303b7be6a55a1c46a67c4f007127aef853a30200aa",
+      "leaf_hash": "22965ec8da8139347e9886bc5081bff362d510c08685fb5d527532e673a28410"
+    },
+    {
+      "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-002",
+      "kind": "file",
+      "size_bytes": 94371840,
+      "sha256": "295c093f097da277b5e1525cc715510ff958d45614ee2fd1a6a30115c28c59e0",
+      "leaf_hash": "f80f3596351f86ce6afd9e4d22ac99394bded644bfcddd4e781493226ce6199a"
+    },
+    {
+      "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-003",
+      "kind": "file",
+      "size_bytes": 94371840,
+      "sha256": "a0727b58d88e1506ae6da1475fcda9d44a7594811af0b72f7e1b0ae2b969ffef",
+      "leaf_hash": "248e70c723cf9298f49d99b285787ca9152740bee2064bf01fbbe6c8407bc9b9"
+    },
+    {
+      "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-004",
+      "kind": "file",
+      "size_bytes": 94371840,
+      "sha256": "450683e0424d5f7e1695c5216a10a1a919d5fd7b15ea2abb5efbd9d6ae32b724",
+      "leaf_hash": "fb6f97f23101eb478edbcb4f8d1799a6a095e642b50f26e60cf02317cadec905"
+    },
+    {
+      "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-005",
+      "kind": "file",
+      "size_bytes": 21151027,
+      "sha256": "9356624d28e5f53cc34f485ffa60db596957d62421998de80e56168d2e46bc2c",
+      "leaf_hash": "99d6bfbfa81650f4cf9601047f973b4c26bea56d3780f64ca88866ec228fd24b"
     },
     {
       "path": "environment.lock.linux-64.txt",

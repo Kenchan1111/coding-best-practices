@@ -1,0 +1,167 @@
+{
+  "version": "1",
+  "snapshot_id": "20260524_full",
+  "created_at_local": "2026-05-24T11:44:52+02:00",
+  "policy": "archive-snapshot",
+  "repo": {
+    "path": "/home/zack/Documents/Divers/Dict_AI_Coding",
+    "snapshot_branch": "snapshot/full-worktree-20260524",
+    "base_branch": "feature/skill-phase1-scaffolding",
+    "base_commit": "366f611c6cca8fac2dc0fe247ca9e88554652375",
+    "current_head": "366f611c6cca8fac2dc0fe247ca9e88554652375",
+    "status_short_before_archive_commit": [
+      "?? archive/"
+    ]
+  },
+  "archive": {
+    "format": "tar.zst split chunks",
+    "chunk_size_target_bytes": 94371840,
+    "combined_sha256": "f7e4bae8e98f610b783c5d8a7da2574d0c0bf1d15af11f709017e2f9246da24e",
+    "chunk_count": 6,
+    "total_chunk_bytes": 493010227,
+    "chunks": [
+      {
+        "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-000",
+        "size_bytes": 94371840,
+        "sha256": "b9514db9f604ba333c6300ba7264dbfbb36b465c2a4e4fdb99984ce237e95ee8"
+      },
+      {
+        "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-001",
+        "size_bytes": 94371840,
+        "sha256": "83b35154ebbddffadc55d7303b7be6a55a1c46a67c4f007127aef853a30200aa"
+      },
+      {
+        "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-002",
+        "size_bytes": 94371840,
+        "sha256": "295c093f097da277b5e1525cc715510ff958d45614ee2fd1a6a30115c28c59e0"
+      },
+      {
+        "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-003",
+        "size_bytes": 94371840,
+        "sha256": "a0727b58d88e1506ae6da1475fcda9d44a7594811af0b72f7e1b0ae2b969ffef"
+      },
+      {
+        "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-004",
+        "size_bytes": 94371840,
+        "sha256": "450683e0424d5f7e1695c5216a10a1a919d5fd7b15ea2abb5efbd9d6ae32b724"
+      },
+      {
+        "path": "archive/worktree_snapshot/20260524_full/payload.tar.zst.part-005",
+        "size_bytes": 21151027,
+        "sha256": "9356624d28e5f53cc34f485ffa60db596957d62421998de80e56168d2e46bc2c"
+      }
+    ]
+  },
+  "included_roots": [
+    {
+      "path": "change_sessions",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 11,
+      "total_bytes": 49755
+    },
+    {
+      "path": "knowledge",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 3,
+      "total_bytes": 50891
+    },
+    {
+      "path": "mcp",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 47,
+      "total_bytes": 271814
+    },
+    {
+      "path": "gstack",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 13932,
+      "total_bytes": 1435799628
+    },
+    {
+      "path": "dictionary-of-ai-coding",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 107,
+      "total_bytes": 300207
+    },
+    {
+      "path": "scripts/__pycache__",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 5,
+      "total_bytes": 101116
+    },
+    {
+      "path": "skill/tests/__pycache__",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 15,
+      "total_bytes": 65748
+    },
+    {
+      "path": "skill/tests/e2e/__pycache__",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 1,
+      "total_bytes": 7589
+    },
+    {
+      "path": "skill/tests/fixtures/planted-bugs/__pycache__",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 4,
+      "total_bytes": 2414
+    }
+  ],
+  "nested_git_repositories": {
+    "gstack": {
+      "head": "bf65487162ce5e4330efc43632ca945b640ebc16",
+      "branch": "main",
+      "remote": [
+        "origin\thttps://github.com/garrytan/gstack.git (fetch)",
+        "origin\thttps://github.com/garrytan/gstack.git (push)"
+      ],
+      "status_short": [
+        " M CHANGELOG.md",
+        " M README.md",
+        " M USING_GBRAIN_WITH_GSTACK.md",
+        " M bin/gstack-brain-context-load.ts",
+        " M bin/gstack-gbrain-source-wireup",
+        " M bin/gstack-gbrain-sync.ts",
+        " M bin/gstack-memory-ingest.ts",
+        " M bun.lock",
+        " M lib/gstack-memory-helpers.ts",
+        " M package.json",
+        " M scripts/resolvers/gbrain.ts",
+        " M setup-gbrain/SKILL.md",
+        " M setup-gbrain/SKILL.md.tmpl",
+        " M setup-gbrain/memory.md",
+        " M test/gstack-brain-context-load.test.ts",
+        " M test/gstack-gbrain-source-wireup.test.ts",
+        " M test/gstack-gbrain-sync.test.ts",
+        " M test/gstack-memory-ingest.test.ts",
+        " M test/skill-validation.test.ts"
+      ]
+    },
+    "dictionary-of-ai-coding": {
+      "head": "0a8c886e2e829be71d36608f2a5099b55376bfae",
+      "branch": "main",
+      "remote": [
+        "origin\thttps://github.com/mattpocock/dictionary-of-ai-coding.git (fetch)",
+        "origin\thttps://github.com/mattpocock/dictionary-of-ai-coding.git (push)"
+      ],
+      "status_short": []
+    }
+  },
+  "restore": {
+    "commands": [
+      "cat payload.tar.zst.part-* > payload.tar.zst",
+      "tar --zstd -xf payload.tar.zst -C /path/to/restore"
+    ],
+    "restore_rule": "Extract over a checkout of base_commit to recreate ignored/local payloads and nested repositories."
+  }
+}

@@ -5,20 +5,23 @@
   "root_path": "change_sessions",
   "classification": "local_git_manifested",
   "reason": "Imported and local change proof stays on the workstation.",
-  "generated_at_utc": "2026-05-23T07:04:45+00:00",
-  "generated_at_local": "2026-05-23T09:04:45+02:00",
+  "generated_at_utc": "2026-05-24T09:47:52+00:00",
+  "generated_at_local": "2026-05-24T11:47:52+02:00",
   "exists": true,
-  "directory_count": 2,
-  "file_count": 9,
+  "directory_count": 3,
+  "file_count": 11,
   "symlink_count": 0,
-  "total_bytes": 45369,
-  "merkle_root": "9617d16afaaa992a6e15da69392361e5fa07100b792f11f824d8498f6681b85e",
+  "total_bytes": 49755,
+  "merkle_root": "cedeb2409a04ead000d0ce763324161a565f9d00f66b3beaa98614886315c8d2",
   "directories": [
     {
       "path": "20260507T235259+0200_gstack"
     },
     {
       "path": "20260523T010647+0200_dict_ai_coding"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding"
     }
   ],
   "files": [
@@ -75,6 +78,18 @@
       "size_bytes": 2994,
       "sha256": "befd2e6039add8dbf5a18718707225aa745a3891910a5f6f72014a3fb63bad0e",
       "leaf_hash": "d7cde0c722233875751325890b30e53d3e6033217c932ebc6481d603c654a7dc"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding/session.json",
+      "size_bytes": 3131,
+      "sha256": "3e7386e65d5b1dd254f9f39db85ba7b617256bfdd7a19c6f318eef53215ed7dc",
+      "leaf_hash": "b4493850968119a94e4b1c2b3fcc0d90ad7afa3e08858968e2aa0982348dc430"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 1255,
+      "sha256": "ea9df73a0709f0055e84a513bab44c580d13fcf761230c3103eca6eb4abe7124",
+      "leaf_hash": "9a3fff68601f194f75bb53c994684d378505b25bd3aa9abedc5d012ddab376fd"
     }
   ],
   "symlinks": []
