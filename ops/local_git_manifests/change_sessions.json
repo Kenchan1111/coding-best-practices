@@ -5,20 +5,23 @@
   "root_path": "change_sessions",
   "classification": "local_git_manifested",
   "reason": "Imported and local change proof stays on the workstation.",
-  "generated_at_utc": "2026-05-23T07:04:45+00:00",
-  "generated_at_local": "2026-05-23T09:04:45+02:00",
+  "generated_at_utc": "2026-05-24T09:52:10+00:00",
+  "generated_at_local": "2026-05-24T11:52:10+02:00",
   "exists": true,
-  "directory_count": 2,
-  "file_count": 9,
+  "directory_count": 3,
+  "file_count": 14,
   "symlink_count": 0,
-  "total_bytes": 45369,
-  "merkle_root": "9617d16afaaa992a6e15da69392361e5fa07100b792f11f824d8498f6681b85e",
+  "total_bytes": 55472,
+  "merkle_root": "e073734ab76310bc8a0bbb92ea7d9863f23609c496596b79eab63619978eda30",
   "directories": [
     {
       "path": "20260507T235259+0200_gstack"
     },
     {
       "path": "20260523T010647+0200_dict_ai_coding"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding"
     }
   ],
   "files": [
@@ -75,6 +78,36 @@
       "size_bytes": 2994,
       "sha256": "befd2e6039add8dbf5a18718707225aa745a3891910a5f6f72014a3fb63bad0e",
       "leaf_hash": "d7cde0c722233875751325890b30e53d3e6033217c932ebc6481d603c654a7dc"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding/change_receipt.json",
+      "size_bytes": 667,
+      "sha256": "4b414e4cb640e9b57216dccaa520667222dfe19f41e19c167a1d0812419bcab0",
+      "leaf_hash": "bd62c726dd098a91c0b681726b1cad756c0a276021d620e6a8ebad401b875d41"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding/closeout.md",
+      "size_bytes": 3292,
+      "sha256": "d2a969a2196ebb511e2acfca7e677153343631b292e4f7adea2271992dc23c4c",
+      "leaf_hash": "a47ebfb611b45327067563eae6b14ceb1b9ef2d6d3a5816c6e59c855188c3f18"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding/closeout.md.change-receipt.json",
+      "size_bytes": 667,
+      "sha256": "4b414e4cb640e9b57216dccaa520667222dfe19f41e19c167a1d0812419bcab0",
+      "leaf_hash": "b2076f2d4aeb059c326ef2f0ca3233fc7cd8b6cd86cdaadc58165d2bdbd84bb8"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding/session.json",
+      "size_bytes": 3937,
+      "sha256": "5dc1581d3a1b776453985f3ecf1353ec4d58a70465941010b6d29bc199adb2b7",
+      "leaf_hash": "066def98c6a4fbe3fe89b3075113a004cb1222a4dee2f1a2250a838c467a31f2"
+    },
+    {
+      "path": "20260524T114027+0200_dict_ai_coding/task_snapshot.md",
+      "size_bytes": 1540,
+      "sha256": "d2e0e55646debcc8e00a3c1cae26ab705007a20af19590dc747928a02cd77200",
+      "leaf_hash": "377ce27fb3865a18c7a7b25daa9ca75a6fad1f4b892144b29ad9f84dabb2584e"
     }
   ],
   "symlinks": []

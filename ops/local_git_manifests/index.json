@@ -1,10 +1,10 @@
 {
   "version": "1",
   "policy_name": "local_git_manifested",
-  "generated_at_utc": "2026-05-23T07:04:45+00:00",
-  "generated_at_local": "2026-05-23T09:04:45+02:00",
-  "git_head": "46a3c2a0d12af8d1347c7bdf34f032b0eddc554e",
-  "reviewed_revision": "46a3c2a0d12af8d1347c7bdf34f032b0eddc554e+dirty",
+  "generated_at_utc": "2026-05-24T09:52:10+00:00",
+  "generated_at_local": "2026-05-24T11:52:10+02:00",
+  "git_head": "366f611c6cca8fac2dc0fe247ca9e88554652375",
+  "reviewed_revision": "366f611c6cca8fac2dc0fe247ca9e88554652375+dirty",
   "local_roots": [
     {
       "name": "change_sessions",
@@ -12,11 +12,11 @@
       "classification": "local_git_manifested",
       "manifest_path": "ops/local_git_manifests/change_sessions.json",
       "exists": true,
-      "directory_count": 2,
-      "file_count": 9,
+      "directory_count": 3,
+      "file_count": 14,
       "symlink_count": 0,
-      "total_bytes": 45369,
-      "merkle_root": "9617d16afaaa992a6e15da69392361e5fa07100b792f11f824d8498f6681b85e"
+      "total_bytes": 55472,
+      "merkle_root": "e073734ab76310bc8a0bbb92ea7d9863f23609c496596b79eab63619978eda30"
     },
     {
       "name": "review_sessions",
@@ -39,8 +39,8 @@
       "directory_count": 0,
       "file_count": 3,
       "symlink_count": 0,
-      "total_bytes": 49955,
-      "merkle_root": "eae4b8d5b4db0ec158f0bb519f538f8887a48b4fe384544e48969c4ea63c1c2f"
+      "total_bytes": 52139,
+      "merkle_root": "0f07bc092143de61d78a01a421d24b7abbf57c672bd3522c08d525ae997045be"
     },
     {
       "name": "mcp",
@@ -52,10 +52,10 @@
       "file_count": 47,
       "symlink_count": 2,
       "total_bytes": 271814,
-      "merkle_root": "6a11b583998cea6103dae41fe2e5ae223826b715981ba9b785cfbafc55e597c5"
+      "merkle_root": "c9873539e3e16077d9cd064aca5e33a27ecc490bfd6eae2aa785ad67111780a1"
     }
   ],
-  "global_local_merkle_root": "afa4f736da4340830d553b63410d87fc7a9d3956d76ed872e0424d18492fed4f",
+  "global_local_merkle_root": "8a28f66b07fb53944fcad0d582888d624d1d0b55c775a9ae9d1dbb8b30286952",
   "pushable_manifest_path": "ops/local_git_manifests/pushable_tracked.json",
   "pushable_merkle_root": "a724f4623284389c65f0439344df18fb636257ec624b08e82034881a12472b13"
 }
