@@ -1,10 +1,10 @@
 {
   "version": "1",
   "policy_name": "local_git_manifested",
-  "generated_at_utc": "2026-05-25T09:58:45+00:00",
-  "generated_at_local": "2026-05-25T11:58:45+02:00",
-  "git_head": "aed66785f30ce285fd6875fb72cd20cfef07344c",
-  "reviewed_revision": "aed66785f30ce285fd6875fb72cd20cfef07344c+dirty",
+  "generated_at_utc": "2026-05-25T10:25:23+00:00",
+  "generated_at_local": "2026-05-25T12:25:23+02:00",
+  "git_head": "53a045624510af02afc623136dcbf56f9651e0ab",
+  "reviewed_revision": "53a045624510af02afc623136dcbf56f9651e0ab+dirty",
   "local_roots": [
     {
       "name": "change_sessions",
@@ -39,8 +39,8 @@
       "directory_count": 0,
       "file_count": 3,
       "symlink_count": 0,
-      "total_bytes": 54011,
-      "merkle_root": "cd51cc9f8be042833cf581c7086c8a87fd90cfebb70190f6738b412eb3aa04e4"
+      "total_bytes": 54167,
+      "merkle_root": "f0cbf2ba4ea3bc2acaf841e3c7bae7cdb2a7f7c360888477e0995ca128ae4d75"
     },
     {
       "name": "mcp",
@@ -52,10 +52,10 @@
       "file_count": 47,
       "symlink_count": 2,
       "total_bytes": 271814,
-      "merkle_root": "b4c7cbcb86e4c9a5f5f8633306090144b08dc47b79b6d7cdeac26aa1746f5e88"
+      "merkle_root": "1f567946f5f212e6e6ac12cfc2116c7709e6282c03afa88df2e5569355fe0fd5"
     }
   ],
-  "global_local_merkle_root": "c090f2865a121fd69d2f70ddc0628d12fed23450a1dd2c55009ae49284238a4e",
+  "global_local_merkle_root": "39a8d39cbd1a3a89712af02a2042e05d79ed5c3ae81807335ae19cbff0008fe4",
   "pushable_manifest_path": "ops/local_git_manifests/pushable_tracked.json",
   "pushable_merkle_root": "1dc85bf8948dea6237dae150e637c1a17d0761747b8d525a3c9b5f68958d9de6"
 }

@@ -5,33 +5,33 @@
   "root_path": "knowledge/80_summaries",
   "classification": "local_git_manifested",
   "reason": "Generated team summaries remain local working state.",
-  "generated_at_utc": "2026-05-25T09:58:45+00:00",
-  "generated_at_local": "2026-05-25T11:58:45+02:00",
+  "generated_at_utc": "2026-05-25T10:25:23+00:00",
+  "generated_at_local": "2026-05-25T12:25:23+02:00",
   "exists": true,
   "directory_count": 0,
   "file_count": 3,
   "symlink_count": 0,
-  "total_bytes": 54011,
-  "merkle_root": "cd51cc9f8be042833cf581c7086c8a87fd90cfebb70190f6738b412eb3aa04e4",
+  "total_bytes": 54167,
+  "merkle_root": "f0cbf2ba4ea3bc2acaf841e3c7bae7cdb2a7f7c360888477e0995ca128ae4d75",
   "directories": [],
   "files": [
     {
       "path": "team_review_changelog.md",
-      "size_bytes": 35465,
-      "sha256": "44516caffc6dbcd35785539cdc5f2d955a3c1bbfee337f421441ca5d3cd944b7",
-      "leaf_hash": "4c2fb0a01b16f6e4d904292a8d5d489901a4cf49759abbce7eeefeb46602f691"
+      "size_bytes": 35621,
+      "sha256": "f9de747d7f7fc81f2f945b22e4275a78a701bac49e07f8433d7202a69f3065db",
+      "leaf_hash": "789e7b4500e55fa721cb4ea350483f19a9aebdb7feac690bd980a8b41f7a015a"
     },
     {
       "path": "team_review_digest.md",
       "size_bytes": 12800,
-      "sha256": "c5d4caa7348fd42eb4f7d8b21486f370062abf309450d0310fa1bf977182f703",
-      "leaf_hash": "20383e23c64a8736f42b171bde9d6de411305231ba65d0537610c679fe4d0dc5"
+      "sha256": "143ea653677c85ec6ad83221a0c2320259c8ba26836ed406c9e1208b05d5c9b9",
+      "leaf_hash": "2b773f4f22d6392c6ff848943cc9e2a6735e35e480e3e7a8eecc2bc37bad57e8"
     },
     {
       "path": "team_review_latest.md",
       "size_bytes": 5746,
-      "sha256": "01f78aa711b27b875a69f6ac1367008f5b7eb36089c75ad814e3d2010816a0b9",
-      "leaf_hash": "87c727cd66c068cc2723d62f4d941377d2d5d3475685416f7541d1ce66c4d65d"
+      "sha256": "dfe72b53dcf2bd6171aa5eb0b504c56b08a5b40f1e97c3a85e727b94a596f179",
+      "leaf_hash": "cd72791eb06c897ca2b11f55f29a8716297a436639ec9218be18b2b97fa172d6"
     }
   ],
   "symlinks": []

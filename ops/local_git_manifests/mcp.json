@@ -5,14 +5,14 @@
   "root_path": "mcp",
   "classification": "local_git_manifested",
   "reason": "Local MCP catalog state and guard proof remain local.",
-  "generated_at_utc": "2026-05-25T09:58:45+00:00",
-  "generated_at_local": "2026-05-25T11:58:45+02:00",
+  "generated_at_utc": "2026-05-25T10:25:23+00:00",
+  "generated_at_local": "2026-05-25T12:25:23+02:00",
   "exists": true,
   "directory_count": 15,
   "file_count": 47,
   "symlink_count": 2,
   "total_bytes": 271814,
-  "merkle_root": "b4c7cbcb86e4c9a5f5f8633306090144b08dc47b79b6d7cdeac26aa1746f5e88",
+  "merkle_root": "1f567946f5f212e6e6ac12cfc2116c7709e6282c03afa88df2e5569355fe0fd5",
   "directories": [
     {
       "path": "repo-change-guard"
@@ -64,8 +64,8 @@
     {
       "path": "catalog.json",
       "size_bytes": 17603,
-      "sha256": "71f6a413407124b5e744a64bd5c0236300b1e2debdd374d422835fe28208d3af",
-      "leaf_hash": "fdff0e091e5d3cc653f994d27e0b97b6d9cfd44e45f764ec5eeae38ab1e6bef5"
+      "sha256": "65f0adcc44a414cda85a92daaa22fcdafb4ec84ec4dabfe02975e6dd225b052c",
+      "leaf_hash": "f624ba9faf6acc0264ca9991e2ff958865c9615c3a7d8ecaa1fe9b5a28f27651"
     },
     {
       "path": "repo-change-guard/20260505T210528+0200_dict_ai_coding/change_receipt.json",
