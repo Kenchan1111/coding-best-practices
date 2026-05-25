@@ -1,14 +1,14 @@
 {
   "version": "1",
   "policy_name": "local_git_manifested",
-  "generated_at_utc": "2026-05-25T09:56:24+00:00",
-  "generated_at_local": "2026-05-25T11:56:24+02:00",
-  "git_head": "32b04d81e948b201ae4ae7c16ad8c234ff4f5c56",
-  "reviewed_revision": "32b04d81e948b201ae4ae7c16ad8c234ff4f5c56+dirty",
+  "generated_at_utc": "2026-05-25T09:58:45+00:00",
+  "generated_at_local": "2026-05-25T11:58:45+02:00",
+  "git_head": "aed66785f30ce285fd6875fb72cd20cfef07344c",
+  "reviewed_revision": "aed66785f30ce285fd6875fb72cd20cfef07344c+dirty",
   "file_selection": "git ls-files --cached minus local_git roots and excluded manifest self",
-  "file_count": 169,
-  "total_bytes": 774052,
-  "merkle_root": "a724f4623284389c65f0439344df18fb636257ec624b08e82034881a12472b13",
+  "file_count": 174,
+  "total_bytes": 789625,
+  "merkle_root": "1dc85bf8948dea6237dae150e637c1a17d0761747b8d525a3c9b5f68958d9de6",
   "files": [
     {
       "path": ".githooks/pre-commit",
@@ -256,6 +256,13 @@
       "leaf_hash": "d6b50398d5b9ea8eea4a77d53d747dbf981bc18429e28acbfc8adac571179774"
     },
     {
+      "path": "reviews/claude-opus/handoff/07-phase1-p8-rereview-ready-20260525.md",
+      "kind": "file",
+      "size_bytes": 3158,
+      "sha256": "d21305a6b5f3c12e15eb35d6737d884595569d8e9cd36429578237e8db7e8c75",
+      "leaf_hash": "7168d1f66f7028bceb177d39ec15b20d1cd847008929aeabb1619dc4cdfe0a93"
+    },
+    {
       "path": "reviews/claude-opus/proposition/.gitkeep",
       "kind": "file",
       "size_bytes": 0,
@@ -347,6 +354,13 @@
       "leaf_hash": "f9f95db8eababc8657eb0b63e7678302bfae141d0663a30eacdf74967d9ca2a0"
     },
     {
+      "path": "reviews/claude-sonnet/handoff/07-phase1-p8-rereview-ready-20260525.md",
+      "kind": "file",
+      "size_bytes": 3158,
+      "sha256": "d21305a6b5f3c12e15eb35d6737d884595569d8e9cd36429578237e8db7e8c75",
+      "leaf_hash": "762c28cc7c51facc939afc70735d386beb72b38f4e84250d40390c605ac7b9a3"
+    },
+    {
       "path": "reviews/claude-sonnet/proposition/.gitkeep",
       "kind": "file",
       "size_bytes": 0,
@@ -408,6 +422,13 @@
       "size_bytes": 3826,
       "sha256": "429e27ba4b6a89dc48171c0b54b0ec55ab1320484a00fb9c1dcd0e07f6f17708",
       "leaf_hash": "a5be7ac8f5c0f67f41d069535c3d9c093b4bc9070f9d2a08fd2a2b66e5946b65"
+    },
+    {
+      "path": "reviews/global_handoff/07-phase1-p8-rereview-ready-20260525.md",
+      "kind": "file",
+      "size_bytes": 3161,
+      "sha256": "1bc6aead536fccaa4e4d492981abe4908ca4ddae93c4bf604f57fdfdcacf93da",
+      "leaf_hash": "91dd591f9adfd6e5c100cd350f5a26a110c7ee170a7e44cdaa77cbe7810888cb"
     },
     {
       "path": "reviews/gpt-5.5/corrections/.gitkeep",
@@ -478,6 +499,13 @@
       "size_bytes": 3595,
       "sha256": "8993e79e3758b18a8028c4168da9c34655ade6e32b8efb45a036614050e01dba",
       "leaf_hash": "9f2e95f949a8ecc3169eba83ef89d1c1b8b7089800525cc9ad2af4dbd4af40d1"
+    },
+    {
+      "path": "reviews/gpt-5.5/handoff/07-phase1-p8-rereview-ready-20260525.md",
+      "kind": "file",
+      "size_bytes": 2938,
+      "sha256": "4587666421293338a30e80c07fb14ce5932ebf48c8253561b124ee3b2f5fb7c2",
+      "leaf_hash": "0f021eec71c8ca75592ba5c2c235f32cdef15d476ba5581ade8a3152bd31c754"
     },
     {
       "path": "reviews/gpt-5.5/proposition/.gitkeep",
@@ -660,6 +688,13 @@
       "size_bytes": 3825,
       "sha256": "97fb20108f043d0024ec184ffa14440d3ad8acc649b14c24851fad5fac3cc76b",
       "leaf_hash": "6678882bf83550dfca846a9a58fa4ae8c7e40f641c90e722a513d15d77987673"
+    },
+    {
+      "path": "reviews/kimi/handoff/07-phase1-p8-rereview-ready-20260525.md",
+      "kind": "file",
+      "size_bytes": 3158,
+      "sha256": "d21305a6b5f3c12e15eb35d6737d884595569d8e9cd36429578237e8db7e8c75",
+      "leaf_hash": "0d736b49a48153888586f20210d637c4c76d7ed40c2829af4b33bb0aac7b6f69"
     },
     {
       "path": "reviews/kimi/proposition/.gitkeep",
